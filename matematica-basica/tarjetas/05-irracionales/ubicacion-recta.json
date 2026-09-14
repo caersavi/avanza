@@ -1,0 +1,58 @@
+[
+  {
+    "id": "irracionales-ubicacion-recta-01",
+    "modulo": "irracionales",
+    "subtema": "ubicacion-recta",
+    "dificultad": 1,
+    "tipo": "arrastrar-recta",
+    "enunciado": "Ubica √4 en la recta numérica.",
+    "recta": { "min": 0, "max": 10, "paso": 1 },
+    "respuesta": 2,
+    "tolerancia": 0,
+    "pistas": ["Calcula primero cuánto vale √4."],
+    "explicacion": "√4 = 2, un número exacto."
+  },
+  {
+    "id": "irracionales-ubicacion-recta-02",
+    "modulo": "irracionales",
+    "subtema": "ubicacion-recta",
+    "dificultad": 2,
+    "tipo": "arrastrar-recta",
+    "enunciado": "Ubica aproximadamente √2 en la recta numérica (√2 ≈ 1,41).",
+    "recta": { "min": 0, "max": 3, "paso": 0.1, "marcaCada": 0.5 },
+    "respuesta": 1.41,
+    "tolerancia": 0.15,
+    "pistas": ["√2 está entre 1 y 2, más cerca de 1,4."],
+    "explicacion": "√2 = 1,41421356... — se ubica un poco después de 1,4."
+  },
+  {
+    "id": "irracionales-ubicacion-recta-03",
+    "modulo": "irracionales",
+    "subtema": "ubicacion-recta",
+    "dificultad": 2,
+    "tipo": "arrastrar-recta",
+    "enunciado": "Ubica aproximadamente √10 en la recta numérica (√10 ≈ 3,16).",
+    "recta": { "min": 0, "max": 5, "paso": 0.1, "marcaCada": 1 },
+    "respuesta": 3.16,
+    "tolerancia": 0.15,
+    "pistas": ["√9=3 y √16=4, así que √10 está justo después de 3."],
+    "explicacion": "√10 = 3,16227766... — un poco después de 3."
+  },
+  {
+    "id": "irracionales-ubicacion-recta-04",
+    "modulo": "irracionales",
+    "subtema": "ubicacion-recta",
+    "dificultad": 2,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Entre qué dos enteros consecutivos se ubica √20?",
+    "opciones": [
+      { "id": "a", "texto": "3 y 4" },
+      { "id": "b", "texto": "4 y 5" },
+      { "id": "c", "texto": "5 y 6" },
+      { "id": "d", "texto": "2 y 3" }
+    ],
+    "respuesta": "b",
+    "pistas": ["Busca los cuadrados perfectos más cercanos a 20: 16 y 25."],
+    "explicacion": "√16=4 y √25=5. Como 16<20<25, entonces 4<√20<5."
+  }
+]

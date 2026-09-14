@@ -1,0 +1,76 @@
+[
+  {
+    "id": "irracionales-operaciones-radicales-01",
+    "modulo": "irracionales",
+    "subtema": "operaciones-radicales",
+    "dificultad": 1,
+    "tipo": "paso-a-paso",
+    "enunciado": "Simplifica: 3√2 + 5√2. Escribe el resultado en la forma a√b (sin espacios, ej. 6√2).",
+    "pasos": [
+      { "texto": "3√2 + 5√2 =", "esperado": "8√2" }
+    ],
+    "pistas": ["Son radicales semejantes: suma solo los coeficientes."],
+    "explicacion": "3√2 + 5√2 = 8√2."
+  },
+  {
+    "id": "irracionales-operaciones-radicales-02",
+    "modulo": "irracionales",
+    "subtema": "operaciones-radicales",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Simplifica: 7√3 − 2√3. Escribe el resultado en la forma a√b.",
+    "pasos": [
+      { "texto": "7√3 − 2√3 =", "esperado": "5√3" }
+    ],
+    "pistas": ["Resta solo los coeficientes de los radicales semejantes."],
+    "explicacion": "7√3 − 2√3 = 5√3."
+  },
+  {
+    "id": "irracionales-operaciones-radicales-03",
+    "modulo": "irracionales",
+    "subtema": "operaciones-radicales",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Simplifica: 3√2 + 5√2 − √8 (simplifica √8 primero). Escribe el resultado en la forma a√b.",
+    "pasos": [
+      { "texto": "3√2 + 5√2 − √8 =", "esperado": "6√2" }
+    ],
+    "pistas": ["√8 = √(4×2) = 2√2. Sustituye antes de combinar."],
+    "explicacion": "3√2+5√2−2√2 = 6√2."
+  },
+  {
+    "id": "irracionales-operaciones-radicales-04",
+    "modulo": "irracionales",
+    "subtema": "operaciones-radicales",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Calcula: √2 × √8",
+    "respuesta": 4,
+    "pistas": ["√a × √b = √(a×b)."],
+    "explicacion": "√2×√8 = √16 = 4."
+  },
+  {
+    "id": "irracionales-operaciones-radicales-05",
+    "modulo": "irracionales",
+    "subtema": "operaciones-radicales",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Calcula: √3 × √12",
+    "respuesta": 6,
+    "pistas": ["√3 × √12 = √36."],
+    "explicacion": "√(3×12) = √36 = 6."
+  },
+  {
+    "id": "irracionales-operaciones-radicales-06",
+    "modulo": "irracionales",
+    "subtema": "operaciones-radicales",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Simplifica: 2√5 + √20 (simplifica √20 primero). Escribe el resultado en la forma a√b.",
+    "pasos": [
+      { "texto": "2√5 + √20 =", "esperado": "4√5" }
+    ],
+    "pistas": ["√20 = √(4×5) = 2√5."],
+    "explicacion": "2√5 + 2√5 = 4√5."
+  }
+]

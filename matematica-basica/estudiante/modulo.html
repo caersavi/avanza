@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avanza — Módulo</title>
+  <link rel="stylesheet" href="/assets/styles/tokens.css">
+  <link rel="stylesheet" href="estudiante.css">
+</head>
+<body>
+  <div class="migas"><a href="index.html">← Módulos</a></div>
+  <h1 id="titulo-modulo">Cargando…</h1>
+  <p>Elige un subtema para practicar.</p>
+
+  <ul class="lista-tarjetas" id="lista-subtemas"></ul>
+
+  <footer class="creditos">Hecho por Carlos Sánchez</footer>
+
+  <script type="module">
+    import { obtenerModulo, cargarTarjetasDeModulo, agruparPorSubtema, humanizar } from './util.js';
+    import { resumenSubtema } from './progreso.js';
+
+    const params = new URLSearchParams(location.search);
+    const idModulo = params.get('modulo');
+
+    async function render() {
+      if (!idModulo) throw new Error('Falta el parámetro ?modulo= en la URL.');
+
+      const modulo = await obtenerModulo(idModulo);
+      document.querySelector('#titulo-modulo').textContent = modulo.nombre;
+      document.title = `Avanza — ${modulo.nombre}`;
+
+      const tarjetas = await cargarTarjetasDeModulo(modulo);
+      const grupos = agruparPorSubtema(tarjetas);
+
+      const lista = document.querySelector('#lista-subtemas');
+      lista.innerHTML = '';
+
+      for (const [subtema, tarjetasDelSubtema] of grupos) {
+        const total = tarjetasDelSubtema.length;
+        const { tarjetasVistas, aciertos } = resumenSubtema(modulo.id, subtema);
+        const porcentaje = total > 0 ? Math.round((tarjetasVistas / total) * 100) : 0;
+        const precision = tarjetasVistas > 0 ? `${Math.round((aciertos / tarjetasVistas) * 100)}%` : '—';
+        const completado = total > 0 && tarjetasVistas >= total;
+        const colorBarra = completado ? 'var(--av-exito)' : 'var(--av-progreso)';
+
+        let badge = '';
+        if (completado) {
+          badge = '<span class="badge badge-completado">Completado</span>';
+        } else if (tarjetasVistas > 0) {
+          badge = '<span class="badge badge-progreso">En progreso</span>';
+        }
+
+        const li = document.createElement('li');
+        const enlace = document.createElement('a');
+        enlace.className = 'item-navegable';
+        enlace.href = `practica.html?modulo=${encodeURIComponent(modulo.id)}&subtema=${encodeURIComponent(subtema)}`;
+        enlace.innerHTML = `
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <h3>${humanizar(subtema)}</h3>
+            ${badge}
+          </div>
+          <div class="progreso-texto">
+            ${tarjetasVistas} de ${total} ejercicios vistos · Precisión: ${precision}
+          </div>
+          <div class="barra-progreso"><div style="width:${porcentaje}%; background:${colorBarra};"></div></div>
+        `;
+        li.appendChild(enlace);
+        lista.appendChild(li);
+      }
+    }
+
+    render().catch((err) => {
+      document.querySelector('#titulo-modulo').textContent = 'Error';
+      document.querySelector('#lista-subtemas').textContent = err.message;
+      console.error(err);
+    });
+  </script>
+</body>
+</html>

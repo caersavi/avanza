@@ -1,0 +1,47 @@
+[
+  {
+    "id": "racionales-porcentajes-01",
+    "modulo": "racionales",
+    "subtema": "porcentajes",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "¿Cuánto es el 20% de 60?",
+    "respuesta": 12,
+    "pistas": ["20% = 20/100 = 0,20. Multiplica por 60."],
+    "explicacion": "0,20 × 60 = 12."
+  },
+  {
+    "id": "racionales-porcentajes-02",
+    "modulo": "racionales",
+    "subtema": "porcentajes",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "¿De qué número es 14 el 20%?",
+    "respuesta": 70,
+    "pistas": ["Plantea 0,20 × x = 14 y despeja x."],
+    "explicacion": "x = 14 ÷ 0,20 = 70."
+  },
+  {
+    "id": "racionales-porcentajes-03",
+    "modulo": "racionales",
+    "subtema": "porcentajes",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "5 litros de aire contienen 1,07 litros de oxígeno. ¿Qué porcentaje del aire es oxígeno? (escribe solo el número, ej. 21.4 para 21,4%)",
+    "respuesta": 21.4,
+    "tolerancia": 0.1,
+    "pistas": ["Divide la cantidad entre el total y multiplica por 100."],
+    "explicacion": "1,07 ÷ 5 = 0,214 = 21,4%."
+  },
+  {
+    "id": "racionales-porcentajes-04",
+    "modulo": "racionales",
+    "subtema": "porcentajes",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Un artículo cuesta $80.000 y tiene un descuento del 15%. ¿Cuál es el precio final?",
+    "respuesta": 68000,
+    "pistas": ["Calcula primero el 15% de 80.000, y luego réstalo del precio original."],
+    "explicacion": "15% de 80.000 = 12.000. 80.000 − 12.000 = 68.000."
+  }
+]

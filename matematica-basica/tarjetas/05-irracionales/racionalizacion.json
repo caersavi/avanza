@@ -1,0 +1,54 @@
+[
+  {
+    "id": "irracionales-racionalizacion-01",
+    "modulo": "irracionales",
+    "subtema": "racionalizacion",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Racionaliza 1/√2. Escribe el resultado en la forma a/b (ej. √2/2).",
+    "pasos": [
+      { "texto": "1/√2 =", "esperado": "√2/2" }
+    ],
+    "pistas": ["Multiplica numerador y denominador por √2."],
+    "explicacion": "1/√2 × √2/√2 = √2/2."
+  },
+  {
+    "id": "irracionales-racionalizacion-02",
+    "modulo": "irracionales",
+    "subtema": "racionalizacion",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Racionaliza 1/√5. Escribe el resultado en la forma a/b.",
+    "pasos": [
+      { "texto": "1/√5 =", "esperado": "√5/5" }
+    ],
+    "pistas": ["Multiplica numerador y denominador por √5."],
+    "explicacion": "1/√5 × √5/√5 = √5/5."
+  },
+  {
+    "id": "irracionales-racionalizacion-03",
+    "modulo": "irracionales",
+    "subtema": "racionalizacion",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Racionaliza y simplifica 3/√3. Escribe el resultado (puede quedar solo la raíz, ej. √3).",
+    "pasos": [
+      { "texto": "3/√3 =", "esperado": "√3" }
+    ],
+    "pistas": ["Multiplica por √3/√3 y luego simplifica la fracción resultante."],
+    "explicacion": "3/√3 × √3/√3 = 3√3/3 = √3."
+  },
+  {
+    "id": "irracionales-racionalizacion-04",
+    "modulo": "irracionales",
+    "subtema": "racionalizacion",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Racionaliza 2/√8 (simplifica √8 primero). Escribe el resultado en la forma a/b.",
+    "pasos": [
+      { "texto": "2/√8 =", "esperado": "√2/2" }
+    ],
+    "pistas": ["√8 = 2√2, así que 2/√8 = 2/(2√2) = 1/√2."],
+    "explicacion": "2/(2√2) = 1/√2 = √2/2."
+  }
+]

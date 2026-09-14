@@ -1,0 +1,41 @@
+/* Tokens de diseño compartidos por el motor visual de Avanza.
+   Dirección visual: "Punto de partida" — cálida y alentadora, pensada para
+   estudiantes con bajo nivel matemático que pueden sentirse inseguros con
+   la materia. Los componentes en assets/core/ leen estas variables con
+   fallback, así que importar este archivo es opcional pero recomendado
+   para mantener consistencia visual entre módulos. */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Fondo y superficies */
+  --av-fondo: #FDF9F6;
+  --av-fondo-tarjeta: #ffffff;
+  --av-texto: #2E2033;
+  --av-linea: #6E5F73;
+  --av-borde: #F1E1D9;
+
+  /* Acento principal — llamadas a la acción, elementos interactivos */
+  --av-acento: #E8664B;
+  --av-acento-suave: #FBE3DD;
+
+  /* "En progreso" — distinto del acento para no confundir estado con acción */
+  --av-progreso: #E0A458;
+  --av-progreso-texto: #8A5A1E;
+  --av-progreso-suave: #FBEEDA;
+
+  /* Retroalimentación */
+  --av-exito: #4F9153;
+  --av-exito-suave: #E3F0E1;
+  --av-error: #C1503E;
+  --av-error-suave: #F5DAD3;
+  --av-aviso: var(--av-progreso);
+  --av-aviso-suave: var(--av-progreso-suave);
+
+  /* Tipografía: Bricolage Grotesque para títulos, Work Sans para el resto */
+  --av-fuente: 'Work Sans', system-ui, -apple-system, "Segoe UI", sans-serif;
+  --av-fuente-display: 'Bricolage Grotesque', var(--av-fuente);
+
+  /* Radios — personalidad suave/redondeada de esta dirección */
+  --av-radio: 18px;
+  --av-radio-control: 12px;
+}

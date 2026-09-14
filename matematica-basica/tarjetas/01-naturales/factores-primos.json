@@ -1,0 +1,57 @@
+[
+  {
+    "id": "naturales-factores-primos-01",
+    "modulo": "naturales",
+    "subtema": "descomposicion-factores-primos",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Descompón 60 en factores primos dividiendo sucesivamente por el menor primo posible.",
+    "pasos": [
+      { "texto": "60 ÷ 2 =", "esperado": "30" },
+      { "texto": "30 ÷ 2 =", "esperado": "15" },
+      { "texto": "15 ÷ 3 =", "esperado": "5" },
+      { "texto": "5 ÷ 5 =", "esperado": "1" }
+    ],
+    "pistas": ["Empieza probando si el número es divisible por 2; si no, prueba con 3, luego 5..."],
+    "explicacion": "60 = 2 × 2 × 3 × 5 = 2² × 3 × 5."
+  },
+  {
+    "id": "naturales-factores-primos-02",
+    "modulo": "naturales",
+    "subtema": "descomposicion-factores-primos",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "¿Cuál es el mayor factor primo de 84?",
+    "respuesta": 7,
+    "pistas": ["Descompón 84 en factores primos primero."],
+    "explicacion": "84 = 2² × 3 × 7. El mayor de esos factores primos es 7."
+  },
+  {
+    "id": "naturales-factores-primos-03",
+    "modulo": "naturales",
+    "subtema": "descomposicion-factores-primos",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Descompón 72 en factores primos dividiendo sucesivamente por el menor primo posible.",
+    "pasos": [
+      { "texto": "72 ÷ 2 =", "esperado": "36" },
+      { "texto": "36 ÷ 2 =", "esperado": "18" },
+      { "texto": "18 ÷ 2 =", "esperado": "9" },
+      { "texto": "9 ÷ 3 =", "esperado": "3" },
+      { "texto": "3 ÷ 3 =", "esperado": "1" }
+    ],
+    "pistas": ["72 sigue siendo divisible por 2 varias veces antes de pasar a 3."],
+    "explicacion": "72 = 2³ × 3²."
+  },
+  {
+    "id": "naturales-factores-primos-04",
+    "modulo": "naturales",
+    "subtema": "descomposicion-factores-primos",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "En la descomposición en factores primos de 96, ¿cuál es el exponente del 2?",
+    "respuesta": 5,
+    "pistas": ["96 = 2^? × 3. Divide 96 sucesivamente por 2 y cuenta cuántas veces lo logras."],
+    "explicacion": "96 = 2⁵ × 3 (32 × 3 = 96), así que el exponente del 2 es 5."
+  }
+]

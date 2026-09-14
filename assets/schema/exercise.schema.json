@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://avanza.local/schemas/exercise.schema.json",
+  "title": "Tarjeta de ejercicio — Avanza",
+  "description": "Contrato de datos que debe cumplir toda tarjeta consumida por el motor visual en assets/core/engine.js. Un archivo en matematica-basica/tarjetas/ contiene un objeto o un arreglo de objetos que cumplen este schema.",
+  "type": "object",
+  "required": ["id", "modulo", "subtema", "dificultad", "tipo", "enunciado"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Identificador único, kebab-case. Ej: irracionales-clasificar-01"
+    },
+    "modulo": {
+      "type": "string",
+      "enum": ["naturales", "enteros", "racionales", "irracionales", "reales"]
+    },
+    "subtema": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Subtema dentro del módulo. Ej: 'jerarquia-operaciones', 'mcd', 'densidad', 'intervalos'"
+    },
+    "dificultad": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "description": "1 = básico, 2 = intermedio, 3 = avanzado"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": ["numerico", "opcion-multiple", "verdadero-falso", "clasificar", "arrastrar-recta", "paso-a-paso"]
+    },
+    "enunciado": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Texto del enunciado. Admite LaTeX inline delimitado con $...$"
+    },
+    "recta": { "$ref": "#/$defs/recta" },
+    "opciones": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "$ref": "#/$defs/opcion" }
+    },
+    "categorias": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Solo para tipo 'clasificar': nombres de las categorías disponibles, ej. ['racional', 'irracional']"
+    },
+    "pasos": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/paso" }
+    },
+    "respuesta": {
+      "description": "Forma varía según 'tipo': número (numerico/arrastrar-recta), id de opción (opcion-multiple/verdadero-falso). No aplica para 'clasificar' (la respuesta vive en cada opción) ni 'paso-a-paso' (vive en cada paso)."
+    },
+    "tolerancia": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Margen de error aceptado para tipos numéricos/arrastrar-recta. Por defecto 0."
+    },
+    "pistas": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Pistas progresivas; se muestran en orden, una por cada clic en 'Pista'."
+    },
+    "explicacion": {
+      "type": "string",
+      "description": "Explicación mostrada al responder correctamente (el 'por qué')."
+    },
+    "metadata": { "$ref": "#/$defs/metadata" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "tipo": { "const": "numerico" } } },
+      "then": {
+        "required": ["respuesta"],
+        "properties": { "respuesta": { "type": "number" } }
+      }
+    },
+    {
+      "if": { "properties": { "tipo": { "const": "arrastrar-recta" } } },
+      "then": {
+        "required": ["recta", "respuesta"],
+        "properties": { "respuesta": { "type": "number" } }
+      }
+    },
+    {
+      "if": {
+        "properties": { "tipo": { "enum": ["opcion-multiple", "verdadero-falso"] } }
+      },
+      "then": {
+        "required": ["opciones", "respuesta"],
+        "properties": { "respuesta": { "type": "string" } }
+      }
+    },
+    {
+      "if": { "properties": { "tipo": { "const": "clasificar" } } },
+      "then": { "required": ["opciones", "categorias"] }
+    },
+    {
+      "if": { "properties": { "tipo": { "const": "paso-a-paso" } } },
+      "then": { "required": ["pasos"] }
+    }
+  ],
+  "$defs": {
+    "recta": {
+      "type": "object",
+      "required": ["min", "max"],
+      "properties": {
+        "min": { "type": "number" },
+        "max": { "type": "number" },
+        "paso": { "type": "number", "default": 1, "description": "Precisión del clic/arrastre (a qué valor se engancha la selección)" },
+        "marcaCada": { "type": "number", "description": "Cada cuánto se dibuja una marca numerada en la recta. Opcional — si no se indica, usa el valor de 'paso'. Útil para permitir precisión fina (paso pequeño) sin saturar la recta de números (ej. paso=0.1 para ubicar √2, marcaCada=0.5 para no dibujar 30 marcas)." },
+        "puntosFijos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["valor"],
+            "properties": {
+              "valor": { "type": "number" },
+              "etiqueta": { "type": "string" },
+              "color": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "opcion": {
+      "type": "object",
+      "required": ["id", "texto"],
+      "properties": {
+        "id": { "type": "string" },
+        "texto": { "type": "string" },
+        "valor": {
+          "description": "Solo para tipo 'clasificar': el valor a clasificar (ej. '√7')"
+        },
+        "categoria": {
+          "type": "string",
+          "description": "Solo para tipo 'clasificar': la categoría correcta de este valor"
+        }
+      }
+    },
+    "paso": {
+      "type": "object",
+      "required": ["texto", "esperado"],
+      "properties": {
+        "texto": { "type": "string", "description": "Enunciado parcial antes del espacio en blanco" },
+        "esperado": { "description": "Valor esperado en ese paso (string o number)" }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "autor": { "type": "string" },
+        "fecha": { "type": "string", "format": "date" },
+        "fuente": {
+          "type": "string",
+          "description": "'original' o referencia al libro, ej. 'libro p.210'"
+        }
+      }
+    }
+  }
+}

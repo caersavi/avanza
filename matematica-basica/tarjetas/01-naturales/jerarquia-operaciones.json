@@ -1,0 +1,61 @@
+[
+  {
+    "id": "naturales-jerarquia-01",
+    "modulo": "naturales",
+    "subtema": "jerarquia-operaciones",
+    "dificultad": 1,
+    "tipo": "verdadero-falso",
+    "enunciado": "3 + 4 × 2 es igual a (3 + 4) × 2.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["Sin paréntesis, la multiplicación se hace antes que la suma."],
+    "explicacion": "3+4×2 = 3+8 = 11, pero (3+4)×2 = 7×2 = 14. Son distintos."
+  },
+  {
+    "id": "naturales-jerarquia-02",
+    "modulo": "naturales",
+    "subtema": "jerarquia-operaciones",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Calcula: 8 + 2 × 5 − 3²",
+    "respuesta": 9,
+    "pistas": ["Primero la potencia, luego la multiplicación, y al final suma y resta de izquierda a derecha."],
+    "explicacion": "3²=9; 2×5=10; 8+10−9=9."
+  },
+  {
+    "id": "naturales-jerarquia-03",
+    "modulo": "naturales",
+    "subtema": "jerarquia-operaciones",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Calcula: (14 − 4) ÷ 2 + 3 × 2",
+    "respuesta": 11,
+    "pistas": ["Resuelve primero el paréntesis."],
+    "explicacion": "(14−4)=10; 10÷2=5; 3×2=6; 5+6=11."
+  },
+  {
+    "id": "naturales-jerarquia-04",
+    "modulo": "naturales",
+    "subtema": "jerarquia-operaciones",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Compraste 3 paquetes de 12 lápices y repartiste 10 entre tus amigos. Luego compraste 2 paquetes más de 6 lápices. ¿Cuántos lápices tienes ahora?",
+    "respuesta": 38,
+    "pistas": ["Traduce el problema a una expresión: (3×12 − 10) + 2×6, y respeta la jerarquía de operaciones."],
+    "explicacion": "3×12=36; 36−10=26; 2×6=12; 26+12=38."
+  },
+  {
+    "id": "naturales-jerarquia-05",
+    "modulo": "naturales",
+    "subtema": "jerarquia-operaciones",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Calcula MCD(48, 18) + mcm(4, 6).",
+    "respuesta": 18,
+    "pistas": ["Calcula cada resultado por separado antes de sumar.", "MCD(48,18): 48=2⁴×3, 18=2×3². mcm(4,6): 4=2², 6=2×3."],
+    "explicacion": "MCD(48,18)=2×3=6. mcm(4,6)=2²×3=12. 6+12=18."
+  }
+]

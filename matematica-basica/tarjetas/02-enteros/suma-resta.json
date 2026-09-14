@@ -1,0 +1,72 @@
+[
+  {
+    "id": "enteros-suma-resta-01",
+    "modulo": "enteros",
+    "subtema": "suma-resta",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Calcula: (−8) + 3",
+    "respuesta": -5,
+    "pistas": ["Con signos distintos, resta el menor valor absoluto del mayor y usa el signo del que tiene mayor valor absoluto."],
+    "explicacion": "|−8|=8, |3|=3; 8−3=5, y como −8 tiene mayor valor absoluto, el resultado es −5."
+  },
+  {
+    "id": "enteros-suma-resta-02",
+    "modulo": "enteros",
+    "subtema": "suma-resta",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Calcula: (−15) + (−6)",
+    "respuesta": -21,
+    "pistas": ["Con el mismo signo, se suman los valores absolutos y se conserva el signo."],
+    "explicacion": "Ambos son negativos: se suman los valores absolutos (15+6=21) y el resultado queda negativo: −21."
+  },
+  {
+    "id": "enteros-suma-resta-03",
+    "modulo": "enteros",
+    "subtema": "suma-resta",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Calcula: 12 − 20",
+    "respuesta": -8,
+    "pistas": ["Recuerda: a − b = a + (−b)."],
+    "explicacion": "12 − 20 = 12 + (−20) = −8."
+  },
+  {
+    "id": "enteros-suma-resta-04",
+    "modulo": "enteros",
+    "subtema": "suma-resta",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Calcula: (−9) − (−4)",
+    "respuesta": -5,
+    "pistas": ["Restar un negativo equivale a sumar su opuesto positivo."],
+    "explicacion": "(−9) − (−4) = (−9) + 4 = −5."
+  },
+  {
+    "id": "enteros-suma-resta-05",
+    "modulo": "enteros",
+    "subtema": "suma-resta",
+    "dificultad": 1,
+    "tipo": "verdadero-falso",
+    "enunciado": "7 − 12 y 12 − 7 dan el mismo resultado.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["A diferencia de la suma, en la resta el orden sí importa."],
+    "explicacion": "7−12=−5, pero 12−7=5. Son opuestos, no iguales."
+  },
+  {
+    "id": "enteros-suma-resta-06",
+    "modulo": "enteros",
+    "subtema": "suma-resta",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "La temperatura era de 15°C y bajó 22°C durante la noche. ¿Cuál es la temperatura final?",
+    "respuesta": -7,
+    "pistas": ["Bajar la temperatura es restar."],
+    "explicacion": "15 − 22 = −7°C."
+  }
+]

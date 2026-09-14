@@ -1,0 +1,51 @@
+[
+  {
+    "id": "reales-aplicacion-combinada-01",
+    "modulo": "reales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Usa la propiedad distributiva para calcular 7 × (20 + 3) sin multiplicar 7×23 directamente. ¿Cuál es el resultado?",
+    "respuesta": 161,
+    "pistas": ["7×(20+3) = 7×20 + 7×3."],
+    "explicacion": "7×20=140, 7×3=21, 140+21=161."
+  },
+  {
+    "id": "reales-aplicacion-combinada-02",
+    "modulo": "reales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Calcula (3 × 10²) × (2 × 10³) y exprésalo en notación estándar.",
+    "respuesta": 600000,
+    "pistas": ["Multiplica los factores 'a' entre sí y suma los exponentes de las potencias de 10."],
+    "explicacion": "(3×2) × 10^(2+3) = 6 × 10⁵ = 600.000."
+  },
+  {
+    "id": "reales-aplicacion-combinada-03",
+    "modulo": "reales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Cuál es mayor: 2¹⁰ o 10³?",
+    "opciones": [
+      { "id": "a", "texto": "2¹⁰" },
+      { "id": "b", "texto": "10³" },
+      { "id": "c", "texto": "Son iguales" }
+    ],
+    "respuesta": "a",
+    "pistas": ["Calcula ambos valores por separado."],
+    "explicacion": "2¹⁰=1024 y 10³=1000. 1024 > 1000, así que 2¹⁰ es mayor."
+  },
+  {
+    "id": "reales-aplicacion-combinada-04",
+    "modulo": "reales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Un virus mide 3 × 10⁻⁷ metros. Si se alinean 100 virus uno tras otro, ¿cuántos metros mide la fila? (en notación estándar)",
+    "respuesta": 0.00003,
+    "pistas": ["100 = 10². Multiplica las potencias de 10 sumando exponentes."],
+    "explicacion": "3×10⁻⁷ × 10² = 3×10⁻⁵ = 0,00003 metros."
+  }
+]

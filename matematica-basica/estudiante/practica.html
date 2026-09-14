@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avanza — Práctica</title>
+  <link rel="stylesheet" href="/assets/styles/tokens.css">
+  <link rel="stylesheet" href="estudiante.css">
+</head>
+<body>
+  <div class="migas">
+    <a href="index.html">Módulos</a> ·
+    <a id="enlace-modulo" href="#">Módulo</a>
+  </div>
+  <h1 id="titulo-subtema">Cargando…</h1>
+  <div class="progreso-texto" id="contador">—</div>
+
+  <div id="contenedor-tarjeta" style="margin-top:16px;"></div>
+
+  <div class="pie-practica" id="pie-practica" hidden>
+    <button id="btn-anterior">← Anterior</button>
+    <button id="btn-siguiente" class="primario">Siguiente →</button>
+  </div>
+
+  <div id="resumen" hidden>
+    <h2>¡Terminaste esta parte!</h2>
+    <p id="texto-resumen"></p>
+    <div class="resumen-acciones">
+      <button id="btn-repetir">Repetir subtema</button>
+      <a id="enlace-volver-modulo" href="#">Volver al módulo</a>
+    </div>
+  </div>
+
+  <footer class="creditos">Hecho por Carlos Sánchez</footer>
+
+  <script type="module">
+    import { montarTarjeta } from '/assets/core/engine.js';
+    import { obtenerModulo, cargarTarjetasDeModulo, agruparPorSubtema, humanizar } from './util.js';
+    import { registrarResultado, resumenSubtema } from './progreso.js';
+
+    const params = new URLSearchParams(location.search);
+    const idModulo = params.get('modulo');
+    const subtema = params.get('subtema');
+
+    const contenedorTarjeta = document.querySelector('#contenedor-tarjeta');
+    const pie = document.querySelector('#pie-practica');
+    const resumenEl = document.querySelector('#resumen');
+    const btnAnterior = document.querySelector('#btn-anterior');
+    const btnSiguiente = document.querySelector('#btn-siguiente');
+    const btnRepetir = document.querySelector('#btn-repetir');
+
+    let tarjetas = [];
+    let indice = 0;
+
+    function mostrarTarjeta() {
+      resumenEl.hidden = true;
+      pie.hidden = false;
+      contenedorTarjeta.hidden = false;
+
+      document.querySelector('#contador').textContent = `Tarjeta ${indice + 1} de ${tarjetas.length}`;
+      btnAnterior.disabled = indice === 0;
+      btnSiguiente.textContent = indice === tarjetas.length - 1 ? 'Terminar' : 'Siguiente →';
+
+      montarTarjeta(contenedorTarjeta, tarjetas[indice]);
+    }
+
+    function mostrarResumen() {
+      contenedorTarjeta.hidden = true;
+      pie.hidden = true;
+      resumenEl.hidden = false;
+
+      const { aciertos, intentos } = resumenSubtema(idModulo, subtema);
+      document.querySelector('#texto-resumen').textContent =
+        intentos > 0
+          ? `Respondiste correctamente ${aciertos} de ${intentos} intentos en este subtema.`
+          : 'No se registraron intentos.';
+    }
+
+    contenedorTarjeta.addEventListener('av-tarjeta-evaluada', (e) => {
+      registrarResultado(idModulo, subtema, e.detail.id, e.detail.correcta);
+    });
+
+    btnSiguiente.addEventListener('click', () => {
+      if (indice < tarjetas.length - 1) {
+        indice += 1;
+        mostrarTarjeta();
+      } else {
+        mostrarResumen();
+      }
+    });
+
+    btnAnterior.addEventListener('click', () => {
+      if (indice > 0) {
+        indice -= 1;
+        mostrarTarjeta();
+      }
+    });
+
+    btnRepetir.addEventListener('click', () => {
+      indice = 0;
+      mostrarTarjeta();
+    });
+
+    async function iniciar() {
+      if (!idModulo || !subtema) {
+        throw new Error('Faltan parámetros ?modulo= y ?subtema= en la URL.');
+      }
+
+      const modulo = await obtenerModulo(idModulo);
+      document.querySelector('#enlace-modulo').textContent = modulo.nombre;
+      document.querySelector('#enlace-modulo').href = `modulo.html?modulo=${encodeURIComponent(idModulo)}`;
+      document.querySelector('#enlace-volver-modulo').href = `modulo.html?modulo=${encodeURIComponent(idModulo)}`;
+
+      const todasLasTarjetas = await cargarTarjetasDeModulo(modulo);
+      const grupos = agruparPorSubtema(todasLasTarjetas);
+      tarjetas = grupos.get(subtema) ?? [];
+
+      document.querySelector('#titulo-subtema').textContent = humanizar(subtema);
+      document.title = `Avanza — ${humanizar(subtema)}`;
+
+      if (tarjetas.length === 0) {
+        document.querySelector('#contador').textContent = 'Todavía no hay ejercicios en este subtema.';
+        return;
+      }
+
+      mostrarTarjeta();
+    }
+
+    iniciar().catch((err) => {
+      document.querySelector('#titulo-subtema').textContent = 'Error';
+      document.querySelector('#contador').textContent = err.message;
+      console.error(err);
+    });
+  </script>
+</body>
+</html>

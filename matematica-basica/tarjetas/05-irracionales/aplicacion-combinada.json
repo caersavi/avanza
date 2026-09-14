@@ -1,0 +1,56 @@
+[
+  {
+    "id": "irracionales-aplicacion-combinada-01",
+    "modulo": "irracionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "El área de un cuadrado es 50 cm². ¿Cuánto mide su lado? Escribe el resultado simplificado en la forma a√b.",
+    "pasos": [
+      { "texto": "lado = √50 =", "esperado": "5√2" }
+    ],
+    "pistas": ["El lado de un cuadrado de área A mide √A.", "50 = 25 × 2."],
+    "explicacion": "√50 = √(25×2) = 5√2 cm."
+  },
+  {
+    "id": "irracionales-aplicacion-combinada-02",
+    "modulo": "irracionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "verdadero-falso",
+    "enunciado": "√2 + √8 = √10",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["Simplifica √8 primero y luego suma con √2. Compara con calcular √10 directamente."],
+    "explicacion": "√8=2√2, así que √2+√8=3√2≈4,24. Pero √10≈3,16. No son iguales: la raíz de una suma no es la suma de las raíces."
+  },
+  {
+    "id": "irracionales-aplicacion-combinada-03",
+    "modulo": "irracionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Un triángulo rectángulo tiene catetos de longitud 1 y 1. ¿Cuánto mide la hipotenusa? Escribe el resultado en la forma √b.",
+    "pasos": [
+      { "texto": "hipotenusa = √(1²+1²) =", "esperado": "√2" }
+    ],
+    "pistas": ["Usa el Teorema de Pitágoras: hipotenusa² = cateto₁² + cateto₂²."],
+    "explicacion": "1²+1²=2, así que la hipotenusa mide √2."
+  },
+  {
+    "id": "irracionales-aplicacion-combinada-04",
+    "modulo": "irracionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Racionaliza y simplifica 4/√2. Escribe el resultado en la forma a√b.",
+    "pasos": [
+      { "texto": "4/√2 =", "esperado": "2√2" }
+    ],
+    "pistas": ["Multiplica por √2/√2 y simplifica la fracción resultante."],
+    "explicacion": "4/√2 × √2/√2 = 4√2/2 = 2√2."
+  }
+]

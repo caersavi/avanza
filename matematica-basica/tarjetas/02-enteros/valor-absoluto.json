@@ -1,0 +1,50 @@
+[
+  {
+    "id": "enteros-valor-absoluto-01",
+    "modulo": "enteros",
+    "subtema": "valor-absoluto",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Calcula: |−9|",
+    "respuesta": 9,
+    "pistas": ["El valor absoluto es la distancia a 0, siempre positiva o cero."],
+    "explicacion": "|−9| = 9."
+  },
+  {
+    "id": "enteros-valor-absoluto-02",
+    "modulo": "enteros",
+    "subtema": "valor-absoluto",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Calcula: |7|",
+    "respuesta": 7,
+    "pistas": ["Si el número ya es positivo, su valor absoluto es él mismo."],
+    "explicacion": "|7| = 7."
+  },
+  {
+    "id": "enteros-valor-absoluto-03",
+    "modulo": "enteros",
+    "subtema": "valor-absoluto",
+    "dificultad": 2,
+    "tipo": "verdadero-falso",
+    "enunciado": "|−5| = |5|",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "v",
+    "pistas": ["−5 y 5 son opuestos: están a la misma distancia de 0."],
+    "explicacion": "Ambos valen 5. Dos números opuestos siempre comparten el mismo valor absoluto."
+  },
+  {
+    "id": "enteros-valor-absoluto-04",
+    "modulo": "enteros",
+    "subtema": "valor-absoluto",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Calcula: |−12| − |4|",
+    "respuesta": 8,
+    "pistas": ["Primero resuelve cada valor absoluto por separado, luego resta."],
+    "explicacion": "|−12|=12, |4|=4; 12−4=8."
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "id": "racionales-propia-impropia-mixta-01",
+    "modulo": "racionales",
+    "subtema": "propia-impropia-mixta",
+    "dificultad": 1,
+    "tipo": "clasificar",
+    "enunciado": "Clasifica cada fracción como propia o impropia.",
+    "categorias": ["propia", "impropia"],
+    "opciones": [
+      { "valor": "3/4", "categoria": "propia" },
+      { "valor": "7/4", "categoria": "impropia" },
+      { "valor": "5/3", "categoria": "impropia" },
+      { "valor": "2/9", "categoria": "propia" }
+    ],
+    "pistas": ["Propia: numerador menor que denominador. Impropia: numerador mayor o igual."],
+    "explicacion": "3/4 y 2/9 tienen numerador menor (propias). 7/4 y 5/3 tienen numerador mayor o igual (impropias)."
+  },
+  {
+    "id": "racionales-propia-impropia-mixta-02",
+    "modulo": "racionales",
+    "subtema": "propia-impropia-mixta",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Convierte 7/4 a número mixto. Escríbelo como 'entero fracción', por ejemplo '1 3/4'.",
+    "pasos": [
+      { "texto": "7/4 =", "esperado": "1 3/4" }
+    ],
+    "pistas": ["Divide 7 entre 4: el cociente es la parte entera y el residuo va sobre 4."],
+    "explicacion": "7÷4 = 1 residuo 3, así que 7/4 = 1 3/4."
+  },
+  {
+    "id": "racionales-propia-impropia-mixta-03",
+    "modulo": "racionales",
+    "subtema": "propia-impropia-mixta",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Convierte el número mixto 2 1/3 a fracción impropia. Escribe el resultado en la forma a/b.",
+    "pasos": [
+      { "texto": "2 1/3 =", "esperado": "7/3" }
+    ],
+    "pistas": ["Multiplica el entero por el denominador y suma el numerador: (2×3)+1."],
+    "explicacion": "(2×3)+1=7, así que 2 1/3 = 7/3."
+  }
+]

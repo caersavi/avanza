@@ -1,0 +1,94 @@
+[
+  {
+    "id": "irracionales-clasificacion-01",
+    "modulo": "irracionales",
+    "subtema": "clasificacion-racional-irracional",
+    "dificultad": 1,
+    "tipo": "clasificar",
+    "enunciado": "Clasifica cada número como racional o irracional.",
+    "categorias": ["racional", "irracional"],
+    "opciones": [
+      { "valor": "√4", "categoria": "racional" },
+      { "valor": "√7", "categoria": "irracional" },
+      { "valor": "0.5", "categoria": "racional" },
+      { "valor": "π", "categoria": "irracional" }
+    ],
+    "pistas": ["√4 = 2, un número entero. 7 no es cuadrado perfecto."],
+    "explicacion": "√4=2 y 0,5 se escriben como fracción (racionales). √7 y π tienen decimal infinito no periódico (irracionales)."
+  },
+  {
+    "id": "irracionales-clasificacion-02",
+    "modulo": "irracionales",
+    "subtema": "clasificacion-racional-irracional",
+    "dificultad": 1,
+    "tipo": "verdadero-falso",
+    "enunciado": "√9 es un número irracional.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["Calcula √9 primero."],
+    "explicacion": "√9 = 3, que se escribe como fracción 3/1: es racional, no irracional."
+  },
+  {
+    "id": "irracionales-clasificacion-03",
+    "modulo": "irracionales",
+    "subtema": "clasificacion-racional-irracional",
+    "dificultad": 2,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Cuál de los siguientes números es irracional?",
+    "opciones": [
+      { "id": "a", "texto": "4/5" },
+      { "id": "b", "texto": "√16" },
+      { "id": "c", "texto": "0,25" },
+      { "id": "d", "texto": "√10" }
+    ],
+    "respuesta": "d",
+    "pistas": ["√16 es una raíz exacta. ¿10 es cuadrado perfecto?"],
+    "explicacion": "√16=4 es racional. 10 no es cuadrado perfecto, así que √10 es irracional."
+  },
+  {
+    "id": "irracionales-clasificacion-04",
+    "modulo": "irracionales",
+    "subtema": "clasificacion-racional-irracional",
+    "dificultad": 2,
+    "tipo": "verdadero-falso",
+    "enunciado": "Todo número decimal con muchas cifras decimales es irracional.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["Piensa en 1/7 = 0,142857142857... — tiene muchas cifras, pero se repite."],
+    "explicacion": "Un decimal periódico (aunque tenga muchas cifras) sigue siendo racional. Lo que define a un irracional es no ser periódico."
+  },
+  {
+    "id": "irracionales-clasificacion-05",
+    "modulo": "irracionales",
+    "subtema": "clasificacion-racional-irracional",
+    "dificultad": 3,
+    "tipo": "clasificar",
+    "enunciado": "Clasifica cada número como racional o irracional (cuidado: dos de ellos parecen tener un patrón, pero solo uno se repite periódicamente).",
+    "categorias": ["racional", "irracional"],
+    "opciones": [
+      { "valor": "0,1010010001...", "categoria": "irracional" },
+      { "valor": "0,454545...", "categoria": "racional" },
+      { "valor": "√21", "categoria": "irracional" },
+      { "valor": "√25", "categoria": "racional" }
+    ],
+    "pistas": ["0,454545... se repite (periodo 45): es periódico. 0,1010010001... nunca repite el mismo bloque."],
+    "explicacion": "0,454545...=5/11 es periódico (racional). 0,1010010001... no tiene periodo (irracional). √21 no es cuadrado perfecto (irracional). √25=5 (racional)."
+  },
+  {
+    "id": "irracionales-clasificacion-06",
+    "modulo": "irracionales",
+    "subtema": "clasificacion-racional-irracional",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "¿Cuántos de estos números son irracionales: √2, √9, π, 3/7, √15?",
+    "respuesta": 3,
+    "pistas": ["Revisa cada uno: ¿es raíz exacta, fracción, o decimal infinito no periódico?"],
+    "explicacion": "√2, π y √15 son irracionales. √9=3 y 3/7 son racionales. En total, 3 irracionales."
+  }
+]

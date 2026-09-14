@@ -1,0 +1,46 @@
+[
+  {
+    "id": "enteros-operaciones-combinadas-01",
+    "modulo": "enteros",
+    "subtema": "operaciones-combinadas",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Calcula: (−3)(5) − (−7) + 2²",
+    "respuesta": -4,
+    "pistas": ["Primero la potencia y la multiplicación, luego suma y resta de izquierda a derecha."],
+    "explicacion": "(−3)(5)=−15; 2²=4; −15 −(−7) +4 = −15+7+4 = −4."
+  },
+  {
+    "id": "enteros-operaciones-combinadas-02",
+    "modulo": "enteros",
+    "subtema": "operaciones-combinadas",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Un submarino está a −120 metros. Sube 45 metros y luego baja 30 metros. ¿A qué profundidad queda?",
+    "respuesta": -105,
+    "pistas": ["Subir es sumar, bajar es restar."],
+    "explicacion": "−120 + 45 − 30 = −105 metros."
+  },
+  {
+    "id": "enteros-operaciones-combinadas-03",
+    "modulo": "enteros",
+    "subtema": "operaciones-combinadas",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Calcula: |−8 + 3| − |−2|",
+    "respuesta": 3,
+    "pistas": ["Resuelve primero lo que está dentro de cada valor absoluto."],
+    "explicacion": "−8+3=−5, así que |−5|=5. |−2|=2. 5−2=3."
+  },
+  {
+    "id": "enteros-operaciones-combinadas-04",
+    "modulo": "enteros",
+    "subtema": "operaciones-combinadas",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Una cuenta bancaria tiene un saldo de −$50 000. Si la deuda se triplica y luego se abonan $60 000, ¿cuál es el saldo final?",
+    "respuesta": -90000,
+    "pistas": ["Triplicar la deuda es multiplicar por 3; abonar es sumar."],
+    "explicacion": "(−50 000)×3 = −150 000; −150 000 + 60 000 = −90 000."
+  }
+]

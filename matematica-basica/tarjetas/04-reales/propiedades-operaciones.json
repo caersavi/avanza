@@ -1,0 +1,79 @@
+[
+  {
+    "id": "reales-propiedades-01",
+    "modulo": "reales",
+    "subtema": "propiedades-operaciones",
+    "dificultad": 1,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Qué propiedad se ilustra en (−9) + 8 = 8 + (−9)?",
+    "opciones": [
+      { "id": "a", "texto": "Conmutativa de la suma" },
+      { "id": "b", "texto": "Asociativa de la suma" },
+      { "id": "c", "texto": "Distributiva" },
+      { "id": "d", "texto": "Conmutativa del producto" }
+    ],
+    "respuesta": "a",
+    "pistas": ["El orden de los sumandos cambió, pero el resultado no."],
+    "explicacion": "Cambiar el orden de una suma sin alterar el resultado es la propiedad conmutativa de la suma."
+  },
+  {
+    "id": "reales-propiedades-02",
+    "modulo": "reales",
+    "subtema": "propiedades-operaciones",
+    "dificultad": 1,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Qué propiedad se ilustra en 5 × (4 + 3) = 5×4 + 5×3?",
+    "opciones": [
+      { "id": "a", "texto": "Conmutativa" },
+      { "id": "b", "texto": "Asociativa" },
+      { "id": "c", "texto": "Distributiva" },
+      { "id": "d", "texto": "Invertiva" }
+    ],
+    "respuesta": "c",
+    "pistas": ["Un factor se reparte sobre una suma."],
+    "explicacion": "Multiplicar un número por una suma repartiendo el producto es la propiedad distributiva."
+  },
+  {
+    "id": "reales-propiedades-03",
+    "modulo": "reales",
+    "subtema": "propiedades-operaciones",
+    "dificultad": 2,
+    "tipo": "verdadero-falso",
+    "enunciado": "La resta es conmutativa: a − b = b − a para todo real.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["Prueba con un ejemplo concreto: ¿5−3 es igual a 3−5?"],
+    "explicacion": "5−3=2 pero 3−5=−2. La resta no es conmutativa (solo la suma y la multiplicación lo son)."
+  },
+  {
+    "id": "reales-propiedades-04",
+    "modulo": "reales",
+    "subtema": "propiedades-operaciones",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Según la propiedad distributiva, 6×(10+2) = 6×10 + 6×?. ¿Cuál es el número que falta?",
+    "respuesta": 2,
+    "pistas": ["El factor 6 se reparte sobre cada término de la suma original."],
+    "explicacion": "El segundo término dentro del paréntesis es 2, así que 6×(10+2) = 6×10 + 6×2."
+  },
+  {
+    "id": "reales-propiedades-05",
+    "modulo": "reales",
+    "subtema": "propiedades-operaciones",
+    "dificultad": 2,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Cuál es el inverso multiplicativo de 5?",
+    "opciones": [
+      { "id": "a", "texto": "−5" },
+      { "id": "b", "texto": "1/5" },
+      { "id": "c", "texto": "0" },
+      { "id": "d", "texto": "5" }
+    ],
+    "respuesta": "b",
+    "pistas": ["El inverso multiplicativo de a es el número que, multiplicado por a, da 1."],
+    "explicacion": "5 × 1/5 = 1, así que el inverso multiplicativo de 5 es 1/5."
+  }
+]

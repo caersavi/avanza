@@ -1,0 +1,83 @@
+[
+  {
+    "id": "reales-comparacion-01",
+    "modulo": "reales",
+    "subtema": "comparacion",
+    "dificultad": 1,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Cuál de las siguientes comparaciones es verdadera?",
+    "opciones": [
+      { "id": "a", "texto": "−2 < 9" },
+      { "id": "b", "texto": "9 < −2" },
+      { "id": "c", "texto": "−2 > 9" },
+      { "id": "d", "texto": "−2 = 9" }
+    ],
+    "respuesta": "a",
+    "pistas": ["En la recta numérica, −2 está a la izquierda de 9."],
+    "explicacion": "−2 está a la izquierda de 9 en la recta, así que −2 < 9."
+  },
+  {
+    "id": "reales-comparacion-02",
+    "modulo": "reales",
+    "subtema": "comparacion",
+    "dificultad": 1,
+    "tipo": "verdadero-falso",
+    "enunciado": "−7 está a la derecha de −3 en la recta numérica.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["Entre más negativo es un número, más a la izquierda está."],
+    "explicacion": "−7 es menor que −3, así que −7 está a la izquierda (no a la derecha) de −3."
+  },
+  {
+    "id": "reales-comparacion-03",
+    "modulo": "reales",
+    "subtema": "comparacion",
+    "dificultad": 2,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Cuál es mayor, 1/2 o 2/3?",
+    "opciones": [
+      { "id": "a", "texto": "1/2" },
+      { "id": "b", "texto": "2/3" },
+      { "id": "c", "texto": "Son iguales" }
+    ],
+    "respuesta": "b",
+    "pistas": ["Amplifica a un común denominador (6) y compara los numeradores, o convierte ambas a decimal."],
+    "explicacion": "1/2=0,5 y 2/3=0,666..., así que 2/3 es mayor."
+  },
+  {
+    "id": "reales-comparacion-04",
+    "modulo": "reales",
+    "subtema": "comparacion",
+    "dificultad": 2,
+    "tipo": "opcion-multiple",
+    "enunciado": "Ordena de menor a mayor: 2/5, 0,5 y 3/4.",
+    "opciones": [
+      { "id": "a", "texto": "2/5 < 0,5 < 3/4" },
+      { "id": "b", "texto": "0,5 < 2/5 < 3/4" },
+      { "id": "c", "texto": "3/4 < 0,5 < 2/5" },
+      { "id": "d", "texto": "2/5 < 3/4 < 0,5" }
+    ],
+    "respuesta": "a",
+    "pistas": ["Convierte todo a decimal: 2/5=0,4 y 3/4=0,75."],
+    "explicacion": "2/5=0,4; 0,5; 3/4=0,75. En orden: 0,4 < 0,5 < 0,75."
+  },
+  {
+    "id": "reales-comparacion-05",
+    "modulo": "reales",
+    "subtema": "comparacion",
+    "dificultad": 2,
+    "tipo": "opcion-multiple",
+    "enunciado": "Un termómetro marca −5°C y otro marca −8°C. ¿Cuál temperatura es mayor?",
+    "opciones": [
+      { "id": "a", "texto": "−5°C" },
+      { "id": "b", "texto": "−8°C" },
+      { "id": "c", "texto": "Son iguales" }
+    ],
+    "respuesta": "a",
+    "pistas": ["Entre dos negativos, es mayor el que está más cerca de 0."],
+    "explicacion": "−5 está a la derecha de −8 en la recta numérica, así que −5°C es la temperatura mayor (menos fría)."
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "modulos": [
+    {
+      "id": "naturales",
+      "nombre": "Naturales",
+      "carpeta": "01-naturales",
+      "archivos": [
+        "divisibilidad.json",
+        "primos.json",
+        "factores-primos.json",
+        "mcd.json",
+        "mcm.json",
+        "jerarquia-operaciones.json"
+      ]
+    },
+    {
+      "id": "enteros",
+      "nombre": "Enteros",
+      "carpeta": "02-enteros",
+      "archivos": [
+        "suma-resta.json",
+        "multiplicacion-division.json",
+        "valor-absoluto.json",
+        "potenciacion.json",
+        "operaciones-combinadas.json"
+      ]
+    },
+    {
+      "id": "racionales",
+      "nombre": "Racionales",
+      "carpeta": "03-racionales",
+      "archivos": [
+        "equivalencia-simplificacion.json",
+        "suma-resta.json",
+        "multiplicacion-division.json",
+        "propia-impropia-mixta.json",
+        "conversion-decimal.json",
+        "porcentajes.json",
+        "aplicacion-combinada.json"
+      ]
+    },
+    {
+      "id": "reales",
+      "nombre": "Reales",
+      "carpeta": "04-reales",
+      "archivos": [
+        "propiedades-operaciones.json",
+        "comparacion.json",
+        "potenciacion-exponentes.json",
+        "notacion-cientifica.json",
+        "aplicacion-combinada.json"
+      ]
+    },
+    {
+      "id": "irracionales",
+      "nombre": "Irracionales",
+      "carpeta": "05-irracionales",
+      "archivos": [
+        "clasificacion.json",
+        "ubicacion-recta.json",
+        "operaciones-radicales.json",
+        "racionalizacion.json",
+        "aplicacion-combinada.json"
+      ]
+    }
+  ]
+}

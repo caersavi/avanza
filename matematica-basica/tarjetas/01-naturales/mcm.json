@@ -1,0 +1,35 @@
+[
+  {
+    "id": "naturales-mcm-01",
+    "modulo": "naturales",
+    "subtema": "mcm",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Usando factorización, halla el mcm(8, 12).",
+    "respuesta": 24,
+    "pistas": ["8 = 2³, 12 = 2² × 3. Toma todos los factores primos con el mayor exponente."],
+    "explicacion": "mcm(8,12) = 2³ × 3 = 24."
+  },
+  {
+    "id": "naturales-mcm-02",
+    "modulo": "naturales",
+    "subtema": "mcm",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Si MCD(36, 48) = 12, ¿cuál es mcm(36, 48)?",
+    "respuesta": 144,
+    "pistas": ["mcm(a,b) = (a × b) ÷ MCD(a,b)."],
+    "explicacion": "mcm(36,48) = (36 × 48) ÷ 12 = 1728 ÷ 12 = 144."
+  },
+  {
+    "id": "naturales-mcm-03",
+    "modulo": "naturales",
+    "subtema": "mcm",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Un autobús pasa por una parada cada 15 minutos y otro cada 20 minutos. Si ambos pasan juntos a las 8:00 a.m., ¿después de cuántos minutos volverán a coincidir?",
+    "respuesta": 60,
+    "pistas": ["Necesitas el menor tiempo que sea múltiplo de 15 y de 20 a la vez: el mcm(15,20)."],
+    "explicacion": "15=3×5, 20=2²×5, mcm(15,20)=2²×3×5=60. Volverán a coincidir a las 9:00 a.m., 60 minutos después."
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "racionales-suma-resta-01",
+    "modulo": "racionales",
+    "subtema": "suma-resta",
+    "dificultad": 1,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula 2/5 + 1/5. Escribe el resultado en la forma a/b (sin espacios).",
+    "pasos": [
+      { "texto": "2/5 + 1/5 =", "esperado": "3/5" }
+    ],
+    "pistas": ["Mismo denominador: solo se suman los numeradores."],
+    "explicacion": "2/5 + 1/5 = 3/5."
+  },
+  {
+    "id": "racionales-suma-resta-02",
+    "modulo": "racionales",
+    "subtema": "suma-resta",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula 1/2 + 1/3. Escribe el resultado en la forma a/b (sin espacios).",
+    "pasos": [
+      { "texto": "1/2 + 1/3 =", "esperado": "5/6" }
+    ],
+    "pistas": ["Usa el mcm(2,3)=6 como denominador común: 1/2=3/6 y 1/3=2/6."],
+    "explicacion": "3/6 + 2/6 = 5/6."
+  },
+  {
+    "id": "racionales-suma-resta-03",
+    "modulo": "racionales",
+    "subtema": "suma-resta",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula 3/4 − 1/6. Escribe el resultado en la forma a/b (sin espacios).",
+    "pasos": [
+      { "texto": "3/4 − 1/6 =", "esperado": "7/12" }
+    ],
+    "pistas": ["Usa el mcm(4,6)=12: 3/4=9/12 y 1/6=2/12."],
+    "explicacion": "9/12 − 2/12 = 7/12."
+  },
+  {
+    "id": "racionales-suma-resta-04",
+    "modulo": "racionales",
+    "subtema": "suma-resta",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Un pastel se divide en octavos. Comiste 3/8 en la mañana y 2/8 en la tarde. ¿Qué fracción del pastel comiste en total? Escribe la fracción en la forma a/b.",
+    "pasos": [
+      { "texto": "3/8 + 2/8 =", "esperado": "5/8" }
+    ],
+    "pistas": ["Mismo denominador (octavos): suma los numeradores."],
+    "explicacion": "3/8 + 2/8 = 5/8 del pastel."
+  }
+]

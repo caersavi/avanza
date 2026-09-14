@@ -1,0 +1,37 @@
+[
+  {
+    "id": "racionales-aplicacion-combinada-01",
+    "modulo": "racionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Un jardín rectangular mide 3/4 de metro por 2/3 de metro. ¿Cuál es su área, en metros cuadrados? Escribe la fracción simplificada en la forma a/b.",
+    "pasos": [
+      { "texto": "3/4 × 2/3 =", "esperado": "1/2" }
+    ],
+    "pistas": ["El área de un rectángulo es base por altura: multiplica las dos fracciones."],
+    "explicacion": "3/4 × 2/3 = 6/12 = 1/2 metro cuadrado."
+  },
+  {
+    "id": "racionales-aplicacion-combinada-02",
+    "modulo": "racionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "En una clase de 40 estudiantes, 3/8 son mujeres. ¿Cuántos hombres hay?",
+    "respuesta": 25,
+    "pistas": ["Primero calcula cuántas mujeres hay (3/8 de 40), luego resta del total."],
+    "explicacion": "40 × 3/8 = 15 mujeres. 40 − 15 = 25 hombres."
+  },
+  {
+    "id": "racionales-aplicacion-combinada-03",
+    "modulo": "racionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Convierte 3/5 a decimal y luego exprésalo como porcentaje. Escribe solo el número del porcentaje (ej. 60 para 60%).",
+    "respuesta": 60,
+    "pistas": ["3/5 en decimal es 0,6; un decimal se convierte a porcentaje multiplicando por 100."],
+    "explicacion": "3/5 = 0,6 = 60%."
+  }
+]

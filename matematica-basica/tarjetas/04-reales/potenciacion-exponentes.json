@@ -1,0 +1,76 @@
+[
+  {
+    "id": "reales-potenciacion-exponentes-01",
+    "modulo": "reales",
+    "subtema": "potenciacion-exponentes",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Calcula: 5⁰",
+    "respuesta": 1,
+    "pistas": ["Cualquier base distinta de cero elevada a 0 da 1."],
+    "explicacion": "5⁰ = 1."
+  },
+  {
+    "id": "reales-potenciacion-exponentes-02",
+    "modulo": "reales",
+    "subtema": "potenciacion-exponentes",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Escribe 3⁻² como fracción, en la forma 1/b.",
+    "pasos": [
+      { "texto": "3⁻² =", "esperado": "1/9" }
+    ],
+    "pistas": ["b⁻ⁿ = 1/bⁿ."],
+    "explicacion": "3⁻² = 1/3² = 1/9."
+  },
+  {
+    "id": "reales-potenciacion-exponentes-03",
+    "modulo": "reales",
+    "subtema": "potenciacion-exponentes",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Escribe 2⁻³ como fracción, en la forma 1/b.",
+    "pasos": [
+      { "texto": "2⁻³ =", "esperado": "1/8" }
+    ],
+    "pistas": ["b⁻ⁿ = 1/bⁿ."],
+    "explicacion": "2⁻³ = 1/2³ = 1/8."
+  },
+  {
+    "id": "reales-potenciacion-exponentes-04",
+    "modulo": "reales",
+    "subtema": "potenciacion-exponentes",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Usa bᵐ·bⁿ=bᵐ⁺ⁿ para simplificar 2³ × 2² y calcula el resultado.",
+    "respuesta": 32,
+    "pistas": ["2³×2² = 2^(3+2) = 2⁵."],
+    "explicacion": "2⁵ = 32."
+  },
+  {
+    "id": "reales-potenciacion-exponentes-05",
+    "modulo": "reales",
+    "subtema": "potenciacion-exponentes",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Usa (bᵐ)ⁿ=bᵐⁿ para simplificar (2³)² y calcula el resultado.",
+    "respuesta": 64,
+    "pistas": ["(2³)² = 2^(3×2) = 2⁶."],
+    "explicacion": "2⁶ = 64."
+  },
+  {
+    "id": "reales-potenciacion-exponentes-06",
+    "modulo": "reales",
+    "subtema": "potenciacion-exponentes",
+    "dificultad": 2,
+    "tipo": "verdadero-falso",
+    "enunciado": "(4 + 3)² = 4² + 3²",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["Calcula ambos lados por separado antes de comparar."],
+    "explicacion": "(4+3)²=7²=49, pero 4²+3²=16+9=25. El exponente no se distribuye sobre una suma."
+  }
+]

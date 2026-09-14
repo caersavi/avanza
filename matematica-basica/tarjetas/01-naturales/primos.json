@@ -1,0 +1,51 @@
+[
+  {
+    "id": "naturales-primos-01",
+    "modulo": "naturales",
+    "subtema": "primos-y-compuestos",
+    "dificultad": 1,
+    "tipo": "clasificar",
+    "enunciado": "Clasifica cada número como primo o compuesto.",
+    "categorias": ["primo", "compuesto"],
+    "opciones": [
+      { "valor": "17", "categoria": "primo" },
+      { "valor": "21", "categoria": "compuesto" },
+      { "valor": "29", "categoria": "primo" },
+      { "valor": "33", "categoria": "compuesto" }
+    ],
+    "pistas": ["Un número es primo si solo es divisible por 1 y por sí mismo.", "21 = 3 × 7 y 33 = 3 × 11."],
+    "explicacion": "17 y 29 no tienen más divisores que 1 y ellos mismos. 21 = 3×7 y 33 = 3×11 sí tienen otros factores."
+  },
+  {
+    "id": "naturales-primos-02",
+    "modulo": "naturales",
+    "subtema": "primos-y-compuestos",
+    "dificultad": 1,
+    "tipo": "verdadero-falso",
+    "enunciado": "El número 1 es primo.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["Un primo debe tener exactamente dos divisores distintos: 1 y él mismo."],
+    "explicacion": "El 1 solo tiene un divisor (él mismo), así que no se considera ni primo ni compuesto."
+  },
+  {
+    "id": "naturales-primos-03",
+    "modulo": "naturales",
+    "subtema": "primos-y-compuestos",
+    "dificultad": 2,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Cuál de estos números es primo?",
+    "opciones": [
+      { "id": "a", "texto": "51" },
+      { "id": "b", "texto": "57" },
+      { "id": "c", "texto": "61" },
+      { "id": "d", "texto": "91" }
+    ],
+    "respuesta": "c",
+    "pistas": ["Prueba dividir cada número entre 3, 7 y 11 antes de decidir."],
+    "explicacion": "51=3×17, 57=3×19, 91=7×13 son compuestos. 61 no es divisible por ningún primo menor que su raíz cuadrada."
+  }
+]

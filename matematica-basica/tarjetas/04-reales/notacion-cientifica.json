@@ -1,0 +1,78 @@
+[
+  {
+    "id": "reales-notacion-cientifica-01",
+    "modulo": "reales",
+    "subtema": "notacion-cientifica",
+    "dificultad": 1,
+    "tipo": "paso-a-paso",
+    "enunciado": "Escribe 73.500.000.000.000 en notación científica a × 10ⁿ.",
+    "pasos": [
+      { "texto": "a =", "esperado": "7.35" },
+      { "texto": "n =", "esperado": "13" }
+    ],
+    "pistas": ["Ubica el punto decimal justo después de la primera cifra distinta de cero; cuenta cuántos lugares se movió."],
+    "explicacion": "73.500.000.000.000 = 7,35 × 10¹³."
+  },
+  {
+    "id": "reales-notacion-cientifica-02",
+    "modulo": "reales",
+    "subtema": "notacion-cientifica",
+    "dificultad": 1,
+    "tipo": "paso-a-paso",
+    "enunciado": "Escribe 0.00412 en notación científica a × 10ⁿ.",
+    "pasos": [
+      { "texto": "a =", "esperado": "4.12" },
+      { "texto": "n =", "esperado": "-3" }
+    ],
+    "pistas": ["Para números menores que 1, el exponente es negativo."],
+    "explicacion": "0,00412 = 4,12 × 10⁻³."
+  },
+  {
+    "id": "reales-notacion-cientifica-03",
+    "modulo": "reales",
+    "subtema": "notacion-cientifica",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "¿A qué número estándar corresponde 1,354 × 10⁷?",
+    "respuesta": 13540000,
+    "pistas": ["Mueve el punto decimal 7 lugares a la derecha."],
+    "explicacion": "1,354 × 10⁷ = 13.540.000."
+  },
+  {
+    "id": "reales-notacion-cientifica-04",
+    "modulo": "reales",
+    "subtema": "notacion-cientifica",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "¿A qué número estándar corresponde 7,08 × 10⁻⁴?",
+    "respuesta": 0.000708,
+    "pistas": ["Un exponente negativo mueve el punto decimal hacia la izquierda."],
+    "explicacion": "7,08 × 10⁻⁴ = 0,000708."
+  },
+  {
+    "id": "reales-notacion-cientifica-05",
+    "modulo": "reales",
+    "subtema": "notacion-cientifica",
+    "dificultad": 1,
+    "tipo": "verdadero-falso",
+    "enunciado": "En notación científica a × 10ⁿ, el factor 'a' debe cumplir 1 ≤ a < 10.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "v",
+    "pistas": ["Es justamente lo que hace que la notación sea estándar y comparable entre números."],
+    "explicacion": "Por definición, el primer factor siempre está entre 1 (incluido) y 10 (excluido)."
+  },
+  {
+    "id": "reales-notacion-cientifica-06",
+    "modulo": "reales",
+    "subtema": "notacion-cientifica",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "La masa de la Tierra es 5.970.000.000.000.000.000.000.000 kg. Expresada como a × 10²⁴, ¿cuál es el valor de a?",
+    "respuesta": 5.97,
+    "pistas": ["Ubica el punto decimal después de la primera cifra distinta de cero."],
+    "explicacion": "5.970.000.000.000.000.000.000.000 = 5,97 × 10²⁴."
+  }
+]

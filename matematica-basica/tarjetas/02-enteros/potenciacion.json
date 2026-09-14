@@ -1,0 +1,50 @@
+[
+  {
+    "id": "enteros-potenciacion-01",
+    "modulo": "enteros",
+    "subtema": "potenciacion",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Calcula: (−2)⁴",
+    "respuesta": 16,
+    "pistas": ["Con exponente par, el resultado siempre es positivo."],
+    "explicacion": "(−2)⁴ = (−2)×(−2)×(−2)×(−2) = 16."
+  },
+  {
+    "id": "enteros-potenciacion-02",
+    "modulo": "enteros",
+    "subtema": "potenciacion",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Calcula: (−2)⁵",
+    "respuesta": -32,
+    "pistas": ["Con exponente impar, el resultado conserva el signo negativo de la base."],
+    "explicacion": "(−2)⁵ = (−2)×(−2)×(−2)×(−2)×(−2) = −32."
+  },
+  {
+    "id": "enteros-potenciacion-03",
+    "modulo": "enteros",
+    "subtema": "potenciacion",
+    "dificultad": 2,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Cuál es el signo de (−3)⁷?",
+    "opciones": [
+      { "id": "a", "texto": "Positivo" },
+      { "id": "b", "texto": "Negativo" }
+    ],
+    "respuesta": "b",
+    "pistas": ["Fíjate si el exponente es par o impar."],
+    "explicacion": "7 es impar, así que (−3)⁷ conserva el signo negativo de la base."
+  },
+  {
+    "id": "enteros-potenciacion-04",
+    "modulo": "enteros",
+    "subtema": "potenciacion",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Calcula: (−1)¹⁰⁰",
+    "respuesta": 1,
+    "pistas": ["100 es un exponente par."],
+    "explicacion": "Con exponente par, (−1)¹⁰⁰ = 1."
+  }
+]
