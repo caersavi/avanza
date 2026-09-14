@@ -5,7 +5,7 @@
  */
 
 export async function cargarManifest() {
-  const res = await fetch('/matematica-basica/tarjetas/manifest.json');
+  const res = await fetch('../tarjetas/manifest.json');
   if (!res.ok) throw new Error(`No se pudo cargar manifest.json (${res.status})`);
   const datos = await res.json();
   return datos.modulos;
@@ -23,7 +23,7 @@ export async function obtenerModulo(idModulo) {
 export async function cargarTarjetasDeModulo(modulo) {
   const listas = await Promise.all(
     modulo.archivos.map((archivo) =>
-      fetch(`/matematica-basica/tarjetas/${modulo.carpeta}/${archivo}`).then((r) => r.json())
+      fetch(`../tarjetas/${modulo.carpeta}/${archivo}`).then((r) => r.json())
     )
   );
   return listas.flat();

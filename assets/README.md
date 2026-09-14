@@ -9,7 +9,7 @@ código.
 
 ```html
 <script type="module">
-  import { montarTarjeta } from '/assets/core/engine.js';
+  import { montarTarjeta } from './assets/core/engine.js'; // ruta relativa a tu página
 
   const tarjeta = {
     id: 'irracionales-clasificar-01',

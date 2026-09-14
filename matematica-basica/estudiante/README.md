@@ -34,10 +34,12 @@ index.html                          Selección de módulo (5 tarjetas, con % de 
 
 ## Requisito para correr esto localmente
 
-Las páginas usan rutas absolutas (`/assets/...`, `/matematica-basica/...`),
-así que deben servirse desde la **raíz del proyecto** (`avanza/`), no abrirse
-directamente como `file://` ni servirse desde una subcarpeta. Cualquier
-servidor estático simple sirve, ej. `npx serve .` desde la raíz del repo.
+Las páginas usan rutas **relativas** (`../../assets/...`, `../tarjetas/...`),
+así que funcionan sin importar si el sitio se sirve desde la raíz del dominio
+(localhost) o desde una subcarpeta (ej. GitHub Pages en `/avanza/`). Sí deben
+servirse por HTTP — no abrirse directamente como `file://`, porque `fetch()`
+no funciona con ese esquema. Cualquier servidor estático simple sirve, ej.
+`npx serve .` desde la raíz del repo.
 
 ## Pendiente (fases siguientes)
 
