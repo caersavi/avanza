@@ -31,5 +31,53 @@
     "respuesta": 60,
     "pistas": ["Necesitas el menor tiempo que sea múltiplo de 15 y de 20 a la vez: el mcm(15,20)."],
     "explicacion": "15=3×5, 20=2²×5, mcm(15,20)=2²×3×5=60. Volverán a coincidir a las 9:00 a.m., 60 minutos después."
+  },
+  {
+    "id": "naturales-mcm-04",
+    "modulo": "naturales",
+    "subtema": "mcm",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Usando factorización, halla el mcm(6, 10).",
+    "respuesta": 30,
+    "pistas": ["6 = 2 × 3, 10 = 2 × 5. Toma todos los factores primos con el mayor exponente."],
+    "explicacion": "mcm(6,10) = 2 × 3 × 5 = 30."
+  },
+  {
+    "id": "naturales-mcm-05",
+    "modulo": "naturales",
+    "subtema": "mcm",
+    "dificultad": 2,
+    "tipo": "verdadero-falso",
+    "enunciado": "El mcm de dos números primos entre sí es igual al producto de ambos.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "v",
+    "pistas": ["Recuerda: mcm(a,b) = (a×b) ÷ MCD(a,b). ¿Qué pasa si MCD(a,b)=1?"],
+    "explicacion": "Si son primos entre sí, MCD(a,b)=1, así que mcm(a,b) = (a×b) ÷ 1 = a×b."
+  },
+  {
+    "id": "naturales-mcm-06",
+    "modulo": "naturales",
+    "subtema": "mcm",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Usando factorización, halla el mcm(9, 12).",
+    "respuesta": 36,
+    "pistas": ["9 = 3², 12 = 2² × 3."],
+    "explicacion": "mcm(9,12) = 2² × 3² = 36."
+  },
+  {
+    "id": "naturales-mcm-07",
+    "modulo": "naturales",
+    "subtema": "mcm",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Tienes dos temporizadores: uno suena cada 18 minutos y otro cada 24 minutos. Si ambos suenan juntos ahora, ¿dentro de cuántos minutos volverán a sonar juntos por primera vez?",
+    "respuesta": 72,
+    "pistas": ["Necesitas el mcm(18,24)."],
+    "explicacion": "18=2×3², 24=2³×3, mcm(18,24)=2³×3²=72 minutos."
   }
 ]

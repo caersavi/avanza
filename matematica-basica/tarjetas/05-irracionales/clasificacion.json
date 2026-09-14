@@ -90,5 +90,20 @@
     "respuesta": 3,
     "pistas": ["Revisa cada uno: ¿es raíz exacta, fracción, o decimal infinito no periódico?"],
     "explicacion": "√2, π y √15 son irracionales. √9=3 y 3/7 son racionales. En total, 3 irracionales."
+  },
+  {
+    "id": "irracionales-clasificacion-07",
+    "modulo": "irracionales",
+    "subtema": "clasificacion-racional-irracional",
+    "dificultad": 1,
+    "tipo": "verdadero-falso",
+    "enunciado": "π es un número racional.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["¿π tiene un decimal que se repite en algún momento?"],
+    "explicacion": "π=3,14159... es un decimal infinito no periódico: es irracional, no racional."
   }
 ]

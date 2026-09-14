@@ -79,5 +79,38 @@
     "respuesta": "a",
     "pistas": ["Entre dos negativos, es mayor el que está más cerca de 0."],
     "explicacion": "−5 está a la derecha de −8 en la recta numérica, así que −5°C es la temperatura mayor (menos fría)."
+  },
+  {
+    "id": "reales-comparacion-06",
+    "modulo": "reales",
+    "subtema": "comparacion",
+    "dificultad": 3,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Cuál de estas comparaciones es verdadera?",
+    "opciones": [
+      { "id": "a", "texto": "−3/4 < −1/2" },
+      { "id": "b", "texto": "−1/2 < −3/4" },
+      { "id": "c", "texto": "−3/4 = −1/2" }
+    ],
+    "respuesta": "a",
+    "pistas": ["Convierte ambas fracciones a decimal: −3/4=−0,75 y −1/2=−0,5."],
+    "explicacion": "−0,75 está más a la izquierda que −0,5 en la recta numérica, así que −3/4 < −1/2."
+  },
+  {
+    "id": "reales-comparacion-07",
+    "modulo": "reales",
+    "subtema": "comparacion",
+    "dificultad": 2,
+    "tipo": "opcion-multiple",
+    "enunciado": "Ordena de mayor a menor: 0, −0,3 y −1.",
+    "opciones": [
+      { "id": "a", "texto": "0 > −0,3 > −1" },
+      { "id": "b", "texto": "−1 > −0,3 > 0" },
+      { "id": "c", "texto": "0 > −1 > −0,3" },
+      { "id": "d", "texto": "−0,3 > 0 > −1" }
+    ],
+    "respuesta": "a",
+    "pistas": ["0 siempre es mayor que cualquier negativo; entre negativos, el más cercano a 0 es mayor."],
+    "explicacion": "0 es mayor que cualquier negativo. Entre −0,3 y −1, −0,3 está más cerca de 0, así que 0 > −0,3 > −1."
   }
 ]

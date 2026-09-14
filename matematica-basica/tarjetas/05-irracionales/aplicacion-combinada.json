@@ -52,5 +52,42 @@
     ],
     "pistas": ["Multiplica por √2/√2 y simplifica la fracción resultante."],
     "explicacion": "4/√2 × √2/√2 = 4√2/2 = 2√2."
+  },
+  {
+    "id": "irracionales-aplicacion-combinada-05",
+    "modulo": "irracionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "El área de un cuadrado es 72 cm². ¿Cuánto mide su lado? Escribe el resultado simplificado en la forma a√b.",
+    "pasos": [
+      { "texto": "lado = √72 =", "esperado": "6√2" }
+    ],
+    "pistas": ["El lado de un cuadrado de área A mide √A.", "72 = 36 × 2."],
+    "explicacion": "√72 = √(36×2) = 6√2 cm."
+  },
+  {
+    "id": "irracionales-aplicacion-combinada-06",
+    "modulo": "irracionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Un triángulo rectángulo tiene catetos de longitud 3 y 4. ¿Cuánto mide la hipotenusa?",
+    "respuesta": 5,
+    "pistas": ["Usa el Teorema de Pitágoras: hipotenusa² = cateto₁² + cateto₂²."],
+    "explicacion": "√(3²+4²) = √(9+16) = √25 = 5."
+  },
+  {
+    "id": "irracionales-aplicacion-combinada-07",
+    "modulo": "irracionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Racionaliza y simplifica 6/√3. Escribe el resultado en la forma a√b.",
+    "pasos": [
+      { "texto": "6/√3 =", "esperado": "2√3" }
+    ],
+    "pistas": ["Multiplica por √3/√3 y simplifica la fracción resultante."],
+    "explicacion": "6/√3 × √3/√3 = 6√3/3 = 2√3."
   }
 ]

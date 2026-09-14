@@ -41,5 +41,63 @@
     ],
     "pistas": ["Multiplica el entero por el denominador y suma el numerador: (2×3)+1."],
     "explicacion": "(2×3)+1=7, así que 2 1/3 = 7/3."
+  },
+  {
+    "id": "racionales-propia-impropia-mixta-04",
+    "modulo": "racionales",
+    "subtema": "propia-impropia-mixta",
+    "dificultad": 1,
+    "tipo": "verdadero-falso",
+    "enunciado": "9/9 es una fracción impropia.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "v",
+    "pistas": ["Una fracción es impropia cuando el numerador es mayor o igual que el denominador."],
+    "explicacion": "En 9/9 el numerador es igual al denominador, así que cumple la condición de impropia (equivale a 1 entero)."
+  },
+  {
+    "id": "racionales-propia-impropia-mixta-05",
+    "modulo": "racionales",
+    "subtema": "propia-impropia-mixta",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Convierte 11/4 a número mixto. Escríbelo como 'entero fracción', por ejemplo '1 3/4'.",
+    "pasos": [
+      { "texto": "11/4 =", "esperado": "2 3/4" }
+    ],
+    "pistas": ["Divide 11 entre 4: el cociente es la parte entera y el residuo va sobre 4."],
+    "explicacion": "11÷4 = 2 residuo 3, así que 11/4 = 2 3/4."
+  },
+  {
+    "id": "racionales-propia-impropia-mixta-06",
+    "modulo": "racionales",
+    "subtema": "propia-impropia-mixta",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Convierte el número mixto 3 2/5 a fracción impropia. Escribe el resultado en la forma a/b.",
+    "pasos": [
+      { "texto": "3 2/5 =", "esperado": "17/5" }
+    ],
+    "pistas": ["Multiplica el entero por el denominador y suma el numerador: (3×5)+2."],
+    "explicacion": "(3×5)+2=17, así que 3 2/5 = 17/5."
+  },
+  {
+    "id": "racionales-propia-impropia-mixta-07",
+    "modulo": "racionales",
+    "subtema": "propia-impropia-mixta",
+    "dificultad": 3,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Cuál de estos números mixtos representa la fracción 13/5?",
+    "opciones": [
+      { "id": "a", "texto": "2 3/5" },
+      { "id": "b", "texto": "2 2/5" },
+      { "id": "c", "texto": "3 1/5" },
+      { "id": "d", "texto": "1 3/5" }
+    ],
+    "respuesta": "a",
+    "pistas": ["Divide 13 entre 5: el cociente es la parte entera y el residuo va sobre 5."],
+    "explicacion": "13÷5 = 2 residuo 3, así que 13/5 = 2 3/5."
   }
 ]

@@ -46,5 +46,42 @@
     "respuesta": 1,
     "pistas": ["100 es un exponente par."],
     "explicacion": "Con exponente par, (−1)¹⁰⁰ = 1."
+  },
+  {
+    "id": "enteros-potenciacion-05",
+    "modulo": "enteros",
+    "subtema": "potenciacion",
+    "dificultad": 1,
+    "tipo": "verdadero-falso",
+    "enunciado": "(−4)² es igual a −4².",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["En (−4)² el signo está dentro del paréntesis y se eleva junto con el 4. En −4², el signo queda fuera."],
+    "explicacion": "(−4)² = 16, pero −4² = −(4²) = −16. Son distintos: el paréntesis cambia todo."
+  },
+  {
+    "id": "enteros-potenciacion-06",
+    "modulo": "enteros",
+    "subtema": "potenciacion",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Calcula: (−5)³",
+    "respuesta": -125,
+    "pistas": ["Exponente impar: el resultado conserva el signo negativo."],
+    "explicacion": "(−5)×(−5)×(−5) = −125."
+  },
+  {
+    "id": "enteros-potenciacion-07",
+    "modulo": "enteros",
+    "subtema": "potenciacion",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Calcula: (−3)² + (−2)³",
+    "respuesta": 1,
+    "pistas": ["Resuelve cada potencia por separado antes de sumar."],
+    "explicacion": "(−3)²=9 (exponente par); (−2)³=−8 (exponente impar); 9+(−8)=1."
   }
 ]

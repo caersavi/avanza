@@ -68,5 +68,16 @@
     "respuesta": -24,
     "pistas": ["Descender es un cambio negativo; repetirlo 6 veces es una multiplicación."],
     "explicacion": "(−4) × 6 = −24, es decir, 24 metros bajo la superficie."
+  },
+  {
+    "id": "enteros-multiplicacion-division-07",
+    "modulo": "enteros",
+    "subtema": "multiplicacion-division",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Una empresa pierde $12.000 cada día durante 5 días. ¿Cuál fue el cambio total en su saldo?",
+    "respuesta": -60000,
+    "pistas": ["Perder cada día es un cambio negativo; repetirlo 5 veces es una multiplicación."],
+    "explicacion": "(−12.000) × 5 = −60.000."
   }
 ]

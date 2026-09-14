@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Verificación de módulo</title></head>
+<body>
+<div id="host"></div>
+<pre id="resultado">esperando...</pre>
+<script type="module">
+import { montarTarjeta } from '/assets/core/engine.js';
+
+const idModulo = new URLSearchParams(location.search).get('modulo');
+
+async function cargarTodas() {
+  const res = await fetch('/matematica-basica/tarjetas/manifest.json');
+  const { modulos } = await res.json();
+  const modulo = modulos.find(m => m.id === idModulo);
+  if (!modulo) throw new Error('Módulo no encontrado: ' + idModulo);
+  const todas = [];
+  for (const archivo of modulo.archivos) {
+    const r = await fetch(`/matematica-basica/tarjetas/${modulo.carpeta}/${archivo}`);
+    const data = await r.json();
+    (Array.isArray(data) ? data : [data]).forEach(t => todas.push({ archivo, tarjeta: t }));
+  }
+  return todas;
+}
+
+function autocompletar(tarjeta) {
+  const host = document.querySelector('#host');
+  host.innerHTML = '';
+  const cont = document.createElement('div');
+  host.appendChild(cont);
+  const { card } = montarTarjeta(cont, tarjeta);
+  const tag = tarjeta.tipo === 'numerico' ? 'av-input-numerico'
+    : (tarjeta.tipo === 'opcion-multiple' || tarjeta.tipo === 'verdadero-falso') ? 'av-input-opcion-multiple'
+    : tarjeta.tipo === 'clasificar' ? 'av-input-clasificar'
+    : tarjeta.tipo === 'arrastrar-recta' ? 'av-input-arrastrar-recta'
+    : 'av-input-pasos';
+  const inputEl = cont.querySelector(tag);
+
+  if (tarjeta.tipo === 'numerico') {
+    inputEl.querySelector('input').value = String(tarjeta.respuesta);
+  } else if (tarjeta.tipo === 'opcion-multiple' || tarjeta.tipo === 'verdadero-falso') {
+    const radio = inputEl.querySelector(`input[value="${tarjeta.respuesta}"]`);
+    if (radio) radio.checked = true;
+  } else if (tarjeta.tipo === 'clasificar') {
+    inputEl.querySelectorAll('select').forEach((sel, i) => { sel.value = tarjeta.opciones[i].categoria; });
+  } else if (tarjeta.tipo === 'arrastrar-recta') {
+    const recta = inputEl.querySelector('av-number-line');
+    recta.dispatchEvent(new CustomEvent('av-punto-seleccionado', { detail: { valor: tarjeta.respuesta }, bubbles: true, composed: true }));
+  } else if (tarjeta.tipo === 'paso-a-paso') {
+    inputEl.querySelectorAll('input').forEach((inp, i) => { inp.value = String(tarjeta.pasos[i].esperado); });
+  }
+  return card;
+}
+
+const todas = await cargarTodas();
+const resultados = [];
+for (const { archivo, tarjeta } of todas) {
+  try {
+    const card = autocompletar(tarjeta);
+    await new Promise(r => setTimeout(r, 0));
+    card.shadowRoot.querySelector('[data-accion="verificar"]').click();
+    const estado = card.getAttribute('estado');
+    resultados.push({ archivo, id: tarjeta.id, tipo: tarjeta.tipo, estado, ok: estado === 'correcta' });
+  } catch (e) {
+    resultados.push({ archivo, id: tarjeta.id, tipo: tarjeta.tipo, estado: 'ERROR', ok: false, error: String(e) });
+  }
+}
+const fallos = resultados.filter(r => !r.ok);
+const porSubtema = {};
+resultados.forEach(r => { porSubtema[r.archivo] = (porSubtema[r.archivo]||0)+1; });
+document.querySelector('#resultado').textContent = JSON.stringify({
+  modulo: idModulo, total: resultados.length, correctos: resultados.length - fallos.length, fallos, porSubtema,
+}, null, 2);
+</script>
+</body>
+</html>

@@ -53,5 +53,38 @@
     "respuesta": 5,
     "pistas": ["96 = 2^? × 3. Divide 96 sucesivamente por 2 y cuenta cuántas veces lo logras."],
     "explicacion": "96 = 2⁵ × 3 (32 × 3 = 96), así que el exponente del 2 es 5."
+  },
+  {
+    "id": "naturales-factores-primos-05",
+    "modulo": "naturales",
+    "subtema": "descomposicion-factores-primos",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "¿Cuántos factores primos distintos tiene 60?",
+    "respuesta": 3,
+    "pistas": ["Descompón 60 en factores primos y cuenta cuántos primos diferentes aparecen."],
+    "explicacion": "60 = 2² × 3 × 5. Aparecen 3 primos distintos: 2, 3 y 5."
+  },
+  {
+    "id": "naturales-factores-primos-06",
+    "modulo": "naturales",
+    "subtema": "descomposicion-factores-primos",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Si un número N se descompone como N = 2² × 5 × 7, ¿cuál es el valor de N?",
+    "respuesta": 140,
+    "pistas": ["Multiplica los factores: 2² × 5 × 7."],
+    "explicacion": "2²=4; 4×5=20; 20×7=140."
+  },
+  {
+    "id": "naturales-factores-primos-07",
+    "modulo": "naturales",
+    "subtema": "descomposicion-factores-primos",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Un número entre 100 y 104 se descompone como producto de tres factores primos distintos. ¿Cuál es ese número?",
+    "respuesta": 102,
+    "pistas": ["Revisa uno por uno: 101, 102, 103 y 104. Descompón los que sean compuestos."],
+    "explicacion": "102 = 2 × 3 × 17, tres primos distintos. 104 = 2³×13 solo tiene dos primos distintos, y 101 y 103 son primos."
   }
 ]

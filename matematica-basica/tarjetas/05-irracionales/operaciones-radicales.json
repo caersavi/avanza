@@ -72,5 +72,18 @@
     ],
     "pistas": ["√20 = √(4×5) = 2√5."],
     "explicacion": "2√5 + 2√5 = 4√5."
+  },
+  {
+    "id": "irracionales-operaciones-radicales-07",
+    "modulo": "irracionales",
+    "subtema": "operaciones-radicales",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Simplifica: √18 + √50 (simplifica cada radical primero). Escribe el resultado en la forma a√b.",
+    "pasos": [
+      { "texto": "√18 + √50 =", "esperado": "8√2" }
+    ],
+    "pistas": ["√18 = √(9×2) = 3√2 y √50 = √(25×2) = 5√2."],
+    "explicacion": "3√2 + 5√2 = 8√2."
   }
 ]

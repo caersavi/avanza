@@ -47,5 +47,43 @@
     "respuesta": 0.00003,
     "pistas": ["100 = 10². Multiplica las potencias de 10 sumando exponentes."],
     "explicacion": "3×10⁻⁷ × 10² = 3×10⁻⁵ = 0,00003 metros."
+  },
+  {
+    "id": "reales-aplicacion-combinada-05",
+    "modulo": "reales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Usa la propiedad distributiva para calcular 12 × 99, escribiéndolo como 12×(100−1). ¿Cuál es el resultado?",
+    "respuesta": 1188,
+    "pistas": ["12×(100−1) = 12×100 − 12×1."],
+    "explicacion": "12×100=1200, 12×1=12, 1200−12=1188."
+  },
+  {
+    "id": "reales-aplicacion-combinada-06",
+    "modulo": "reales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Calcula (2 × 10³) ÷ (4 × 10⁻¹) y exprésalo en notación estándar.",
+    "respuesta": 5000,
+    "pistas": ["Divide los factores 'a' entre sí y resta los exponentes de las potencias de 10."],
+    "explicacion": "2÷4=0,5; 10^(3−(−1))=10⁴; 0,5×10⁴=5000."
+  },
+  {
+    "id": "reales-aplicacion-combinada-07",
+    "modulo": "reales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Cuál de estos números es mayor: 4,5 × 10⁶ o 3,2 × 10⁷?",
+    "opciones": [
+      { "id": "a", "texto": "4,5 × 10⁶" },
+      { "id": "b", "texto": "3,2 × 10⁷" },
+      { "id": "c", "texto": "Son iguales" }
+    ],
+    "respuesta": "b",
+    "pistas": ["Compara primero los exponentes de 10: un exponente mayor casi siempre gana."],
+    "explicacion": "4,5×10⁶=4.500.000 y 3,2×10⁷=32.000.000. Como 32.000.000 > 4.500.000, 3,2×10⁷ es mayor."
   }
 ]

@@ -56,5 +56,46 @@
     "respuesta": "a",
     "pistas": ["Simplifica 5/10 primero."],
     "explicacion": "5/10 = 1/2 al dividir numerador y denominador por 5."
+  },
+  {
+    "id": "racionales-equivalencia-05",
+    "modulo": "racionales",
+    "subtema": "equivalencia-simplificacion",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Simplifica 24/36 usando su MCD. ¿Cuál es el numerador de la fracción simplificada?",
+    "respuesta": 2,
+    "pistas": ["Descompón 24 y 36 en factores primos para hallar su MCD."],
+    "explicacion": "MCD(24,36)=12; 24÷12=2 y 36÷12=3, así 24/36 = 2/3."
+  },
+  {
+    "id": "racionales-equivalencia-06",
+    "modulo": "racionales",
+    "subtema": "equivalencia-simplificacion",
+    "dificultad": 1,
+    "tipo": "verdadero-falso",
+    "enunciado": "4/6 y 2/3 son fracciones equivalentes.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "v",
+    "pistas": ["Compara los productos cruzados: 4×3 y 6×2."],
+    "explicacion": "4×3=12 y 6×2=12. Como son iguales, las fracciones son equivalentes (4/6 simplifica a 2/3)."
+  },
+  {
+    "id": "racionales-equivalencia-07",
+    "modulo": "racionales",
+    "subtema": "equivalencia-simplificacion",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Simplifica 45/60 usando su MCD.",
+    "pasos": [
+      { "texto": "MCD(45,60) =", "esperado": "15" },
+      { "texto": "45 ÷ 15 =", "esperado": "3" },
+      { "texto": "60 ÷ 15 =", "esperado": "4" }
+    ],
+    "pistas": ["45 = 3²×5 y 60 = 2²×3×5; el MCD toma los factores comunes con su menor exponente."],
+    "explicacion": "MCD(45,60)=15, así que 45/60 = 3/4."
   }
 ]

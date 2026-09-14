@@ -42,5 +42,38 @@
     "respuesta": -90000,
     "pistas": ["Triplicar la deuda es multiplicar por 3; abonar es sumar."],
     "explicacion": "(−50 000)×3 = −150 000; −150 000 + 60 000 = −90 000."
+  },
+  {
+    "id": "enteros-operaciones-combinadas-05",
+    "modulo": "enteros",
+    "subtema": "operaciones-combinadas",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Calcula: (−2)³ + 10 ÷ (−5)",
+    "respuesta": -10,
+    "pistas": ["Primero la potencia y la división, luego suma."],
+    "explicacion": "(−2)³=−8; 10÷(−5)=−2; −8+(−2)=−10."
+  },
+  {
+    "id": "enteros-operaciones-combinadas-06",
+    "modulo": "enteros",
+    "subtema": "operaciones-combinadas",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Calcula: |(−4)²| − (−3)(2)",
+    "respuesta": 22,
+    "pistas": ["Resuelve primero la potencia dentro del valor absoluto, y la multiplicación por separado."],
+    "explicacion": "(−4)²=16, |16|=16; (−3)(2)=−6; 16−(−6)=22."
+  },
+  {
+    "id": "enteros-operaciones-combinadas-07",
+    "modulo": "enteros",
+    "subtema": "operaciones-combinadas",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "La temperatura de una ciudad cambió así en 3 días: bajó 5°C, subió 8°C y bajó 2°C. Si empezó en 10°C, ¿en qué temperatura terminó?",
+    "respuesta": 11,
+    "pistas": ["Traduce cada cambio a una suma o resta, en orden: 10 − 5 + 8 − 2."],
+    "explicacion": "10−5=5; 5+8=13; 13−2=11°C."
   }
 ]

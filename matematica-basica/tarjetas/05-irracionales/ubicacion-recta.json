@@ -54,5 +54,48 @@
     "respuesta": "b",
     "pistas": ["Busca los cuadrados perfectos más cercanos a 20: 16 y 25."],
     "explicacion": "√16=4 y √25=5. Como 16<20<25, entonces 4<√20<5."
+  },
+  {
+    "id": "irracionales-ubicacion-recta-05",
+    "modulo": "irracionales",
+    "subtema": "ubicacion-recta",
+    "dificultad": 1,
+    "tipo": "arrastrar-recta",
+    "enunciado": "Ubica √9 en la recta numérica.",
+    "recta": { "min": 0, "max": 10, "paso": 1 },
+    "respuesta": 3,
+    "tolerancia": 0,
+    "pistas": ["Calcula primero cuánto vale √9."],
+    "explicacion": "√9 = 3, un número exacto."
+  },
+  {
+    "id": "irracionales-ubicacion-recta-06",
+    "modulo": "irracionales",
+    "subtema": "ubicacion-recta",
+    "dificultad": 3,
+    "tipo": "arrastrar-recta",
+    "enunciado": "Ubica aproximadamente √5 en la recta numérica (√5 ≈ 2,24).",
+    "recta": { "min": 0, "max": 5, "paso": 0.1, "marcaCada": 1 },
+    "respuesta": 2.24,
+    "tolerancia": 0.15,
+    "pistas": ["√4=2 y √9=3, así que √5 está justo después de 2."],
+    "explicacion": "√5 = 2,2360679... — un poco después de 2."
+  },
+  {
+    "id": "irracionales-ubicacion-recta-07",
+    "modulo": "irracionales",
+    "subtema": "ubicacion-recta",
+    "dificultad": 2,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Entre qué dos enteros consecutivos se ubica √30?",
+    "opciones": [
+      { "id": "a", "texto": "4 y 5" },
+      { "id": "b", "texto": "5 y 6" },
+      { "id": "c", "texto": "6 y 7" },
+      { "id": "d", "texto": "3 y 4" }
+    ],
+    "respuesta": "b",
+    "pistas": ["Busca los cuadrados perfectos más cercanos a 30: 25 y 36."],
+    "explicacion": "√25=5 y √36=6. Como 25<30<36, entonces 5<√30<6."
   }
 ]

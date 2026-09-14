@@ -50,5 +50,44 @@
     ],
     "pistas": ["√8 = 2√2, así que 2/√8 = 2/(2√2) = 1/√2."],
     "explicacion": "2/(2√2) = 1/√2 = √2/2."
+  },
+  {
+    "id": "irracionales-racionalizacion-05",
+    "modulo": "irracionales",
+    "subtema": "racionalizacion",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Racionaliza 1/√7. Escribe el resultado en la forma a/b.",
+    "pasos": [
+      { "texto": "1/√7 =", "esperado": "√7/7" }
+    ],
+    "pistas": ["Multiplica numerador y denominador por √7."],
+    "explicacion": "1/√7 × √7/√7 = √7/7."
+  },
+  {
+    "id": "irracionales-racionalizacion-06",
+    "modulo": "irracionales",
+    "subtema": "racionalizacion",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Racionaliza y simplifica 4/√6. Escribe el resultado en la forma a√b/c.",
+    "pasos": [
+      { "texto": "4/√6 =", "esperado": "2√6/3" }
+    ],
+    "pistas": ["Multiplica por √6/√6 y luego simplifica la fracción resultante."],
+    "explicacion": "4/√6 × √6/√6 = 4√6/6 = 2√6/3."
+  },
+  {
+    "id": "irracionales-racionalizacion-07",
+    "modulo": "irracionales",
+    "subtema": "racionalizacion",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Racionaliza 5/√20 (simplifica √20 primero). Escribe el resultado en la forma a/b.",
+    "pasos": [
+      { "texto": "5/√20 =", "esperado": "√5/2" }
+    ],
+    "pistas": ["√20 = 2√5, así que 5/√20 = 5/(2√5)."],
+    "explicacion": "5/(2√5) × √5/√5 = 5√5/10 = √5/2."
   }
 ]

@@ -74,5 +74,19 @@
     "respuesta": 5.97,
     "pistas": ["Ubica el punto decimal después de la primera cifra distinta de cero."],
     "explicacion": "5.970.000.000.000.000.000.000.000 = 5,97 × 10²⁴."
+  },
+  {
+    "id": "reales-notacion-cientifica-07",
+    "modulo": "reales",
+    "subtema": "notacion-cientifica",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Convierte 250.000 × 10² a notación científica correcta a × 10ⁿ (recuerda que a debe estar entre 1 y 10).",
+    "pasos": [
+      { "texto": "a =", "esperado": "2.5" },
+      { "texto": "n =", "esperado": "7" }
+    ],
+    "pistas": ["Primero multiplica 250.000×10²=25.000.000, y luego exprésalo en notación científica."],
+    "explicacion": "250.000×10² = 25.000.000 = 2,5×10⁷."
   }
 ]

@@ -47,5 +47,59 @@
     "respuesta": "c",
     "pistas": ["Prueba dividir cada número entre 3, 7 y 11 antes de decidir."],
     "explicacion": "51=3×17, 57=3×19, 91=7×13 son compuestos. 61 no es divisible por ningún primo menor que su raíz cuadrada."
+  },
+  {
+    "id": "naturales-primos-04",
+    "modulo": "naturales",
+    "subtema": "primos-y-compuestos",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "¿Cuántos números primos hay entre 1 y 20?",
+    "respuesta": 8,
+    "pistas": ["Lístalos uno por uno: 2, 3, 5, 7..."],
+    "explicacion": "Los primos entre 1 y 20 son 2, 3, 5, 7, 11, 13, 17 y 19: en total 8."
+  },
+  {
+    "id": "naturales-primos-05",
+    "modulo": "naturales",
+    "subtema": "primos-y-compuestos",
+    "dificultad": 2,
+    "tipo": "clasificar",
+    "enunciado": "Clasifica cada número como primo o compuesto (esta vez con números más grandes).",
+    "categorias": ["primo", "compuesto"],
+    "opciones": [
+      { "valor": "41", "categoria": "primo" },
+      { "valor": "87", "categoria": "compuesto" },
+      { "valor": "97", "categoria": "primo" },
+      { "valor": "111", "categoria": "compuesto" }
+    ],
+    "pistas": ["87 y 111 son divisibles por 3 (suma sus cifras)."],
+    "explicacion": "87=3×29 y 111=3×37 son compuestos. 41 y 97 no tienen divisores propios."
+  },
+  {
+    "id": "naturales-primos-06",
+    "modulo": "naturales",
+    "subtema": "primos-y-compuestos",
+    "dificultad": 2,
+    "tipo": "verdadero-falso",
+    "enunciado": "Todos los números primos son impares.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["¿Qué pasa con el número 2?"],
+    "explicacion": "2 es primo (solo divisible por 1 y por sí mismo) y también es par, así que no todos los primos son impares."
+  },
+  {
+    "id": "naturales-primos-07",
+    "modulo": "naturales",
+    "subtema": "primos-y-compuestos",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "¿Cuál es el producto de los dos primeros números primos mayores que 10?",
+    "respuesta": 143,
+    "pistas": ["Los dos primeros primos después de 10 son 11 y 13."],
+    "explicacion": "11 × 13 = 143."
   }
 ]

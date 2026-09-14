@@ -68,5 +68,16 @@
     "respuesta": -7,
     "pistas": ["Bajar la temperatura es restar."],
     "explicacion": "15 − 22 = −7°C."
+  },
+  {
+    "id": "enteros-suma-resta-07",
+    "modulo": "enteros",
+    "subtema": "suma-resta",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Un alpinista está a 320 m sobre el nivel del mar. Desciende 480 m para acampar. ¿A qué altura queda respecto al nivel del mar?",
+    "respuesta": -160,
+    "pistas": ["Descender es restar."],
+    "explicacion": "320 − 480 = −160, es decir, 160 m bajo el nivel del mar."
   }
 ]

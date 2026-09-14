@@ -53,5 +53,41 @@
       "Busca el MCD(80, 75, 60): descompón cada número en factores primos."
     ],
     "explicacion": "80=2⁴·5, 75=3·5², 60=2²·3·5. El único factor común es 5, así que MCD(80,75,60)=5: cada estudiante recibe 5 esferos."
+  },
+  {
+    "id": "naturales-mcd-05",
+    "modulo": "naturales",
+    "subtema": "mcd",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Usando factorización, halla el MCD(45, 60).",
+    "respuesta": 15,
+    "pistas": ["45 = 3² × 5, 60 = 2² × 3 × 5. Toma los factores comunes con el menor exponente."],
+    "explicacion": "MCD(45,60) = 3 × 5 = 15."
+  },
+  {
+    "id": "naturales-mcd-06",
+    "modulo": "naturales",
+    "subtema": "mcd",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Usa el algoritmo de Euclides para hallar el MCD(126, 54). Completa cada residuo.",
+    "pasos": [
+      { "texto": "126 = 54 × 2 + ", "esperado": "18" },
+      { "texto": "54 = 18 × 3 + ", "esperado": "0" }
+    ],
+    "pistas": ["Cuando el residuo llega a 0, el MCD es el último divisor usado."],
+    "explicacion": "El último residuo distinto de cero fue 18, así que MCD(126,54) = 18."
+  },
+  {
+    "id": "naturales-mcd-07",
+    "modulo": "naturales",
+    "subtema": "mcd",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Dos cintas miden 84 cm y 126 cm. Se quieren cortar en trozos iguales, lo más largos posible, sin que sobre material. ¿Cuánto debe medir cada trozo?",
+    "respuesta": 42,
+    "pistas": ["El tamaño del trozo debe dividir exactamente ambas longitudes: busca el MCD(84,126)."],
+    "explicacion": "84=2²·3·7, 126=2·3²·7. MCD(84,126)=2·3·7=42 cm."
   }
 ]

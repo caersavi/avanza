@@ -75,5 +75,37 @@
     "respuesta": "b",
     "pistas": ["El inverso multiplicativo de a es el número que, multiplicado por a, da 1."],
     "explicacion": "5 × 1/5 = 1, así que el inverso multiplicativo de 5 es 1/5."
+  },
+  {
+    "id": "reales-propiedades-06",
+    "modulo": "reales",
+    "subtema": "propiedades-operaciones",
+    "dificultad": 2,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Qué propiedad se ilustra en (2+5)+3 = 2+(5+3)?",
+    "opciones": [
+      { "id": "a", "texto": "Conmutativa" },
+      { "id": "b", "texto": "Asociativa" },
+      { "id": "c", "texto": "Distributiva" },
+      { "id": "d", "texto": "Inverso aditivo" }
+    ],
+    "respuesta": "b",
+    "pistas": ["El orden de los números no cambió, solo la forma de agruparlos."],
+    "explicacion": "Agrupar los sumandos de manera distinta sin cambiar el resultado es la propiedad asociativa de la suma."
+  },
+  {
+    "id": "reales-propiedades-07",
+    "modulo": "reales",
+    "subtema": "propiedades-operaciones",
+    "dificultad": 2,
+    "tipo": "verdadero-falso",
+    "enunciado": "El inverso aditivo de −7 es 7.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "v",
+    "pistas": ["El inverso aditivo de a es el número que sumado a a da 0."],
+    "explicacion": "−7+7=0, así que el inverso aditivo de −7 es 7."
   }
 ]

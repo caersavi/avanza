@@ -72,5 +72,16 @@
     "respuesta": "f",
     "pistas": ["Calcula ambos lados por separado antes de comparar."],
     "explicacion": "(4+3)²=7²=49, pero 4²+3²=16+9=25. El exponente no se distribuye sobre una suma."
+  },
+  {
+    "id": "reales-potenciacion-exponentes-07",
+    "modulo": "reales",
+    "subtema": "potenciacion-exponentes",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Calcula: 2⁻² + 2⁻¹",
+    "respuesta": 0.75,
+    "pistas": ["Convierte cada potencia negativa a fracción o decimal antes de sumar."],
+    "explicacion": "2⁻²=1/4=0,25; 2⁻¹=1/2=0,5; 0,25+0,5=0,75."
   }
 ]

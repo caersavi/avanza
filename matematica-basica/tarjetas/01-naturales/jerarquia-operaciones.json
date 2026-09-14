@@ -57,5 +57,27 @@
     "respuesta": 18,
     "pistas": ["Calcula cada resultado por separado antes de sumar.", "MCD(48,18): 48=2⁴×3, 18=2×3². mcm(4,6): 4=2², 6=2×3."],
     "explicacion": "MCD(48,18)=2×3=6. mcm(4,6)=2²×3=12. 6+12=18."
+  },
+  {
+    "id": "naturales-jerarquia-06",
+    "modulo": "naturales",
+    "subtema": "jerarquia-operaciones",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Calcula: 20 − 3 × 4 + 2³",
+    "respuesta": 16,
+    "pistas": ["Primero la potencia, luego la multiplicación, y al final suma y resta de izquierda a derecha."],
+    "explicacion": "2³=8; 3×4=12; 20−12+8=16."
+  },
+  {
+    "id": "naturales-jerarquia-07",
+    "modulo": "naturales",
+    "subtema": "jerarquia-operaciones",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Una camisa cuesta $45.000 y tiene un descuento de $8.000. Compras 3 camisas con ese descuento cada una, y además pagas $15.000 de envío. ¿Cuánto pagas en total?",
+    "respuesta": 126000,
+    "pistas": ["Traduce el problema a una expresión: 3×(45000−8000)+15000, y respeta la jerarquía de operaciones."],
+    "explicacion": "45000−8000=37000; 3×37000=111000; 111000+15000=126000."
   }
 ]

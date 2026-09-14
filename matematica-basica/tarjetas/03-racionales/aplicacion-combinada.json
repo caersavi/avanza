@@ -33,5 +33,51 @@
     "respuesta": 60,
     "pistas": ["3/5 en decimal es 0,6; un decimal se convierte a porcentaje multiplicando por 100."],
     "explicacion": "3/5 = 0,6 = 60%."
+  },
+  {
+    "id": "racionales-aplicacion-combinada-04",
+    "modulo": "racionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Un depósito de 200 litros está lleno hasta 3/5 de su capacidad. Se agregan 40 litros más. ¿Qué porcentaje de la capacidad total queda lleno?",
+    "respuesta": 80,
+    "pistas": ["Primero halla cuántos litros hay (3/5 de 200), súmale 40, y calcula qué porcentaje es del total."],
+    "explicacion": "3/5 × 200 = 120; 120+40=160; 160/200 = 0,8 = 80%."
+  },
+  {
+    "id": "racionales-aplicacion-combinada-05",
+    "modulo": "racionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula (1/2)² + 1/4. Escribe el resultado en la forma a/b.",
+    "pasos": [
+      { "texto": "(1/2)² + 1/4 =", "esperado": "1/2" }
+    ],
+    "pistas": ["Primero eleva 1/2 al cuadrado, luego suma."],
+    "explicacion": "(1/2)²=1/4; 1/4+1/4=2/4=1/2."
+  },
+  {
+    "id": "racionales-aplicacion-combinada-06",
+    "modulo": "racionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "De un salario de $1.200.000, una persona gasta 2/5 en arriendo y 15% en transporte. ¿Cuánto le queda?",
+    "respuesta": 540000,
+    "pistas": ["Calcula por separado cuánto es 2/5 del salario y cuánto es el 15%, súmalos y resta del total."],
+    "explicacion": "2/5×1.200.000=480.000; 15%×1.200.000=180.000; gastado=660.000; queda 1.200.000−660.000=540.000."
+  },
+  {
+    "id": "racionales-aplicacion-combinada-07",
+    "modulo": "racionales",
+    "subtema": "aplicacion-combinada",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Una tienda tiene 240 camisetas. El primer día vende 3/4 del inventario, y al día siguiente vende el 20% de lo que quedaba. ¿Cuántas camisetas quedan sin vender?",
+    "respuesta": 48,
+    "pistas": ["Primero halla cuántas vendió el primer día (3/4 de 240) y cuántas quedaron; luego calcula el 20% de ese resto."],
+    "explicacion": "3/4×240=180 vendidas; quedan 60; 20%×60=12 vendidas el segundo día; quedan 60−12=48."
   }
 ]

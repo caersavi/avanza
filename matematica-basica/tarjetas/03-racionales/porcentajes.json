@@ -43,5 +43,38 @@
     "respuesta": 68000,
     "pistas": ["Calcula primero el 15% de 80.000, y luego réstalo del precio original."],
     "explicacion": "15% de 80.000 = 12.000. 80.000 − 12.000 = 68.000."
+  },
+  {
+    "id": "racionales-porcentajes-05",
+    "modulo": "racionales",
+    "subtema": "porcentajes",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "¿Cuánto es el 15% de 200?",
+    "respuesta": 30,
+    "pistas": ["Convierte el porcentaje a decimal (15% = 0,15) y multiplica."],
+    "explicacion": "200 × 0,15 = 30."
+  },
+  {
+    "id": "racionales-porcentajes-06",
+    "modulo": "racionales",
+    "subtema": "porcentajes",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "En un salón, 12 estudiantes representan el 30% del total de estudiantes. ¿Cuántos estudiantes hay en total?",
+    "respuesta": 40,
+    "pistas": ["Si 12 es el 30%, divide 12 entre 0,30 para hallar el total."],
+    "explicacion": "12 ÷ 0,30 = 40 estudiantes."
+  },
+  {
+    "id": "racionales-porcentajes-07",
+    "modulo": "racionales",
+    "subtema": "porcentajes",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Un producto cuesta $45.000 y su precio aumenta un 10%. ¿Cuál es el nuevo precio?",
+    "respuesta": 49500,
+    "pistas": ["Aumentar un 10% equivale a multiplicar por 1,10."],
+    "explicacion": "45.000 × 1,10 = 49.500."
   }
 ]

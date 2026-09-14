@@ -46,5 +46,42 @@
     "respuesta": 0.03,
     "pistas": ["Simplifica primero la fracción: 9/300 = 3/100."],
     "explicacion": "9/300 = 3/100 = 0,03."
+  },
+  {
+    "id": "racionales-conversion-decimal-05",
+    "modulo": "racionales",
+    "subtema": "conversion-decimal",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Convierte 1/4 a decimal.",
+    "respuesta": 0.25,
+    "pistas": ["Divide el numerador entre el denominador."],
+    "explicacion": "1 ÷ 4 = 0,25."
+  },
+  {
+    "id": "racionales-conversion-decimal-06",
+    "modulo": "racionales",
+    "subtema": "conversion-decimal",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Convierte 7/8 a decimal.",
+    "respuesta": 0.875,
+    "pistas": ["Divide el numerador entre el denominador."],
+    "explicacion": "7 ÷ 8 = 0,875."
+  },
+  {
+    "id": "racionales-conversion-decimal-07",
+    "modulo": "racionales",
+    "subtema": "conversion-decimal",
+    "dificultad": 3,
+    "tipo": "verdadero-falso",
+    "enunciado": "5/8 tiene una representación decimal finita.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "v",
+    "pistas": ["Cuando el denominador (en su forma simplificada) solo tiene factores 2 y/o 5, la división termina."],
+    "explicacion": "5/8 = 0,625. Como 8=2³ solo tiene el factor 2, la división termina: es finita."
   }
 ]

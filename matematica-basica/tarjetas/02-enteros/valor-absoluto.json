@@ -46,5 +46,46 @@
     "respuesta": 8,
     "pistas": ["Primero resuelve cada valor absoluto por separado, luego resta."],
     "explicacion": "|−12|=12, |4|=4; 12−4=8."
+  },
+  {
+    "id": "enteros-valor-absoluto-05",
+    "modulo": "enteros",
+    "subtema": "valor-absoluto",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Calcula: |−6| + |−3|",
+    "respuesta": 9,
+    "pistas": ["Resuelve cada valor absoluto por separado; ambos dan positivo."],
+    "explicacion": "|−6|=6, |−3|=3; 6+3=9."
+  },
+  {
+    "id": "enteros-valor-absoluto-06",
+    "modulo": "enteros",
+    "subtema": "valor-absoluto",
+    "dificultad": 2,
+    "tipo": "verdadero-falso",
+    "enunciado": "|−8| es menor que |5|.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["Calcula cada valor absoluto antes de comparar."],
+    "explicacion": "|−8|=8 y |5|=5. Como 8 no es menor que 5, la afirmación es falsa."
+  },
+  {
+    "id": "enteros-valor-absoluto-07",
+    "modulo": "enteros",
+    "subtema": "valor-absoluto",
+    "dificultad": 3,
+    "tipo": "opcion-multiple",
+    "enunciado": "Dos pueblos están a alturas de −40 m y −65 m respecto al nivel del mar. ¿Cuál está más lejos del nivel del mar?",
+    "opciones": [
+      { "id": "a", "texto": "El de −40 m" },
+      { "id": "b", "texto": "El de −65 m" }
+    ],
+    "respuesta": "b",
+    "pistas": ["La distancia al nivel del mar es el valor absoluto de la altura."],
+    "explicacion": "|−40|=40 y |−65|=65. Como 65>40, el pueblo a −65 m está más lejos del nivel del mar."
   }
 ]

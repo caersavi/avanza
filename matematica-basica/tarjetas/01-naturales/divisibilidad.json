@@ -64,5 +64,53 @@
     "respuesta": "d",
     "pistas": ["Revisa las tres reglas por separado: última cifra para 2 y 5, suma de cifras para 3."],
     "explicacion": "317 es impar (no divisible por 2), 3+1+7=11 no es divisible por 3, y no termina en 0 ni 5."
+  },
+  {
+    "id": "naturales-divisibilidad-05",
+    "modulo": "naturales",
+    "subtema": "divisibilidad",
+    "dificultad": 2,
+    "tipo": "clasificar",
+    "enunciado": "Clasifica cada número según si es divisible por 3.",
+    "categorias": ["divisible por 3", "no divisible por 3"],
+    "opciones": [
+      { "valor": "141", "categoria": "divisible por 3" },
+      { "valor": "256", "categoria": "no divisible por 3" },
+      { "valor": "522", "categoria": "divisible por 3" },
+      { "valor": "730", "categoria": "no divisible por 3" }
+    ],
+    "pistas": ["Suma las cifras de cada número y revisa si esa suma es divisible por 3."],
+    "explicacion": "141(1+4+1=6) y 522(5+2+2=9) tienen suma de cifras divisible por 3. 256(13) y 730(10) no."
+  },
+  {
+    "id": "naturales-divisibilidad-06",
+    "modulo": "naturales",
+    "subtema": "divisibilidad",
+    "dificultad": 2,
+    "tipo": "verdadero-falso",
+    "enunciado": "Si un número es divisible por 2 y por 3 a la vez, también es divisible por 6.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "v",
+    "pistas": ["Prueba con un ejemplo: 18 es divisible por 2 y por 3. ¿También por 6?"],
+    "explicacion": "Como 2 y 3 no comparten factores, si un número es múltiplo de ambos, también lo es de 2×3=6."
+  },
+  {
+    "id": "naturales-divisibilidad-07",
+    "modulo": "naturales",
+    "subtema": "divisibilidad",
+    "dificultad": 3,
+    "tipo": "opcion-multiple",
+    "enunciado": "Un panadero quiere empacar 90 panes en cajas del mismo tamaño, sin que sobre ninguno. ¿Cuál de estos tamaños de caja NO sirve?",
+    "opciones": [
+      { "id": "a", "texto": "Cajas de 5" },
+      { "id": "b", "texto": "Cajas de 6" },
+      { "id": "c", "texto": "Cajas de 7" }
+    ],
+    "respuesta": "c",
+    "pistas": ["Revisa si 90 es divisible por cada uno de esos números."],
+    "explicacion": "90 es divisible por 5 y por 6 (90÷6=15), pero 90÷7 no da un resultado exacto."
   }
 ]

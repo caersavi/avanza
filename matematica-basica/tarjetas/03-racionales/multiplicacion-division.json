@@ -50,5 +50,44 @@
     ],
     "pistas": ["Dividir entre 3 es multiplicar por 1/3."],
     "explicacion": "3/4 × 1/3 = 3/12 = 1/4 de litro cada una."
+  },
+  {
+    "id": "racionales-multiplicacion-division-05",
+    "modulo": "racionales",
+    "subtema": "multiplicacion-division",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula 5/6 × 2/3 y simplifica el resultado. Escribe la fracción en la forma a/b.",
+    "pasos": [
+      { "texto": "5/6 × 2/3 =", "esperado": "5/9" }
+    ],
+    "pistas": ["5×2=10, 6×3=18. Simplifica 10/18."],
+    "explicacion": "10/18 simplificado (÷2) es 5/9."
+  },
+  {
+    "id": "racionales-multiplicacion-division-06",
+    "modulo": "racionales",
+    "subtema": "multiplicacion-division",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula 2/5 ÷ 4/15 (multiplica por el recíproco) y simplifica. Escribe la fracción en la forma a/b.",
+    "pasos": [
+      { "texto": "2/5 ÷ 4/15 =", "esperado": "3/2" }
+    ],
+    "pistas": ["Dividir entre 4/15 es multiplicar por 15/4."],
+    "explicacion": "2/5 × 15/4 = 30/20, que simplificado (÷10) es 3/2."
+  },
+  {
+    "id": "racionales-multiplicacion-division-07",
+    "modulo": "racionales",
+    "subtema": "multiplicacion-division",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Una receta necesita 2/3 de taza de azúcar. Si quieres hacer el doble de la receta, ¿cuántas tazas de azúcar necesitas? Escribe la fracción en la forma a/b.",
+    "pasos": [
+      { "texto": "2/3 × 2 =", "esperado": "4/3" }
+    ],
+    "pistas": ["Hacer el doble es multiplicar la cantidad por 2."],
+    "explicacion": "2/3 × 2 = 4/3 tazas."
   }
 ]
