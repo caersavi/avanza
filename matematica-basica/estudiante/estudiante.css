@@ -27,6 +27,84 @@ h1, h2, h3, h4 {
 
 a { color: var(--av-acento, #E8664B); }
 
+/* ---------- marca / wordmark ---------- */
+
+.marca-avanza {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 3px;
+  text-decoration: none;
+  color: var(--av-acento, #E8664B);
+  font-family: var(--av-fuente-display, inherit);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.marca-avanza-texto {
+  letter-spacing: -0.01em;
+}
+
+.marca-avanza-trazo {
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.marca-avanza-trazo path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.55;
+  transition: opacity 0.15s ease;
+}
+
+.marca-avanza:hover .marca-avanza-trazo path {
+  opacity: 0.9;
+}
+
+/* Wordmark compacto: usado como enlace de marca en el encabezado de las
+   páginas secundarias (módulo, teoría, práctica), junto a las migas. */
+.marca-avanza .marca-avanza-texto {
+  font-size: 1.15rem;
+}
+
+.marca-avanza .marca-avanza-trazo {
+  width: 30px;
+  height: 11px;
+  margin-bottom: 2px;
+}
+
+/* Wordmark grande: la marca principal de la portada, encima del eyebrow. */
+.marca-avanza--grande {
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.marca-avanza--grande .marca-avanza-texto {
+  font-size: clamp(2.6rem, 11vw, 3.6rem);
+  letter-spacing: -0.02em;
+}
+
+.marca-avanza--grande .marca-avanza-trazo {
+  width: clamp(74px, 18vw, 112px);
+  height: clamp(22px, 5vw, 32px);
+  margin-bottom: clamp(4px, 1.4vw, 10px);
+}
+
+/* Encabezado de páginas secundarias: marca compacta + migas en una fila. */
+.encabezado-pagina {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.encabezado-pagina .migas {
+  margin-bottom: 0;
+}
+
 /* ---------- portada ---------- */
 
 .portada {

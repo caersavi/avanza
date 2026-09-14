@@ -8,13 +8,21 @@
   <link rel="stylesheet" href="estudiante.css">
 </head>
 <body>
-  <div class="migas"><a href="index.html">← Módulos</a></div>
+  <header class="encabezado-pagina">
+    <a class="marca-avanza" href="index.html" aria-label="Avanza — Inicio">
+      <span class="marca-avanza-texto">Avanza</span>
+      <svg class="marca-avanza-trazo" viewBox="0 0 120 24" aria-hidden="true">
+        <path d="M2 17 C 32 6, 62 6, 92 12 C 100 14, 106 12, 112 5" />
+      </svg>
+    </a>
+    <div class="migas"><a href="index.html">← Módulos</a></div>
+  </header>
   <h1 id="titulo-modulo">Cargando…</h1>
   <p>Elige un subtema para practicar.</p>
 
   <ul class="lista-tarjetas" id="lista-subtemas"></ul>
 
-  <footer class="creditos">Hecho por Carlos Sánchez</footer>
+  <footer class="creditos">Ing. Carlos Sánchez</footer>
 
   <script type="module">
     import { obtenerModulo, cargarTarjetasDeModulo, agruparPorSubtema, humanizar } from './util.js';

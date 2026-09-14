@@ -32,7 +32,15 @@
   <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
 </head>
 <body>
-  <div class="migas"><a href="index.html">← Módulos</a></div>
+  <header class="encabezado-pagina">
+    <a class="marca-avanza" href="index.html" aria-label="Avanza — Inicio">
+      <span class="marca-avanza-texto">Avanza</span>
+      <svg class="marca-avanza-trazo" viewBox="0 0 120 24" aria-hidden="true">
+        <path d="M2 17 C 32 6, 62 6, 92 12 C 100 14, 106 12, 112 5" />
+      </svg>
+    </a>
+    <div class="migas"><a href="index.html">← Módulos</a></div>
+  </header>
 
   <p class="teoria-eyebrow">Teoría</p>
   <h1 id="titulo-modulo">Cargando…</h1>
@@ -45,7 +53,7 @@
     <a id="enlace-practicar" class="boton-cta" href="#">Practicar ejercicios de este módulo →</a>
   </div>
 
-  <footer class="creditos">Hecho por Carlos Sánchez</footer>
+  <footer class="creditos">Ing. Carlos Sánchez</footer>
 
   <script type="module">
     import { obtenerModulo, cargarTeoriaDeModulo } from './util.js';
