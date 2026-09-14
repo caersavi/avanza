@@ -29,6 +29,15 @@ export async function cargarTarjetasDeModulo(modulo) {
   return listas.flat();
 }
 
+/** Descarga el teoria.md (texto crudo, sin procesar) del módulo. Vive en
+ *  matematica-basica/modulos/<carpeta>/teoria.md — usa la misma `carpeta`
+ *  que el manifest de tarjetas, porque ambas carpetas comparten numeración. */
+export async function cargarTeoriaDeModulo(modulo) {
+  const res = await fetch(`../modulos/${modulo.carpeta}/teoria.md`);
+  if (!res.ok) throw new Error(`No se pudo cargar la teoría de este módulo (${res.status}).`);
+  return res.text();
+}
+
 /** Agrupa un arreglo de tarjetas por su campo `subtema`, preservando el
  *  orden de aparición y ordenando cada grupo por dificultad ascendente. */
 export function agruparPorSubtema(tarjetas) {

@@ -33,7 +33,8 @@ admite alguna factorización distinta de la trivial ($d=d\cdot1$). El 1 no es
 ni primo ni compuesto.
 
 Primos menores que 100:
-$$2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97$$
+
+2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97
 
 **Reglas de divisibilidad:**
 
@@ -57,12 +58,25 @@ $$
 ## 5. Máximo común divisor (MCD)
 
 **Por factorización:** factores comunes con el menor exponente.
-$$84=2^2\cdot3\cdot7 \quad 360=2^3\cdot3^2\cdot5 \quad \text{MCD}(84,360)=2^2\cdot3=12$$
+$$
+\begin{aligned}
+84 &= 2^2\cdot3\cdot7 \\
+360 &= 2^3\cdot3^2\cdot5 \\
+\text{MCD}(84,360) &= 2^2\cdot3=12
+\end{aligned}
+$$
 
 **Por Euclides:** se divide el mayor entre el menor, luego el divisor entre
 el residuo, hasta residuo 0. El MCD es el último divisor.
 
-$$258=78\cdot3+24 \qquad 78=24\cdot3+6 \qquad 24=6\cdot4+0 \qquad \text{MCD}(258,78)=6$$
+$$
+\begin{aligned}
+258 &=78\cdot3+24 \\
+78 &=24\cdot3+6 \\
+24 &=6\cdot4+0 \\
+\text{MCD}(258,78) &=6
+\end{aligned}
+$$
 
 **Primos entre sí:** $\text{MCD}(a,b)=1$ (ej. 39 y 32), aunque ninguno sea
 primo.
@@ -70,12 +84,24 @@ primo.
 ## 6. Mínimo común múltiplo (mcm)
 
 **Por factorización:** todos los factores primos con el mayor exponente.
-$$12=2^2\cdot3 \quad 15=3\cdot5 \quad \text{mcm}(12,15)=2^2\cdot3\cdot5=60$$
+$$
+\begin{aligned}
+12 &= 2^2\cdot3 \\
+15 &= 3\cdot5 \\
+\text{mcm}(12,15) &= 2^2\cdot3\cdot5=60
+\end{aligned}
+$$
 
 **Fórmula:**
 $$\text{mcm}(a,b) = \frac{a \times b}{\text{MCD}(a,b)}$$
 
-Ejemplo: $\text{MCD}(242,110)=22 \Rightarrow \text{mcm}(242,110)=\frac{242\times110}{22}=1210$.
+Ejemplo:
+$$
+\begin{aligned}
+\text{MCD}(242,110) &= 22 \\
+\text{mcm}(242,110) &= \frac{242\times110}{22}=1210
+\end{aligned}
+$$
 
 *(MCD y mcm se usan directamente en [Racionales](../03-racionales/teoria.md)
 para simplificar fracciones y sumar con distinto denominador.)*

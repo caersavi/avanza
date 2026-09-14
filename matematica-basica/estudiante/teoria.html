@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avanza — Teoría</title>
+  <link rel="stylesheet" href="../../assets/styles/tokens.css">
+  <link rel="stylesheet" href="estudiante.css">
+  <link rel="stylesheet" href="teoria.css">
+
+  <!-- Parser de Markdown (marked) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
+
+  <!-- Renderizado de LaTeX (MathJax). typeset:false porque tipeamos a mano
+       después de insertar el HTML, no automáticamente al cargar la página. -->
+  <script>
+    window.MathJax = {
+      startup: { typeset: false },
+      // El menú contextual (clic derecho) de MathJax no lo necesitamos, y
+      // agrega a cada fórmula elementos posicionados fuera del flujo normal
+      // que provocan scroll horizontal fantasma en móvil (no se ve ningún
+      // elemento "desbordado" al inspeccionar cajas, pero sí ensanchan
+      // document.documentElement.scrollWidth).
+      options: { enableMenu: false },
+    };
+  </script>
+  <!-- Sin `async`: así se ejecuta antes que el <script type="module"> de más
+       abajo (los módulos siempre se difieren hasta después de los scripts
+       normales), garantizando que MathJax.startup.promise ya exista de
+       verdad cuando el módulo lo usa, en vez de ser undefined por una
+       carrera con la carga asíncrona. -->
+  <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+</head>
+<body>
+  <div class="migas"><a href="index.html">← Módulos</a></div>
+
+  <p class="teoria-eyebrow">Teoría</p>
+  <h1 id="titulo-modulo">Cargando…</h1>
+
+  <article id="contenido-teoria" class="teoria-contenido">
+    <p>Cargando teoría…</p>
+  </article>
+
+  <div class="cta-practicar">
+    <a id="enlace-practicar" class="boton-cta" href="#">Practicar ejercicios de este módulo →</a>
+  </div>
+
+  <footer class="creditos">Hecho por Carlos Sánchez</footer>
+
+  <script type="module">
+    import { obtenerModulo, cargarTeoriaDeModulo } from './util.js';
+
+    const params = new URLSearchParams(location.search);
+    const idModulo = params.get('modulo');
+
+    // El markdown separa fórmulas ($$...$$ y $...$) ANTES de pasar por el
+    // parser de Markdown, para que marked no interprete guiones bajos o
+    // asteriscos dentro de una fórmula como sintaxis de markdown. Se
+    // restauran después, ya envueltas en los delimitadores de MathJax.
+    function extraerMatematicas(md) {
+      const bloques = [];
+      let texto = md.replace(/\$\$([\s\S]+?)\$\$/g, (_, expr) => {
+        bloques.push({ bloque: true, expr });
+        return `@@MATH${bloques.length - 1}@@`;
+      });
+      texto = texto.replace(/\$([^$\n]+?)\$/g, (_, expr) => {
+        bloques.push({ bloque: false, expr });
+        return `@@MATH${bloques.length - 1}@@`;
+      });
+      return { texto, bloques };
+    }
+
+    function restaurarMatematicas(html, bloques) {
+      return html.replace(/@@MATH(\d+)@@/g, (_, i) => {
+        const b = bloques[Number(i)];
+        return b.bloque ? `\\[${b.expr}\\]` : `\\(${b.expr}\\)`;
+      });
+    }
+
+    // Los teoria.md se enlazan entre sí pensando en quien navega el
+    // repositorio en GitHub (ej. "[Racionales](../03-racionales/teoria.md)").
+    // Dentro del sitio, esos enlaces deben ir a teoria.html?modulo=<id>.
+    function corregirEnlacesEntreModulos(html) {
+      return html.replace(/href="\.\.\/\d+-([a-z]+)\/teoria\.md"/g, 'href="teoria.html?modulo=$1"');
+    }
+
+    // El primer título del markdown ("# Módulo N — ...") queda redundante:
+    // el nombre del módulo ya se muestra como <h1> de la página.
+    function quitarTituloPrincipal(md) {
+      return md.replace(/^#\s+.+\n/, '');
+    }
+
+    async function render() {
+      if (!idModulo) throw new Error('Falta el parámetro ?modulo= en la URL.');
+
+      const modulo = await obtenerModulo(idModulo);
+      document.querySelector('#titulo-modulo').textContent = modulo.nombre;
+      document.title = `Avanza — Teoría de ${modulo.nombre}`;
+      document.querySelector('#enlace-practicar').href = `modulo.html?modulo=${encodeURIComponent(idModulo)}`;
+
+      const md = quitarTituloPrincipal(await cargarTeoriaDeModulo(modulo));
+      const { texto, bloques } = extraerMatematicas(md);
+      let html = marked.parse(texto);
+      html = restaurarMatematicas(html, bloques);
+      html = corregirEnlacesEntreModulos(html);
+
+      const contenedor = document.querySelector('#contenido-teoria');
+      contenedor.innerHTML = html;
+
+      await MathJax.startup.promise;
+      await MathJax.typesetPromise([contenedor]);
+    }
+
+    render().catch((err) => {
+      document.querySelector('#titulo-modulo').textContent = 'Error';
+      document.querySelector('#contenido-teoria').textContent = err.message;
+      console.error(err);
+    });
+  </script>
+</body>
+</html>

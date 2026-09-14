@@ -1,0 +1,173 @@
+/* Tipografía del contenido de teoria.md renderizado — dirección "Punto de
+   partida". Separado de estudiante.css porque son reglas de tipografía de
+   artículo largo, no de chrome de la app. */
+
+.teoria-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--av-acento, #E8664B);
+  margin: 0 0 6px;
+}
+
+.teoria-contenido {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--av-texto, #2E2033);
+}
+
+.teoria-contenido h2 {
+  font-family: var(--av-fuente-display, inherit);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 40px 0 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--av-borde, #F1E1D9);
+}
+
+/* La primera sección (justo después de la cita de fuente) no necesita el
+   separador — ya lo provee el blockquote encima. */
+.teoria-contenido blockquote + h2 {
+  margin-top: 28px;
+  padding-top: 0;
+  border-top: none;
+}
+
+.teoria-contenido h3 {
+  font-family: var(--av-fuente-display, inherit);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 26px 0 10px;
+}
+
+.teoria-contenido p { margin: 0 0 16px; }
+
+.teoria-contenido strong { font-weight: 700; }
+
+.teoria-contenido ul, .teoria-contenido ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+}
+
+.teoria-contenido li { margin-bottom: 6px; }
+
+.teoria-contenido code {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.88em;
+  background: var(--av-borde, #F1E1D9);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.teoria-contenido blockquote {
+  margin: 0 0 16px;
+  padding: 10px 16px;
+  border-left: 3px solid var(--av-progreso, #E0A458);
+  background: var(--av-progreso-suave, #FBEEDA);
+  border-radius: 0 var(--av-radio-control, 12px) var(--av-radio-control, 12px) 0;
+  color: var(--av-texto, #2E2033);
+}
+
+.teoria-contenido blockquote p { margin: 0; }
+.teoria-contenido blockquote p + p { margin-top: 8px; }
+
+.teoria-contenido table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 20px;
+  font-size: 0.95rem;
+}
+
+.teoria-contenido th, .teoria-contenido td {
+  border: 1px solid var(--av-borde, #F1E1D9);
+  padding: 8px 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.teoria-contenido thead th {
+  background: var(--av-acento-suave, #FBE3DD);
+  font-weight: 700;
+}
+
+.teoria-contenido a {
+  color: var(--av-acento, #E8664B);
+  font-weight: 600;
+}
+
+.teoria-contenido hr {
+  border: none;
+  border-top: 1px solid var(--av-borde, #F1E1D9);
+  margin: 28px 0;
+}
+
+/* MathJax: que herede el color del texto, y que ninguna fórmula (inline o
+   en bloque) pueda ensanchar la página. mjx-container se ajusta por
+   defecto al ancho de su fórmula (shrink-to-fit), así que overflow-x:auto
+   por sí solo no alcanza — hace falta un ancho máximo real para que sea la
+   fórmula la que scrollee dentro de su propia caja. Esto importa incluso
+   para fórmulas "inline" ($...$): algunas (ej. una ecuación con fracción
+   dentro de una oración) terminan siendo bastante anchas igual. */
+.teoria-contenido mjx-container {
+  color: inherit;
+  /* <mjx-container> es una etiqueta sin registrar: por defecto es
+     `display: inline`, y max-width NO tiene efecto en elementos inline no
+     reemplazados (spec de CSS) — de ahí que la fórmula más ancha del
+     ejemplo de mcm ignorara silenciosamente el max-width de abajo. Forzar
+     inline-block la deja seguir fluyendo en el texto pero ya respetando
+     el límite de ancho. */
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: -0.2em;
+  /* Barra de scroll siempre visible (no solo al pasar el mouse/tocar) para
+     que quede claro que una fórmula truncada se puede deslizar, en vez de
+     verse como si el contenido estuviera roto o cortado. */
+  scrollbar-width: thin;
+}
+
+.teoria-contenido mjx-container::-webkit-scrollbar {
+  height: 5px;
+}
+
+.teoria-contenido mjx-container::-webkit-scrollbar-thumb {
+  background: var(--av-borde, #F1E1D9);
+  border-radius: 999px;
+}
+
+/* Las de bloque ($$...$$) además van en su propia línea, centradas, con
+   más aire arriba/abajo. */
+.teoria-contenido mjx-container[display="true"] {
+  display: block !important;
+  margin: 12px 0 20px !important;
+}
+
+.cta-practicar {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--av-borde, #F1E1D9);
+  text-align: center;
+}
+
+.boton-cta {
+  display: inline-block;
+  font: inherit;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 15px 32px;
+  border-radius: var(--av-radio-control, 12px);
+  background: var(--av-acento, #E8664B);
+  color: white;
+  text-decoration: none;
+  transition: filter 0.15s ease;
+}
+
+.boton-cta:hover { filter: brightness(0.94); }
+
+@media (max-width: 460px) {
+  .boton-cta { display: block; }
+}
