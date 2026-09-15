@@ -31,7 +31,17 @@ class AvFeedback extends HTMLElement {
       pista: 'var(--av-aviso-suave, #fef3c7)',
     };
     this.innerHTML = `
-      <div style="display:flex; gap:8px; align-items:flex-start; padding:10px 14px;
+      <style>
+        @keyframes av-feedback-entrada {
+          from { opacity: 0; transform: translateY(-4px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .av-feedback-caja { animation: av-feedback-entrada 0.2s ease; }
+        @media (prefers-reduced-motion: reduce) {
+          .av-feedback-caja { animation: none; }
+        }
+      </style>
+      <div class="av-feedback-caja" style="display:flex; gap:8px; align-items:flex-start; padding:10px 14px;
                   border-radius:var(--av-radio-control, 8px); background:${fondos[estado]}; color:${colores[estado]};
                   font-family: var(--av-fuente, system-ui, sans-serif); font-weight: 500;">
         <span aria-hidden="true">${iconos[estado] ?? ''}</span>

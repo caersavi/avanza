@@ -40,20 +40,23 @@
   </header>
 
   <p class="teoria-eyebrow">Teoría</p>
-  <h1 id="titulo-modulo">Cargando…</h1>
+  <h1 id="titulo-modulo" hidden></h1>
 
   <article id="contenido-teoria" class="teoria-contenido">
-    <p>Cargando teoría…</p>
+    <div class="estado-carga">
+      <span class="spinner" aria-hidden="true"></span>
+      <span>Cargando teoría…</span>
+    </div>
   </article>
 
-  <div class="cta-practicar">
+  <div class="cta-practicar" id="cta-practicar" hidden>
     <a id="enlace-practicar" class="boton-cta" href="#">Practicar ejercicios de este módulo →</a>
   </div>
 
   <footer class="creditos">Ing. Carlos Sánchez</footer>
 
   <script type="module">
-    import { obtenerModulo, cargarTeoriaDeModulo } from './util.js';
+    import { obtenerModulo, cargarTeoriaDeModulo, mostrarError } from './util.js';
 
     const params = new URLSearchParams(location.search);
     const idModulo = params.get('modulo');
@@ -100,6 +103,7 @@
 
       const modulo = await obtenerModulo(idModulo);
       document.querySelector('#titulo-modulo').textContent = modulo.nombre;
+      document.querySelector('#titulo-modulo').hidden = false;
       document.title = `Avanza — Teoría de ${modulo.nombre}`;
       document.querySelector('#enlace-practicar').href = `modulo.html?modulo=${encodeURIComponent(idModulo)}`;
 
@@ -111,14 +115,16 @@
 
       const contenedor = document.querySelector('#contenido-teoria');
       contenedor.innerHTML = html;
+      document.querySelector('#cta-practicar').hidden = false;
 
       await MathJax.startup.promise;
       await MathJax.typesetPromise([contenedor]);
     }
 
     render().catch((err) => {
-      document.querySelector('#titulo-modulo').textContent = 'Error';
-      document.querySelector('#contenido-teoria').textContent = err.message;
+      document.querySelector('#titulo-modulo').textContent = 'No se pudo cargar la teoría';
+      document.querySelector('#titulo-modulo').hidden = false;
+      mostrarError(document.querySelector('#contenido-teoria'), err.message);
       console.error(err);
     });
   </script>

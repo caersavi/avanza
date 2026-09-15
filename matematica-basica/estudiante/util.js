@@ -52,6 +52,34 @@ export function agruparPorSubtema(tarjetas) {
   return grupos;
 }
 
+/** Reemplaza el contenido de `contenedor` con un estado de carga (spinner +
+ *  mensaje), consistente en las 4 páginas de estudiante/. */
+export function mostrarCarga(contenedor, mensaje = 'Cargando…') {
+  contenedor.innerHTML = `
+    <div class="estado-carga">
+      <span class="spinner" aria-hidden="true"></span>
+      <span></span>
+    </div>`;
+  contenedor.querySelector('span:last-child').textContent = mensaje;
+}
+
+/** Reemplaza el contenido de `contenedor` con un estado de error (icono +
+ *  mensaje + botón de reintentar), consistente en las 4 páginas. El mensaje
+ *  se inserta con textContent (nunca como HTML) porque puede contener texto
+ *  derivado de la URL (ej. un id de módulo desconocido). */
+export function mostrarError(contenedor, mensaje, alReintentar = () => location.reload()) {
+  contenedor.innerHTML = `
+    <div class="estado-error">
+      <span class="icono" aria-hidden="true">⚠</span>
+      <div>
+        <p></p>
+        <button type="button">Reintentar</button>
+      </div>
+    </div>`;
+  contenedor.querySelector('p').textContent = mensaje;
+  contenedor.querySelector('button').addEventListener('click', alReintentar);
+}
+
 // Palabras que son siglas y van completas en mayúscula (no solo la
 // primera letra) al humanizar un slug de subtema.
 const SIGLAS = new Set(['mcd', 'mcm']);

@@ -19,15 +19,20 @@
 
   <p class="seccion-titulo">Elige un módulo para empezar</p>
 
-  <ul class="lista-tarjetas" id="lista-modulos">
-    <li>Cargando módulos…</li>
-  </ul>
+  <div id="zona-modulos">
+    <div class="estado-carga">
+      <span class="spinner" aria-hidden="true"></span>
+      <span>Cargando módulos…</span>
+    </div>
+  </div>
 
   <footer class="creditos">Ing. Carlos Sánchez</footer>
 
   <script type="module">
-    import { cargarManifest, cargarTarjetasDeModulo } from './util.js';
+    import { cargarManifest, cargarTarjetasDeModulo, mostrarError } from './util.js';
     import { resumenModulo } from './progreso.js';
+
+    const zona = document.querySelector('#zona-modulos');
 
     async function render() {
       const modulos = await cargarManifest();
@@ -38,8 +43,8 @@
         modulos.map((modulo) => cargarTarjetasDeModulo(modulo))
       );
 
-      const lista = document.querySelector('#lista-modulos');
-      lista.innerHTML = '';
+      const lista = document.createElement('ul');
+      lista.className = 'lista-tarjetas';
 
       modulos.forEach((modulo, i) => {
         const tarjetas = datosPorModulo[i];
@@ -74,10 +79,13 @@
         li.appendChild(enlace);
         lista.appendChild(li);
       });
+
+      zona.innerHTML = '';
+      zona.appendChild(lista);
     }
 
     render().catch((err) => {
-      document.querySelector('#lista-modulos').textContent = 'Error cargando módulos: ' + err.message;
+      mostrarError(zona, err.message);
       console.error(err);
     });
   </script>

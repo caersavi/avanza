@@ -17,8 +17,15 @@
       <a id="enlace-modulo" href="#">Módulo</a>
     </div>
   </header>
-  <h1 id="titulo-subtema">Cargando…</h1>
-  <div class="progreso-texto" id="contador">—</div>
+  <h1 id="titulo-subtema" hidden></h1>
+  <div class="progreso-texto" id="contador" hidden>—</div>
+
+  <div id="zona-carga-practica">
+    <div class="estado-carga">
+      <span class="spinner" aria-hidden="true"></span>
+      <span>Cargando ejercicios…</span>
+    </div>
+  </div>
 
   <div id="contenedor-tarjeta" style="margin-top:16px;"></div>
 
@@ -40,7 +47,7 @@
 
   <script type="module">
     import { montarTarjeta } from '../../assets/core/engine.js';
-    import { obtenerModulo, cargarTarjetasDeModulo, agruparPorSubtema, humanizar } from './util.js';
+    import { obtenerModulo, cargarTarjetasDeModulo, agruparPorSubtema, humanizar, mostrarError } from './util.js';
     import { registrarResultado, resumenSubtema } from './progreso.js';
 
     const params = new URLSearchParams(location.search);
@@ -121,19 +128,29 @@
       tarjetas = grupos.get(subtema) ?? [];
 
       document.querySelector('#titulo-subtema').textContent = humanizar(subtema);
+      document.querySelector('#titulo-subtema').hidden = false;
       document.title = `Avanza — ${humanizar(subtema)}`;
 
+      const zonaCarga = document.querySelector('#zona-carga-practica');
+
       if (tarjetas.length === 0) {
-        document.querySelector('#contador').textContent = 'Todavía no hay ejercicios en este subtema.';
+        zonaCarga.innerHTML = `
+          <div class="estado-vacio">
+            Todavía no hay ejercicios en este subtema.
+            <a href="modulo.html?modulo=${encodeURIComponent(idModulo)}">Volver al módulo →</a>
+          </div>`;
         return;
       }
 
+      zonaCarga.hidden = true;
+      document.querySelector('#contador').hidden = false;
       mostrarTarjeta();
     }
 
     iniciar().catch((err) => {
-      document.querySelector('#titulo-subtema').textContent = 'Error';
-      document.querySelector('#contador').textContent = err.message;
+      document.querySelector('#titulo-subtema').textContent = 'No se pudo cargar';
+      document.querySelector('#titulo-subtema').hidden = false;
+      mostrarError(document.querySelector('#zona-carga-practica'), err.message);
       console.error(err);
     });
   </script>

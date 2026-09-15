@@ -163,10 +163,11 @@
   background: var(--av-acento, #E8664B);
   color: white;
   text-decoration: none;
-  transition: filter 0.15s ease;
+  transition: filter 0.15s ease, transform 0.1s ease;
 }
 
 .boton-cta:hover { filter: brightness(0.94); }
+.boton-cta:active { transform: scale(0.98); }
 
 @media (max-width: 460px) {
   .boton-cta { display: block; }

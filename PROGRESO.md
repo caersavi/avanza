@@ -1,6 +1,6 @@
 # Progreso — Avanza
 
-Última actualización: 2026-09-14. Léeme primero al empezar una sesión nueva.
+Última actualización: 2026-09-15. Léeme primero al empezar una sesión nueva.
 
 Avanza es una plataforma web de nivelación en matemáticas básicas para
 estudiantes universitarios colombianos. Sitio estático (sin backend),
@@ -39,6 +39,49 @@ validadas contra el schema, revisadas por enunciados duplicados, y
 verificadas una por una en el motor real (interacciones de UI reales, no
 solo revisión del JSON) — ver sección 4 para cómo repetir esa verificación.
 
+**Auditoría de calidad de contenido (2026-09-15) — completa.** Se hizo una
+auditoría exhaustiva de los 196 ejercicios + los 5 teoria.md: cada ejercicio
+se resolvió de forma independiente (sin mirar la respuesta) para confirmar
+que el resultado guardado es matemáticamente correcto, se revisaron pistas y
+explicaciones por contradicciones, se comparó cada ejercicio contra lo que
+su teoria.md realmente enseña, y se revisó la progresión de dificultad
+dentro de cada subtema. Resultado: **0 errores de cálculo** en las 196
+tarjetas. Se encontraron y corrigieron: 2 hallazgos críticos (enunciados que
+regalaban la respuesta en Irracionales/racionalización), ~10 pistas que
+resolvían el ejercicio en vez de orientar, ~15 huecos de teoría (conceptos
+que un ejercicio exigía pero teoria.md nunca explicaba — jerarquía de
+operaciones en Enteros, porcentajes inversos en Racionales, comparación de
+fracciones/negativos y notación científica completa en Reales,
+simplificación de radicales y racionalización avanzada en Irracionales,
+entre otros), y ~13 recalibraciones de dificultad. Reverificado todo después:
+schema 196/196, motor real 196/196, 0 duplicados, y las 5 páginas de teoría
+renderizando sin errores de LaTeX/Markdown (se encontró y corrigió un bug
+real en el camino: un `$` de pesos colombianos sin escapar correctamente
+rompía el extractor de fórmulas de `teoria.html`).
+
+**Lo que esa auditoría NO cubrió** (dejado fuera a propósito, ver sección 2):
+observaciones de variedad/repetitividad entre ejercicios del mismo subtema
+(sugerencias de estilo, no errores). El pulido de UI/UX sí se auditó y
+corrigió aparte, ver siguiente punto.
+
+**Pulido de UI — puntos 2-4 cerrados (2026-09-15).** Los 4 puntos de pulido
+pedidos originalmente ya están completos: (1) responsive — verificado con
+capturas mobile en una sesión anterior; (2) microinteracciones — agregadas:
+animación de entrada al montar una tarjeta nueva (`exercise-card.js`, solo
+en el primer montaje, no se repite al cambiar `estado`), fade-in del mensaje
+de retroalimentación (`feedback.js`), transición animada en la barra de
+progreso, estados `:active` (feedback táctil) en todos los botones/tarjetas,
+y `:focus-visible` consistente para navegación por teclado (incluyendo
+dentro del shadow DOM de `av-exercise-card`); (3) estados de carga/error —
+diseñados con un spinner y una caja de error (icono + mensaje + botón
+"Reintentar") usando los tokens `--av-error`/`--av-error-suave`, en vez de
+texto plano; (4) consistencia — los 3 estados (carga/error/vacío) ahora
+comparten una sola implementación (`mostrarCarga`/`mostrarError` en
+`util.js`) usada igual en las 4 páginas, en vez de que cada página lo
+resolviera a su manera. Todo respeta `prefers-reduced-motion` (el spinner de
+carga queda exento por ser información funcional, no decorativa). Reverificado
+después: 196/196 en el motor real, sin errores de consola en las 4 páginas.
+
 **Portal de estudiante** (`matematica-basica/estudiante/`) —
 `index.html` (portada + lista de módulos), `modulo.html` (lista de
 subtemas), `practica.html` (tarjetas de ejercicio), `teoria.html`
@@ -64,15 +107,16 @@ de calidad de texto (extracción de texto byte-idéntica, verificado).
   solo planeados en `matematica-basica/modulos/README.md`, sin `teoria.md`
   ni tarjetas todavía. El módulo 9 (Inecuaciones) va a necesitar teoría
   100% propia porque ningún libro de referencia lo cubre (confirmado por
-  búsqueda de texto completo en el libro Tadeo).
-- **Pulido "siguiente nivel"** — de los 4 puntos pedidos en su momento
-  (1. responsive, 2. microinteracciones, 3. estados de carga/error,
-  4. consistencia entre páginas), solo el punto 1 (responsive) quedó
-  verificado a fondo con capturas mobile. Los puntos 2-4 no tienen
-  confirmación explícita de estar terminados — vale la pena auditarlos en
-  la próxima sesión antes de asumir que están completos.
+  búsqueda de texto completo en el libro Tadeo). **Programado para
+  retomarse el martes** (según lo acordado el 2026-09-15).
 - **`matematica-basica/tarjetas/README.md`** todavía dice "123 en total"
   — desactualizado desde que se amplió a 196. Falta corregir ese número.
+- **Observaciones de variedad/repetitividad** en los ejercicios (varias
+  tarjetas del mismo subtema comparten plantilla casi idéntica, solo cambian
+  los números) — identificadas en la auditoría de 2026-09-15 pero dejadas
+  sin tocar a propósito, por ser sugerencias de estilo y no errores. Si se
+  quiere más variedad de contexto/formato dentro de un subtema, es trabajo
+  pendiente de redacción, no de corrección.
 - **`_test-verificacion-modulo.html`** vive en la raíz del repo (es una
   herramienta de QA para verificar tarjetas en el motor real vía
   `?modulo=X`, no parte del sitio publicado). Sigue siendo útil, pero

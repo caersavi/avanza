@@ -27,6 +27,93 @@ h1, h2, h3, h4 {
 
 a { color: var(--av-acento, #E8664B); }
 
+/* Foco visible por teclado, consistente en toda la app (enlaces, botones,
+   tarjetas navegables). No se toca el foco nativo de inputs/selects/radios:
+   ya es accesible por defecto. */
+a:focus-visible,
+button:focus-visible,
+.item-navegable:focus-visible {
+  outline: 2px solid var(--av-acento, #E8664B);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* El spinner de carga queda exento: es información funcional (indica que
+   algo sigue en curso), no una animación decorativa. Todo lo demás
+   (entradas, transiciones de hover/estado) se reduce a casi instantáneo. */
+@media (prefers-reduced-motion: reduce) {
+  *:not(.spinner) {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---------- estados de carga / error / vacío (compartidos) ---------- */
+
+.estado-carga {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--av-linea, #6E5F73);
+  font-size: 0.95rem;
+  padding: 14px 0;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border: 2.5px solid var(--av-borde, #F1E1D9);
+  border-top-color: var(--av-acento, #E8664B);
+  border-radius: 50%;
+  animation: av-girar 0.7s linear infinite;
+}
+
+@keyframes av-girar {
+  to { transform: rotate(360deg); }
+}
+
+.estado-error {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  border-radius: var(--av-radio, 18px);
+  background: var(--av-error-suave, #F5DAD3);
+  color: var(--av-error, #C1503E);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.estado-error .icono { flex-shrink: 0; font-size: 1.1rem; }
+
+.estado-error p { margin: 0 0 10px; }
+
+.estado-error button {
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 8px 16px;
+  border-radius: var(--av-radio-control, 12px);
+  border: 1px solid var(--av-error, #C1503E);
+  background: transparent;
+  color: var(--av-error, #C1503E);
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.estado-error button:hover { background: rgba(193, 80, 62, 0.08); }
+.estado-error button:active { transform: scale(0.96); }
+
+.estado-vacio {
+  padding: 16px 0;
+  color: var(--av-linea, #6E5F73);
+  font-size: 0.95rem;
+}
+
+.estado-vacio a { font-weight: 600; }
+
 /* ---------- marca / wordmark ---------- */
 
 .marca-avanza {
@@ -146,6 +233,10 @@ a { color: var(--av-acento, #E8664B); }
   box-shadow: 0 6px 16px -10px rgba(46, 32, 51, 0.25);
 }
 
+.item-navegable:active {
+  transform: translateY(0) scale(0.99);
+}
+
 .item-navegable h3 {
   margin: 0;
   font-size: 1.1rem;
@@ -188,6 +279,7 @@ a { color: var(--av-acento, #E8664B); }
   height: 100%;
   background: var(--av-acento, #E8664B);
   border-radius: 999px;
+  transition: width 0.5s ease;
 }
 
 .progreso-texto {
@@ -222,11 +314,15 @@ a { color: var(--av-acento, #E8664B); }
   background: var(--av-fondo-tarjeta, white);
   color: var(--av-texto, inherit);
   cursor: pointer;
-  transition: filter 0.15s ease, background 0.15s ease;
+  transition: filter 0.15s ease, background 0.15s ease, transform 0.1s ease;
 }
 
 .pie-practica button:hover:not(:disabled) {
   background: var(--av-acento-suave, #FBE3DD);
+}
+
+.pie-practica button:active:not(:disabled) {
+  transform: scale(0.97);
 }
 
 .pie-practica button:disabled {
@@ -282,7 +378,12 @@ a { color: var(--av-acento, #E8664B); }
   border-radius: var(--av-radio-control, 12px);
   cursor: pointer;
   text-decoration: none;
-  transition: filter 0.15s ease, background 0.15s ease;
+  transition: filter 0.15s ease, background 0.15s ease, transform 0.1s ease;
+}
+
+.resumen-acciones button:active,
+.resumen-acciones a:active {
+  transform: scale(0.97);
 }
 
 .resumen-acciones button {

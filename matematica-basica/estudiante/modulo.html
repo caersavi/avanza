@@ -14,32 +14,40 @@
     </a>
     <div class="migas"><a href="index.html">← Módulos</a></div>
   </header>
-  <h1 id="titulo-modulo">Cargando…</h1>
-  <p>Elige un subtema para practicar.</p>
+  <h1 id="titulo-modulo" hidden></h1>
+  <p id="subtitulo-modulo" hidden>Elige un subtema para practicar.</p>
 
-  <ul class="lista-tarjetas" id="lista-subtemas"></ul>
+  <div id="zona-modulo">
+    <div class="estado-carga">
+      <span class="spinner" aria-hidden="true"></span>
+      <span>Cargando módulo…</span>
+    </div>
+  </div>
 
   <footer class="creditos">Ing. Carlos Sánchez</footer>
 
   <script type="module">
-    import { obtenerModulo, cargarTarjetasDeModulo, agruparPorSubtema, humanizar } from './util.js';
+    import { obtenerModulo, cargarTarjetasDeModulo, agruparPorSubtema, humanizar, mostrarError } from './util.js';
     import { resumenSubtema } from './progreso.js';
 
     const params = new URLSearchParams(location.search);
     const idModulo = params.get('modulo');
+    const zona = document.querySelector('#zona-modulo');
 
     async function render() {
       if (!idModulo) throw new Error('Falta el parámetro ?modulo= en la URL.');
 
       const modulo = await obtenerModulo(idModulo);
       document.querySelector('#titulo-modulo').textContent = modulo.nombre;
+      document.querySelector('#titulo-modulo').hidden = false;
+      document.querySelector('#subtitulo-modulo').hidden = false;
       document.title = `Avanza — ${modulo.nombre}`;
 
       const tarjetas = await cargarTarjetasDeModulo(modulo);
       const grupos = agruparPorSubtema(tarjetas);
 
-      const lista = document.querySelector('#lista-subtemas');
-      lista.innerHTML = '';
+      const lista = document.createElement('ul');
+      lista.className = 'lista-tarjetas';
 
       for (const [subtema, tarjetasDelSubtema] of grupos) {
         const total = tarjetasDelSubtema.length;
@@ -73,11 +81,15 @@
         li.appendChild(enlace);
         lista.appendChild(li);
       }
+
+      zona.innerHTML = '';
+      zona.appendChild(lista);
     }
 
     render().catch((err) => {
-      document.querySelector('#titulo-modulo').textContent = 'Error';
-      document.querySelector('#lista-subtemas').textContent = err.message;
+      document.querySelector('#titulo-modulo').textContent = 'No se pudo cargar el módulo';
+      document.querySelector('#titulo-modulo').hidden = false;
+      mostrarError(zona, err.message);
       console.error(err);
     });
   </script>
