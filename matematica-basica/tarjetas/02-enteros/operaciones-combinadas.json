@@ -38,10 +38,10 @@
     "subtema": "operaciones-combinadas",
     "dificultad": 3,
     "tipo": "numerico",
-    "enunciado": "Una cuenta bancaria tiene un saldo de −$50 000. Si la deuda se triplica y luego se abonan $60 000, ¿cuál es el saldo final?",
+    "enunciado": "Una cuenta bancaria tiene un saldo de −$50.000. Si la deuda se triplica y luego se abonan $60.000, ¿cuál es el saldo final?",
     "respuesta": -90000,
     "pistas": ["Triplicar la deuda es multiplicar por 3; abonar es sumar."],
-    "explicacion": "(−50 000)×3 = −150 000; −150 000 + 60 000 = −90 000."
+    "explicacion": "(−50.000)×3 = −150.000; −150.000 + 60.000 = −90.000."
   },
   {
     "id": "enteros-operaciones-combinadas-05",
@@ -69,7 +69,7 @@
     "id": "enteros-operaciones-combinadas-07",
     "modulo": "enteros",
     "subtema": "operaciones-combinadas",
-    "dificultad": 3,
+    "dificultad": 2,
     "tipo": "numerico",
     "enunciado": "La temperatura de una ciudad cambió así en 3 días: bajó 5°C, subió 8°C y bajó 2°C. Si empezó en 10°C, ¿en qué temperatura terminó?",
     "respuesta": 11,

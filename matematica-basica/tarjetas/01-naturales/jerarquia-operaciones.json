@@ -44,7 +44,7 @@
     "tipo": "numerico",
     "enunciado": "Compraste 3 paquetes de 12 lápices y repartiste 10 entre tus amigos. Luego compraste 2 paquetes más de 6 lápices. ¿Cuántos lápices tienes ahora?",
     "respuesta": 38,
-    "pistas": ["Traduce el problema a una expresión: (3×12 − 10) + 2×6, y respeta la jerarquía de operaciones."],
+    "pistas": ["Traduce cada frase del problema en una operación, en el mismo orden en que aparecen, y respeta la jerarquía de operaciones."],
     "explicacion": "3×12=36; 36−10=26; 2×6=12; 26+12=38."
   },
   {
@@ -55,7 +55,7 @@
     "tipo": "numerico",
     "enunciado": "Calcula MCD(48, 18) + mcm(4, 6).",
     "respuesta": 18,
-    "pistas": ["Calcula cada resultado por separado antes de sumar.", "MCD(48,18): 48=2⁴×3, 18=2×3². mcm(4,6): 4=2², 6=2×3."],
+    "pistas": ["Calcula cada resultado por separado antes de sumar.", "Para hallar el MCD y el mcm, factoriza cada número por separado en factores primos."],
     "explicacion": "MCD(48,18)=2×3=6. mcm(4,6)=2²×3=12. 6+12=18."
   },
   {
@@ -77,7 +77,7 @@
     "tipo": "numerico",
     "enunciado": "Una camisa cuesta $45.000 y tiene un descuento de $8.000. Compras 3 camisas con ese descuento cada una, y además pagas $15.000 de envío. ¿Cuánto pagas en total?",
     "respuesta": 126000,
-    "pistas": ["Traduce el problema a una expresión: 3×(45000−8000)+15000, y respeta la jerarquía de operaciones."],
+    "pistas": ["Traduce cada frase del problema en una operación, en el mismo orden en que aparecen, y respeta la jerarquía de operaciones."],
     "explicacion": "45000−8000=37000; 3×37000=111000; 111000+15000=126000."
   }
 ]

@@ -72,7 +72,7 @@
     "id": "irracionales-ubicacion-recta-06",
     "modulo": "irracionales",
     "subtema": "ubicacion-recta",
-    "dificultad": 3,
+    "dificultad": 2,
     "tipo": "arrastrar-recta",
     "enunciado": "Ubica aproximadamente √5 en la recta numérica (√5 ≈ 2,24).",
     "recta": { "min": 0, "max": 5, "paso": 0.1, "marcaCada": 1 },

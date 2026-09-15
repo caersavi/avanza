@@ -47,7 +47,7 @@
     "id": "enteros-suma-resta-05",
     "modulo": "enteros",
     "subtema": "suma-resta",
-    "dificultad": 1,
+    "dificultad": 2,
     "tipo": "verdadero-falso",
     "enunciado": "7 − 12 y 12 − 7 dan el mismo resultado.",
     "opciones": [

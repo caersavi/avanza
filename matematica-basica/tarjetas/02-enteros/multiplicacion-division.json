@@ -62,7 +62,7 @@
     "id": "enteros-multiplicacion-division-06",
     "modulo": "enteros",
     "subtema": "multiplicacion-division",
-    "dificultad": 3,
+    "dificultad": 2,
     "tipo": "numerico",
     "enunciado": "Un buzo desciende 4 metros cada minuto. ¿A qué profundidad está después de 6 minutos? (expresa la profundidad como número negativo)",
     "respuesta": -24,

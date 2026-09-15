@@ -51,6 +51,11 @@ compuesto, poblaciones). Ambos son irracionales.
 Raíces: con Pitágoras (hipotenusa = la raíz buscada, trasladada con compás).
 π: por aproximación decimal ($3{,}14$ a $3{,}15$, cada vez más preciso).
 
+**Acotar una raíz entre enteros consecutivos:** para saber entre qué dos
+enteros se ubica $\sqrt{n}$ sin calcular decimales, busca los cuadrados
+perfectos consecutivos más cercanos a $n$. **Ejemplo:** para $\sqrt{20}$,
+como $16<20<25$ (es decir, $4^2<20<5^2$), entonces $4<\sqrt{20}<5$.
+
 ## 6. Densidad
 
 Entre dos racionales cualesquiera siempre hay un irracional (y viceversa).
@@ -59,14 +64,35 @@ Entre dos racionales cualesquiera siempre hay un irracional (y viceversa).
 
 ## 7. Operaciones con radicales
 
+**Simplificación de radicales (regla general):** si dentro de la raíz hay un
+factor que es cuadrado perfecto, se puede "sacar" de la raíz como su raíz
+cuadrada:
+$$\sqrt{a^2 \cdot b} = a\sqrt{b}$$
+**Ejemplo:** $\sqrt{48} = \sqrt{16\times3} = 4\sqrt{3}$ (16 es el mayor
+cuadrado perfecto que divide a 48).
+
 **Suma de semejantes:**
 $$3\sqrt{2}+5\sqrt{2}-\sqrt{8} = 3\sqrt{2}+5\sqrt{2}-2\sqrt{2} = 6\sqrt{2}$$
 
 **Multiplicación:**
 $$\sqrt{2}\cdot\sqrt{8}=\sqrt{16}=4$$
 
+**Área de un cuadrado:** si un cuadrado tiene área $A$, su lado mide
+$\sqrt{A}$ (porque lado × lado = área). **Ejemplo:** un cuadrado de área
+$18$ cm² tiene lado $\sqrt{18}=\sqrt{9\times2}=3\sqrt{2}$ cm.
+
 **Racionalización:**
 $$\frac{1}{\sqrt{2}} = \frac{1}{\sqrt{2}}\cdot\frac{\sqrt{2}}{\sqrt{2}} = \frac{\sqrt{2}}{2}$$
+
+A veces, después de racionalizar, la fracción resultante todavía se puede
+simplificar porque numerador y denominador comparten un factor:
+$$\frac{3}{\sqrt{3}} = \frac{3}{\sqrt{3}}\cdot\frac{\sqrt{3}}{\sqrt{3}} = \frac{3\sqrt{3}}{3} = \sqrt{3}$$
+
+Otras veces conviene simplificar primero el radical del denominador y
+racionalizar después:
+$$\frac{2}{\sqrt{8}} = \frac{2}{2\sqrt{2}} = \frac{1}{\sqrt{2}} = \frac{1}{\sqrt{2}}\cdot\frac{\sqrt{2}}{\sqrt{2}} = \frac{\sqrt{2}}{2}$$
+($\sqrt{8}=2\sqrt{2}$, así que la fracción se reduce antes de multiplicar
+por el radical).
 
 ## 8. Errores comunes
 

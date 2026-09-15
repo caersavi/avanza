@@ -44,6 +44,12 @@ Primos menores que 100:
 | 3 | suma de cifras divisible por 3 | 105 ($1+0+5=6$) sí |
 | 5 | termina en 0 o 5 | 205 sí, 48 no |
 
+**Composición de divisores:** si un número es divisible por dos números que
+no comparten factores primos entre sí (por ejemplo 2 y 3), también es
+divisible por su producto (6). Por eso, para saber si un número es
+divisible por 6, basta con comprobar que sea divisible por 2 y por 3 a la
+vez.
+
 ## 4. Descomposición en factores primos
 
 División sucesiva por primos, de menor a mayor:
@@ -63,6 +69,18 @@ $$
 84 &= 2^2\cdot3\cdot7 \\
 360 &= 2^3\cdot3^2\cdot5 \\
 \text{MCD}(84,360) &= 2^2\cdot3=12
+\end{aligned}
+$$
+
+El método por factorización se extiende igual a tres o más números: se
+factoriza cada uno y se toman los factores comunes a **todos** ellos, con
+el menor exponente.
+$$
+\begin{aligned}
+80 &= 2^4\cdot5 \\
+75 &= 3\cdot5^2 \\
+60 &= 2^2\cdot3\cdot5 \\
+\text{MCD}(80,75,60) &= 5
 \end{aligned}
 $$
 

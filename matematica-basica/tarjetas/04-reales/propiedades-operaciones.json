@@ -63,7 +63,7 @@
     "id": "reales-propiedades-05",
     "modulo": "reales",
     "subtema": "propiedades-operaciones",
-    "dificultad": 2,
+    "dificultad": 1,
     "tipo": "opcion-multiple",
     "enunciado": "¿Cuál es el inverso multiplicativo de 5?",
     "opciones": [
@@ -80,7 +80,7 @@
     "id": "reales-propiedades-06",
     "modulo": "reales",
     "subtema": "propiedades-operaciones",
-    "dificultad": 2,
+    "dificultad": 1,
     "tipo": "opcion-multiple",
     "enunciado": "¿Qué propiedad se ilustra en (2+5)+3 = 2+(5+3)?",
     "opciones": [

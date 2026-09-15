@@ -13,7 +13,7 @@
       { "valor": "29", "categoria": "primo" },
       { "valor": "33", "categoria": "compuesto" }
     ],
-    "pistas": ["Un número es primo si solo es divisible por 1 y por sí mismo.", "21 = 3 × 7 y 33 = 3 × 11."],
+    "pistas": ["Un número es primo si solo es divisible por 1 y por sí mismo.", "Prueba dividir cada número entre los primos pequeños (2, 3, 5, 7...) para ver si tiene otros divisores."],
     "explicacion": "17 y 29 no tienen más divisores que 1 y ellos mismos. 21 = 3×7 y 33 = 3×11 sí tienen otros factores."
   },
   {
@@ -73,7 +73,7 @@
       { "valor": "97", "categoria": "primo" },
       { "valor": "111", "categoria": "compuesto" }
     ],
-    "pistas": ["87 y 111 son divisibles por 3 (suma sus cifras)."],
+    "pistas": ["Suma las cifras de cada número para probar si es divisible por 3, y revisa también si tiene otros divisores además de 1 y sí mismo."],
     "explicacion": "87=3×29 y 111=3×37 son compuestos. 41 y 97 no tienen divisores propios."
   },
   {
@@ -95,7 +95,7 @@
     "id": "naturales-primos-07",
     "modulo": "naturales",
     "subtema": "primos-y-compuestos",
-    "dificultad": 3,
+    "dificultad": 1,
     "tipo": "numerico",
     "enunciado": "¿Cuál es el producto de los dos primeros números primos mayores que 10?",
     "respuesta": 143,

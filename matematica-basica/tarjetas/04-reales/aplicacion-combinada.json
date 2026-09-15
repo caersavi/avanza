@@ -83,7 +83,7 @@
       { "id": "c", "texto": "Son iguales" }
     ],
     "respuesta": "b",
-    "pistas": ["Compara primero los exponentes de 10: un exponente mayor casi siempre gana."],
+    "pistas": ["Compara primero los exponentes de 10: si ambos números están en notación científica normalizada (1≤a<10), un exponente mayor siempre gana."],
     "explicacion": "4,5×10⁶=4.500.000 y 3,2×10⁷=32.000.000. Como 32.000.000 > 4.500.000, 3,2×10⁷ es mayor."
   }
 ]

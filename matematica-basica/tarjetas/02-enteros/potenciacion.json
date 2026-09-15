@@ -25,7 +25,7 @@
     "id": "enteros-potenciacion-03",
     "modulo": "enteros",
     "subtema": "potenciacion",
-    "dificultad": 2,
+    "dificultad": 1,
     "tipo": "opcion-multiple",
     "enunciado": "¿Cuál es el signo de (−3)⁷?",
     "opciones": [
@@ -40,7 +40,7 @@
     "id": "enteros-potenciacion-04",
     "modulo": "enteros",
     "subtema": "potenciacion",
-    "dificultad": 2,
+    "dificultad": 1,
     "tipo": "numerico",
     "enunciado": "Calcula: (−1)¹⁰⁰",
     "respuesta": 1,
@@ -51,7 +51,7 @@
     "id": "enteros-potenciacion-05",
     "modulo": "enteros",
     "subtema": "potenciacion",
-    "dificultad": 1,
+    "dificultad": 2,
     "tipo": "verdadero-falso",
     "enunciado": "(−4)² es igual a −4².",
     "opciones": [

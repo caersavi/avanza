@@ -7,7 +7,7 @@
     "tipo": "numerico",
     "enunciado": "Usando factorización, halla el MCD(18, 24).",
     "respuesta": 6,
-    "pistas": ["18 = 2 × 3², 24 = 2³ × 3. Toma los factores comunes con el menor exponente."],
+    "pistas": ["Descompón 18 y 24 en factores primos, y luego toma los factores comunes con el menor exponente."],
     "explicacion": "MCD(18,24) = 2 × 3 = 6."
   },
   {
@@ -36,7 +36,7 @@
       { "id": "f", "texto": "Falso" }
     ],
     "respuesta": "v",
-    "pistas": ["Dos números son primos entre sí exactamente cuando su MCD es 1, aunque ninguno de los dos sea un número primo."],
+    "pistas": ["Factoriza 15 y 28 en primos y compara ambas descomposiciones: ¿tienen algún factor primo en común?"],
     "explicacion": "15 = 3×5 y 28 = 2²×7 no comparten factores primos, así que su MCD es 1 y son primos entre sí."
   },
   {
@@ -47,7 +47,6 @@
     "tipo": "numerico",
     "enunciado": "Un gerente reparte 80 esferos a un promotor, 75 a otro y 60 a un tercero, para que cada uno le dé la misma cantidad a cada estudiante de un colegio, sin que sobre ninguno. ¿Cuál es la mayor cantidad de esferos que puede recibir cada estudiante?",
     "respuesta": 5,
-    "tolerancia": 0,
     "pistas": [
       "La cantidad que se reparte exacta a cada estudiante debe dividir a 80, 75 y 60 al mismo tiempo.",
       "Busca el MCD(80, 75, 60): descompón cada número en factores primos."
@@ -62,7 +61,7 @@
     "tipo": "numerico",
     "enunciado": "Usando factorización, halla el MCD(45, 60).",
     "respuesta": 15,
-    "pistas": ["45 = 3² × 5, 60 = 2² × 3 × 5. Toma los factores comunes con el menor exponente."],
+    "pistas": ["Descompón 45 y 60 en factores primos, y luego toma los factores comunes con el menor exponente."],
     "explicacion": "MCD(45,60) = 3 × 5 = 15."
   },
   {

@@ -7,7 +7,7 @@
     "tipo": "numerico",
     "enunciado": "Usando factorización, halla el mcm(8, 12).",
     "respuesta": 24,
-    "pistas": ["8 = 2³, 12 = 2² × 3. Toma todos los factores primos con el mayor exponente."],
+    "pistas": ["Descompón 8 y 12 en factores primos, y luego toma todos los factores primos con el mayor exponente."],
     "explicacion": "mcm(8,12) = 2³ × 3 = 24."
   },
   {
@@ -40,7 +40,7 @@
     "tipo": "numerico",
     "enunciado": "Usando factorización, halla el mcm(6, 10).",
     "respuesta": 30,
-    "pistas": ["6 = 2 × 3, 10 = 2 × 5. Toma todos los factores primos con el mayor exponente."],
+    "pistas": ["Descompón 6 y 10 en factores primos, y luego toma todos los factores primos con el mayor exponente."],
     "explicacion": "mcm(6,10) = 2 × 3 × 5 = 30."
   },
   {
@@ -62,11 +62,11 @@
     "id": "naturales-mcm-06",
     "modulo": "naturales",
     "subtema": "mcm",
-    "dificultad": 2,
+    "dificultad": 1,
     "tipo": "numerico",
     "enunciado": "Usando factorización, halla el mcm(9, 12).",
     "respuesta": 36,
-    "pistas": ["9 = 3², 12 = 2² × 3."],
+    "pistas": ["Descompón 9 y 12 en factores primos, y luego toma todos los factores primos con el mayor exponente."],
     "explicacion": "mcm(9,12) = 2² × 3² = 36."
   },
   {

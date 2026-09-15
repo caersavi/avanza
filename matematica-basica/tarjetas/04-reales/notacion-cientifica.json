@@ -5,7 +5,7 @@
     "subtema": "notacion-cientifica",
     "dificultad": 1,
     "tipo": "paso-a-paso",
-    "enunciado": "Escribe 73.500.000.000.000 en notación científica a × 10ⁿ.",
+    "enunciado": "Escribe 73.500.000.000.000 en notación científica a × 10ⁿ (usa punto para el separador decimal al escribir tu respuesta, ej. 7.35).",
     "pasos": [
       { "texto": "a =", "esperado": "7.35" },
       { "texto": "n =", "esperado": "13" }
@@ -19,7 +19,7 @@
     "subtema": "notacion-cientifica",
     "dificultad": 1,
     "tipo": "paso-a-paso",
-    "enunciado": "Escribe 0.00412 en notación científica a × 10ⁿ.",
+    "enunciado": "Escribe 0.00412 en notación científica a × 10ⁿ (usa punto para el separador decimal al escribir tu respuesta, ej. 4.12).",
     "pasos": [
       { "texto": "a =", "esperado": "4.12" },
       { "texto": "n =", "esperado": "-3" }
@@ -81,7 +81,7 @@
     "subtema": "notacion-cientifica",
     "dificultad": 3,
     "tipo": "paso-a-paso",
-    "enunciado": "Convierte 250.000 × 10² a notación científica correcta a × 10ⁿ (recuerda que a debe estar entre 1 y 10).",
+    "enunciado": "Convierte 250.000 × 10² a notación científica correcta a × 10ⁿ (recuerda que a debe estar entre 1 y 10; usa punto para el separador decimal al escribir tu respuesta, ej. 2.5).",
     "pasos": [
       { "texto": "a =", "esperado": "2.5" },
       { "texto": "n =", "esperado": "7" }

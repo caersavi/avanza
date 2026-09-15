@@ -5,7 +5,7 @@
     "subtema": "racionalizacion",
     "dificultad": 2,
     "tipo": "paso-a-paso",
-    "enunciado": "Racionaliza 1/√2. Escribe el resultado en la forma a/b (ej. √2/2).",
+    "enunciado": "Racionaliza 1/√2. Escribe el resultado en la forma a/b (ej. √3/3).",
     "pasos": [
       { "texto": "1/√2 =", "esperado": "√2/2" }
     ],
@@ -31,7 +31,7 @@
     "subtema": "racionalizacion",
     "dificultad": 3,
     "tipo": "paso-a-paso",
-    "enunciado": "Racionaliza y simplifica 3/√3. Escribe el resultado (puede quedar solo la raíz, ej. √3).",
+    "enunciado": "Racionaliza y simplifica 3/√3. Escribe el resultado (puede quedar solo la raíz, ej. √5).",
     "pasos": [
       { "texto": "3/√3 =", "esperado": "√3" }
     ],

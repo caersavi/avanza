@@ -20,6 +20,12 @@ $$|a| = \begin{cases} a & \text{si } a \geq 0 \\ -a & \text{si } a < 0 \end{case
 **Ejemplo:** $|5|=5$, $|-5|=5$ — opuestos comparten valor absoluto (misma
 distancia a 0).
 
+Las barras de valor absoluto también funcionan como símbolo de
+agrupación: si hay una operación dentro de ellas, esa operación se
+resuelve primero y recién después se aplica el valor absoluto.
+
+**Ejemplo:** $|-8+3| = |-5| = 5$ (no $|-8|+3=11$).
+
 ## 3. Adición
 
 $$(-10) + 15 = 5$$
@@ -44,10 +50,23 @@ El orden importa: si $a \neq b$, entonces $a-b \neq b-a$.
 
 **Ejemplo:** $3 \times (-5) = -15$.
 
+Con más de dos factores, cuenta cuántos son negativos: un número par de
+factores negativos da un resultado positivo, y un número impar da un
+resultado negativo.
+
+**Ejemplo:** $(-2)\times(-3)\times(-1) = -6$ (tres factores negativos, un
+número impar → resultado negativo).
+
 $$b^n = \underbrace{b \cdot b \cdots b}_{n \text{ factores}}$$
 
 Cuidado con el signo: $(-2)^4=16$ (exponente par) pero $(-2)^5=-32$
 (exponente impar).
+
+El paréntesis también importa: en $(-4)^2$ el signo está dentro del
+paréntesis y se eleva junto con el 4, así que $(-4)^2=16$. En cambio, en
+$-4^2$ el signo queda fuera: primero se eleva el 4 y después se aplica el
+signo, así que $-4^2=-(4^2)=-16$. Son expresiones distintas aunque se
+parezcan.
 
 ## 6. División
 
@@ -61,3 +80,16 @@ definida** — ningún número multiplicado por 0 da 4.
 Conmutativa, asociativa y distributiva aplican igual que en ℕ, incluyendo
 signos. Tabla unificada con todas sus formas en el
 [módulo de Reales](../04-reales/teoria.md).
+
+## 8. Jerarquía de operaciones
+
+Cuando una expresión combina varias operaciones con enteros, se resuelven
+en este orden:
+
+1. Valor absoluto y potencias.
+2. Multiplicación y división, de izquierda a derecha.
+3. Suma y resta, de izquierda a derecha.
+
+**Ejemplo:** $5 - 2 \times (-3)^2$: primero la potencia, $(-3)^2=9$;
+luego la multiplicación, $2\times9=18$; finalmente la resta,
+$5-18=-13$.
