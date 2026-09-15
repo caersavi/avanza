@@ -34,11 +34,13 @@
     "modulo": "racionales",
     "subtema": "equivalencia-simplificacion",
     "dificultad": 1,
-    "tipo": "numerico",
-    "enunciado": "Amplifica 2/5 multiplicando numerador y denominador por 3. ¿Cuál es el nuevo denominador?",
-    "respuesta": 15,
-    "pistas": ["Multiplica también el denominador original por 3."],
-    "explicacion": "5 × 3 = 15, así que 2/5 = 6/15."
+    "tipo": "paso-a-paso",
+    "enunciado": "Amplifica 2/5 multiplicando numerador y denominador por 3. Escribe la fracción resultante en la forma a/b.",
+    "pasos": [
+      { "texto": "2/5 =", "esperado": "6/15" }
+    ],
+    "pistas": ["Multiplica tanto el numerador como el denominador por 3."],
+    "explicacion": "2×3=6 y 5×3=15, así que 2/5 = 6/15."
   },
   {
     "id": "racionales-equivalencia-04",
@@ -62,9 +64,11 @@
     "modulo": "racionales",
     "subtema": "equivalencia-simplificacion",
     "dificultad": 2,
-    "tipo": "numerico",
-    "enunciado": "Simplifica 24/36 usando su MCD. ¿Cuál es el numerador de la fracción simplificada?",
-    "respuesta": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Simplifica 24/36 usando su MCD. Escribe la fracción simplificada en la forma a/b.",
+    "pasos": [
+      { "texto": "24/36 =", "esperado": "2/3" }
+    ],
     "pistas": ["Descompón 24 y 36 en factores primos para hallar su MCD."],
     "explicacion": "MCD(24,36)=12; 24÷12=2 y 36÷12=3, así 24/36 = 2/3."
   },

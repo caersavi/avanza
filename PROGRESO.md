@@ -89,6 +89,28 @@ subtemas), `practica.html` (tarjetas de ejercicio), `teoria.html`
 `localStorage` (por navegador, sin cuenta ni backend): tarjetas vistas,
 aciertos, badges de estado (en progreso / completado), precisión %.
 
+**Fix: tipo de campo incorrecto en 2 tarjetas de Racionales (reportado por
+el usuario, 2026-09-15).** El usuario detectó usando el sitio real que
+`racionales-equivalencia-03` no lo dejaba responder — el enunciado hace una
+operación sobre una fracción ("Amplifica 2/5 ×3") y antes solo preguntaba
+por una pieza aislada del resultado ("¿Cuál es el nuevo denominador?"),
+usando `tipo: "numerico"`. Es una redacción confusa: el estudiante espera
+responder con la fracción completa, no con un número suelto. Se auditaron
+las 49 tarjetas de Racionales con este criterio (operación sobre fracción +
+`tipo: "numerico"` que pide solo una pieza del resultado, en vez de la
+fracción completa) y se encontraron exactamente 2 con el problema, ambas en
+`equivalencia-simplificacion.json`: `racionales-equivalencia-03` y
+`racionales-equivalencia-05`. Las 47 tarjetas restantes que sí requieren
+fracción completa ya usaban correctamente `tipo: "paso-a-paso"` (campo de
+texto libre, acepta "/"). **El motor ya soportaba respuestas en formato de
+fracción desde antes** — no hizo falta crear un input type nuevo, solo usar
+`paso-a-paso` (que ya usan 47 de las 49 tarjetas del módulo) en vez de
+`numerico` en esas 2. Corrección aplicada: ambas ahora piden la fracción
+resultante completa en forma a/b vía `paso-a-paso`. Verificado: schema
+49/49 sin errores, 0 duplicados, motor real 49/49 correctas (incluida una
+verificación específica escribiendo "6/15" a mano en el campo de texto de
+`equivalencia-03`, replicando el caso exacto que reportó el usuario).
+
 **Publicación** — GitHub Pages vía GitHub Actions
 (`.github/workflows/static.yml`, deploy automático en cada push a
 `master`). Rutas del sitio son **relativas** (no absolutas) porque el sitio
@@ -180,6 +202,25 @@ módulo; repetirla en cada una de las 196 tarjetas sería redundante.
 modificadas se valida contra el schema, se revisa por enunciados
 duplicados, y se verifica montándolas en el motor real dentro de un
 navegador headless (no alcanza con revisar el JSON a simple vista).
+
+**Capacidad del sitio (analizado 2026-09-15)** — se confirmó que no hay
+riesgo de saturación por muchos estudiantes entrando a la vez. Razón
+arquitectónica: el sitio es 100% estático (sin backend, sin base de datos),
+servido por GitHub Pages a través de una CDN (Fastly) — no existe un cupo de
+"conexiones simultáneas" como en un servidor tradicional, y el progreso de
+cada estudiante vive solo en su propio `localStorage`, nunca en un servidor
+compartido. El único límite real es el de GitHub Pages (confirmado en su
+documentación oficial): **100 GB de transferencia al mes** (límite blando,
+no un corte automático). Cada sesión de estudiante pesa muy poco (~1 MB o
+menos: el HTML/CSS/JS/JSON del sitio son unos pocos KB por módulo; MathJax y
+la fuente de Google se cargan desde sus propios CDN y no cuentan contra ese
+límite; el PDF del libro de 45 MB **no está enlazado desde el portal del
+estudiante**, así que tampoco pesa). Con eso, el sitio soporta
+cómodamente decenas de miles de sesiones al mes — muy por encima de lo que
+necesita un curso universitario. Si algún día el tráfico se vuelve masivo de
+verdad, la salida es trivial: mover el mismo contenido estático a otro host
+gratuito sin ese límite blando (Cloudflare Pages, Netlify), sin cambiar
+código.
 
 ---
 
