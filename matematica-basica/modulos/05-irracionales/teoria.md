@@ -81,6 +81,12 @@ $$\sqrt{2}\cdot\sqrt{8}=\sqrt{16}=4$$
 $\sqrt{A}$ (porque lado × lado = área). **Ejemplo:** un cuadrado de área
 $18$ cm² tiene lado $\sqrt{18}=\sqrt{9\times2}=3\sqrt{2}$ cm.
 
+**Teorema de Pitágoras:** en un triángulo rectángulo, el cuadrado de la
+hipotenusa es igual a la suma de los cuadrados de los catetos:
+$$\text{hipotenusa}^2 = \text{cateto}_1^2 + \text{cateto}_2^2$$
+**Ejemplo:** catetos $2$ y $2$ $\Rightarrow$ hipotenusa
+$=\sqrt{2^2+2^2}=\sqrt{8}=2\sqrt{2}$.
+
 **Racionalización:**
 $$\frac{1}{\sqrt{2}} = \frac{1}{\sqrt{2}}\cdot\frac{\sqrt{2}}{\sqrt{2}} = \frac{\sqrt{2}}{2}$$
 

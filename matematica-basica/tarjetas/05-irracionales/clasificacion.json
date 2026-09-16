@@ -13,7 +13,7 @@
       { "valor": "0.5", "categoria": "racional" },
       { "valor": "π", "categoria": "irracional" }
     ],
-    "pistas": ["√4 = 2, un número entero. 7 no es cuadrado perfecto."],
+    "pistas": ["Si la raíz cuadrada de un número da exacto (entero), es racional. Revisa cuáles de estos son cuadrados perfectos."],
     "explicacion": "√4=2 y 0,5 se escriben como fracción (racionales). √7 y π tienen decimal infinito no periódico (irracionales)."
   },
   {
@@ -77,7 +77,7 @@
       { "valor": "√21", "categoria": "irracional" },
       { "valor": "√25", "categoria": "racional" }
     ],
-    "pistas": ["0,454545... se repite (periodo 45): es periódico. 0,1010010001... nunca repite el mismo bloque."],
+    "pistas": ["Revisa cada decimal cifra por cifra: ¿el mismo bloque de números se repite siempre en el mismo lugar, o el patrón va cambiando?"],
     "explicacion": "0,454545...=5/11 es periódico (racional). 0,1010010001... no tiene periodo (irracional). √21 no es cuadrado perfecto (irracional). √25=5 (racional)."
   },
   {

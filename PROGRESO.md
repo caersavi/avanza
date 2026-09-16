@@ -111,6 +111,30 @@ resultante completa en forma a/b vía `paso-a-paso`. Verificado: schema
 verificación específica escribiendo "6/15" a mano en el campo de texto de
 `equivalencia-03`, replicando el caso exacto que reportó el usuario).
 
+**Auditoría específica de Irracionales, criterio ampliado (2026-09-15).**
+Tras el hallazgo de Racionales, se re-auditaron las 35 tarjetas de
+Irracionales con el mismo criterio nuevo (¿el `tipo` de campo coincide con
+el formato de respuesta que pide el enunciado?) además de todo lo del
+primer round (matemática, pistas, teoría, dificultad). Resultado: **0
+mismatches de tipo/formato** — todas las tarjetas que piden un radical o
+una fracción con raíz ya usan `paso-a-paso` (texto libre), y las que piden
+un número plano ya usan `numerico`. Se encontraron y corrigieron 3 cosas
+menores: (1) **hueco de teoría** — `aplicacion-combinada-03` y `-06` piden
+calcular una hipotenusa con Pitágoras, y la fórmula
+($\text{hipotenusa}^2=\text{cateto}_1^2+\text{cateto}_2^2$) solo estaba en
+la pista de esas tarjetas, nunca en `teoria.md` (la única mención a
+Pitágoras ahí era sobre construcción geométrica con compás, no sobre
+calcular una hipotenusa) — se agregó como regla explícita con ejemplo
+propio en la sección 7; (2) **pistas reveladoras** — `clasificacion-01` y
+`clasificacion-05` daban la clasificación de 1 y 2 de los 4 valores
+respectivamente en vez de solo orientar el método, reescritas; (3)
+**dificultad mal calibrada** — `operaciones-radicales-02` (dificultad 2)
+usaba la misma técnica exacta que `-01` (dificultad 1, sumar vs. restar
+radicales semejantes), bajada a dificultad 1 para igualarlas. Verificado
+después: schema 35/35, 0 duplicados, motor real 35/35 correctas, y la
+página de teoría renderizando el nuevo bloque de Pitágoras sin errores de
+LaTeX.
+
 **Publicación** — GitHub Pages vía GitHub Actions
 (`.github/workflows/static.yml`, deploy automático en cada push a
 `master`). Rutas del sitio son **relativas** (no absolutas) porque el sitio
