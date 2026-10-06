@@ -1,0 +1,93 @@
+[
+  {
+    "id": "polinomios-suma-resta-01",
+    "modulo": "polinomios",
+    "subtema": "suma-resta",
+    "dificultad": 1,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: (4x+3) + (2x-5). Escribe el resultado sin espacios (ej. 3x-1).",
+    "pasos": [
+      { "texto": "(4x+3) + (2x-5) =", "esperado": "6x-2" }
+    ],
+    "pistas": ["Suma solo los términos semejantes: los que tienen x por un lado, los números solos por otro."],
+    "explicacion": "4x+2x=6x; 3-5=-2. El resultado es 6x-2."
+  },
+  {
+    "id": "polinomios-suma-resta-02",
+    "modulo": "polinomios",
+    "subtema": "suma-resta",
+    "dificultad": 1,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: (5a-2b) - (3a-4b). Escribe el resultado sin espacios.",
+    "pasos": [
+      { "texto": "(5a-2b) - (3a-4b) =", "esperado": "2a+2b" }
+    ],
+    "pistas": ["Para restar, cambia el signo de cada término del segundo paréntesis y luego suma."],
+    "explicacion": "5a-2b-3a+4b = (5a-3a)+(-2b+4b) = 2a+2b."
+  },
+  {
+    "id": "polinomios-suma-resta-03",
+    "modulo": "polinomios",
+    "subtema": "suma-resta",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: (3x²+2x-1) + (x²-5x+4). Escribe el resultado usando ^ para exponentes y sin espacios (ej. 2x^2-x+1).",
+    "pasos": [
+      { "texto": "(3x²+2x-1) + (x²-5x+4) =", "esperado": "4x^2-3x+3" }
+    ],
+    "pistas": ["Agrupa por separado los términos con x², los términos con x, y los números solos."],
+    "explicacion": "3x²+x²=4x²; 2x-5x=-3x; -1+4=3. El resultado es 4x²-3x+3."
+  },
+  {
+    "id": "polinomios-suma-resta-04",
+    "modulo": "polinomios",
+    "subtema": "suma-resta",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: (7m-3n+2) - (4m+5n-6). Escribe el resultado sin espacios.",
+    "pasos": [
+      { "texto": "(7m-3n+2) - (4m+5n-6) =", "esperado": "3m-8n+8" }
+    ],
+    "pistas": ["Cambia el signo de los tres términos del segundo paréntesis antes de agrupar los semejantes."],
+    "explicacion": "7m-3n+2-4m-5n+6 = (7m-4m)+(-3n-5n)+(2+6) = 3m-8n+8."
+  },
+  {
+    "id": "polinomios-suma-resta-05",
+    "modulo": "polinomios",
+    "subtema": "suma-resta",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Un terreno rectangular mide (2x+5) metros de largo. Se amplía el largo en (x-1) metros. Escribe la expresión para el nuevo largo, sin espacios.",
+    "pasos": [
+      { "texto": "(2x+5) + (x-1) =", "esperado": "3x+4" }
+    ],
+    "pistas": ["Ampliar el largo significa sumar la ampliación a la medida original."],
+    "explicacion": "2x+5+x-1 = (2x+x)+(5-1) = 3x+4 metros."
+  },
+  {
+    "id": "polinomios-suma-resta-06",
+    "modulo": "polinomios",
+    "subtema": "suma-resta",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: (x²-2x+1) + (3x²+x-4) + (-2x²+5). Escribe el resultado usando ^ para exponentes y sin espacios.",
+    "pasos": [
+      { "texto": "(x²-2x+1) + (3x²+x-4) + (-2x²+5) =", "esperado": "2x^2-x+2" }
+    ],
+    "pistas": ["Suma los tres coeficientes de x² por un lado, los tres de x por otro, y los tres números solos aparte."],
+    "explicacion": "x²+3x²-2x²=2x²; -2x+x=-x; 1-4+5=2. El resultado es 2x²-x+2."
+  },
+  {
+    "id": "polinomios-suma-resta-07",
+    "modulo": "polinomios",
+    "subtema": "suma-resta",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "La suma de dos polinomios es 5x²-3x+7, y uno de ellos es 2x²+x-2. ¿Cuál es el otro polinomio? Escribe el resultado usando ^ para exponentes y sin espacios.",
+    "pasos": [
+      { "texto": "(5x²-3x+7) - (2x²+x-2) =", "esperado": "3x^2-4x+9" }
+    ],
+    "pistas": ["Si conoces la suma total y uno de los sumandos, el otro sumando se halla restando: total menos el conocido."],
+    "explicacion": "(5x²-3x+7)-(2x²+x-2) = 5x²-2x²-3x-x+7+2 = 3x²-4x+9."
+  }
+]

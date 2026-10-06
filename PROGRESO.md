@@ -1,6 +1,6 @@
 # Progreso — Avanza
 
-Última actualización: 2026-09-15. Léeme primero al empezar una sesión nueva.
+Última actualización: 2026-10-06. Léeme primero al empezar una sesión nueva.
 
 Avanza es una plataforma web de nivelación en matemáticas básicas para
 estudiantes universitarios colombianos. Sitio estático (sin backend),
@@ -22,7 +22,7 @@ contenido nuevo = agregar un archivo JSON, sin tocar código.
 con wordmark "Avanza" en portada y headers secundarios. Ver decisiones de
 diseño en la sección 3.
 
-**Módulos 1-5 (sistemas numéricos) — completos:**
+**Módulos 1-6 (sistemas numéricos + polinomios) — completos:**
 
 | Módulo | Subtemas | Ejercicios | Teoría |
 |---|---|---|---|
@@ -31,13 +31,18 @@ diseño en la sección 3.
 | 3. Racionales | 7 | 49 | ✅ |
 | 4. Reales | 5 | 35 | ✅ |
 | 5. Irracionales | 5 | 35 | ✅ |
-| **Total** | **28** | **196** | |
+| 6. Polinomios | 6 | 42 | ✅ |
+| **Total** | **34** | **238** | |
 
 Todos los subtemas tienen mínimo 7 ejercicios con progresión de dificultad,
-pistas progresivas y explicación del porqué. Las 196 tarjetas están
+pistas progresivas y explicación del porqué. Las 238 tarjetas están
 validadas contra el schema, revisadas por enunciados duplicados, y
 verificadas una por una en el motor real (interacciones de UI reales, no
 solo revisión del JSON) — ver sección 4 para cómo repetir esa verificación.
+(La auditoría de calidad profunda — resolución independiente, pistas,
+alineación con teoría, dificultad — descrita más abajo solo cubrió
+Módulos 1-5; Polinomios se validó con schema + motor real + revisión
+propia al escribirlo, pero no pasó por esa auditoría exhaustiva todavía.)
 
 **Auditoría de calidad de contenido (2026-09-15) — completa.** Se hizo una
 auditoría exhaustiva de los 196 ejercicios + los 5 teoria.md: cada ejercicio
@@ -135,6 +140,30 @@ después: schema 35/35, 0 duplicados, motor real 35/35 correctas, y la
 página de teoría renderizando el nuevo bloque de Pitágoras sin errores de
 LaTeX.
 
+**Módulo 6 — Polinomios, completo (2026-10-06).** Primer módulo nuevo
+desde que se cerraron los 5 originales. Se siguió el mismo proceso que
+Naturales-Irracionales: primero se confirmó la cobertura real del libro
+Tadeo (Unidad 2 "Expresiones algebraicas", pp. 71-104) extrayendo el texto
+del PDF con PyMuPDF, se propusieron 6 subtemas basados en esa estructura y
+se pidió aprobación antes de escribir nada. Subtemas:
+`expresiones-algebraicas`, `clasificacion-terminos`, `suma-resta`,
+`multiplicacion`, `productos-especiales`, `division` — 7 ejercicios cada
+uno (42 en total). **Decisión de formato nueva:** las respuestas de tipo
+`paso-a-paso` que incluyen exponentes usan notación con `^` (ej. "x^2+6x+9")
+en vez de superíndice unicode, porque un superíndice no se puede escribir
+fácil desde un teclado normal — cada enunciado que lo requiere incluye la
+aclaración "usa ^ para exponentes" (mismo patrón que ya se usó en Reales
+para los decimales de notación científica). Se agregó `"polinomios"` al
+enum de `modulo` en `assets/schema/exercise.schema.json` (antes solo
+tenía los 5 módulos numéricos) y se registró el módulo en
+`manifest.json`. **Bug encontrado y corregido en el camino:** el mismo
+error de `$` sin escapar en pesos colombianos que ya había aparecido en
+Racionales — reapareció en el ejemplo de la sección 1 de esta teoría
+nueva, reescrito sin el símbolo de peso. Verificado: schema 42/42, 0
+duplicados, motor real 42/42 correctas, teoría renderizando sin errores
+de LaTeX. Roadmap actualizado en `modulos/README.md` y conteo total en
+`tarjetas/README.md` (123→196→238 según se fue ampliando el proyecto).
+
 **Publicación** — GitHub Pages vía GitHub Actions
 (`.github/workflows/static.yml`, deploy automático en cada push a
 `master`). Rutas del sitio son **relativas** (no absolutas) porque el sitio
@@ -149,14 +178,18 @@ de calidad de texto (extracción de texto byte-idéntica, verificado).
 
 ## 2. Qué quedó pendiente o a medias
 
-- **Módulos 6-9** (Polinomios, Factorización, Ecuaciones, Inecuaciones) —
-  solo planeados en `matematica-basica/modulos/README.md`, sin `teoria.md`
-  ni tarjetas todavía. El módulo 9 (Inecuaciones) va a necesitar teoría
-  100% propia porque ningún libro de referencia lo cubre (confirmado por
-  búsqueda de texto completo en el libro Tadeo). **Programado para
-  retomarse el martes** (según lo acordado el 2026-09-15).
-- **`matematica-basica/tarjetas/README.md`** todavía dice "123 en total"
-  — desactualizado desde que se amplió a 196. Falta corregir ese número.
+- **Módulos 7-9** (Factorización, Ecuaciones, Inecuaciones) — solo
+  planeados en `matematica-basica/modulos/README.md`, sin `teoria.md` ni
+  tarjetas todavía (Módulo 6, Polinomios, ya se completó el 2026-10-06).
+  El módulo 9 (Inecuaciones) va a necesitar teoría 100% propia porque
+  ningún libro de referencia lo cubre (confirmado por búsqueda de texto
+  completo en el libro Tadeo).
+- **Módulo 6 (Polinomios) sin pasar por la auditoría de calidad
+  profunda** que sí tuvieron los módulos 1-5 (resolución independiente de
+  cada ejercicio, revisión de pistas/explicaciones, alineación con
+  teoria.md, progresión de dificultad, criterio "tipo vs. formato"). Se
+  validó con schema + motor real + revisión propia al escribirlo, pero no
+  con el proceso de auditoría exhaustiva completo.
 - **Observaciones de variedad/repetitividad** en los ejercicios (varias
   tarjetas del mismo subtema comparten plantilla casi idéntica, solo cambian
   los números) — identificadas en la auditoría de 2026-09-15 pero dejadas
@@ -168,6 +201,14 @@ de calidad de texto (extracción de texto byte-idéntica, verificado).
   `?modulo=X`, no parte del sitio publicado). Sigue siendo útil, pero
   convendría moverla a una carpeta de herramientas de desarrollo si se
   sigue usando, para que no se confunda con contenido del sitio.
+- **Naturales, Enteros y Reales sin reauditar con el criterio "tipo vs.
+  formato de respuesta"** — el criterio se descubrió por un bug real que
+  reportó el usuario en Racionales (una tarjeta pedía una fracción pero
+  usaba `tipo: "numerico"`). Ya se aplicó a Racionales (2 tarjetas
+  corregidas) e Irracionales (0 encontradas), pero los otros 3 módulos
+  (Naturales, Enteros, Reales) no se han revisado todavía con este
+  criterio específico — vale la pena hacerlo antes de dar por cerrada la
+  auditoría completa de los 196 ejercicios.
 
 ---
 
@@ -221,11 +262,34 @@ módulo; repetirla en cada una de las 196 tarjetas sería redundante.
   tarjetas cargar — si se agrega o quita un archivo, hay que actualizarlo
   ahí. El campo `subtema` de cada tarjeta es la fuente de verdad para
   agrupar/nombrar subtemas, no el manifest.
+- Cada módulo nuevo que use variables con exponente (`x²`, `a³`, etc.)
+  debe agregarse al enum `modulo` en
+  `assets/schema/exercise.schema.json`, o la validación de schema falla
+  — se descubrió al crear Polinomios (módulo 6).
+
+**Exponentes en respuestas de texto libre (`paso-a-paso`)** — usar
+notación con `^` (ej. "x^2+6x+9"), nunca superíndice unicode (²³), porque
+un superíndice no se puede escribir desde un teclado normal y el
+estudiante quedaría sin forma de responder. Cada enunciado que lo requiere
+debe aclararlo explícitamente (ej. "usa ^ para exponentes, ej. x^2+2x+1")
+— mismo patrón que ya se usó en Reales para los decimales de notación
+científica. Establecido al escribir Polinomios (módulo 6); aplica también
+a los futuros módulos 7-9.
 
 **Verificación de tarjetas nuevas** — todo lote de tarjetas nuevas o
 modificadas se valida contra el schema, se revisa por enunciados
 duplicados, y se verifica montándolas en el motor real dentro de un
 navegador headless (no alcanza con revisar el JSON a simple vista).
+**Criterio agregado (2026-09-15, tras el fix de Racionales):** además de
+que la respuesta sea matemáticamente correcta, hay que revisar que el
+`tipo` de campo coincida con el formato que el enunciado realmente pide —
+una tarjeta que exige una fracción o un radical como respuesta (formato
+"a/b" o "a√b") debe usar `tipo: "paso-a-paso"` (texto libre), nunca
+`tipo: "numerico"` (que solo acepta un número suelto). Este chequeo no
+estaba en la lista original y causó un bug real que un estudiante reportó
+usando el sitio — ya se aplicó retroactivamente a Racionales e
+Irracionales (0 casos encontrados en Irracionales); Naturales, Enteros y
+Reales no se han reauditado todavía con este criterio específico.
 
 **Capacidad del sitio (analizado 2026-09-15)** — se confirmó que no hay
 riesgo de saturación por muchos estudiantes entrando a la vez. Razón

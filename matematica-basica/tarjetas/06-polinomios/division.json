@@ -1,0 +1,96 @@
+[
+  {
+    "id": "polinomios-division-01",
+    "modulo": "polinomios",
+    "subtema": "division",
+    "dificultad": 1,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: (8x³)÷(2x). Escribe el resultado usando ^ para exponentes y sin espacios (ej. 3x^2).",
+    "pasos": [
+      { "texto": "(8x³)÷(2x) =", "esperado": "4x^2" }
+    ],
+    "pistas": ["Divide los coeficientes (8÷2) y resta los exponentes de x (3-1)."],
+    "explicacion": "8÷2=4; x³÷x=x^(3-1)=x². El resultado es 4x²."
+  },
+  {
+    "id": "polinomios-division-02",
+    "modulo": "polinomios",
+    "subtema": "division",
+    "dificultad": 1,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: (15x⁴)÷(5x²). Escribe el resultado usando ^ para exponentes y sin espacios.",
+    "pasos": [
+      { "texto": "(15x⁴)÷(5x²) =", "esperado": "3x^2" }
+    ],
+    "pistas": ["Divide los coeficientes (15÷5) y resta los exponentes de x (4-2)."],
+    "explicacion": "15÷5=3; x⁴÷x²=x². El resultado es 3x²."
+  },
+  {
+    "id": "polinomios-division-03",
+    "modulo": "polinomios",
+    "subtema": "division",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: (6x³-9x²+3x)÷(3x). Escribe el resultado usando ^ para exponentes y sin espacios (ej. 2x^2-x+1).",
+    "pasos": [
+      { "texto": "(6x³-9x²+3x)÷(3x) =", "esperado": "2x^2-3x+1" }
+    ],
+    "pistas": ["Divide cada término del polinomio entre 3x, por separado."],
+    "explicacion": "6x³÷3x=2x²; -9x²÷3x=-3x; 3x÷3x=1. El resultado es 2x²-3x+1."
+  },
+  {
+    "id": "polinomios-division-04",
+    "modulo": "polinomios",
+    "subtema": "division",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: (10x²-15x)÷(5x). Escribe el resultado sin espacios.",
+    "pasos": [
+      { "texto": "(10x²-15x)÷(5x) =", "esperado": "2x-3" }
+    ],
+    "pistas": ["Divide cada término del polinomio entre 5x, por separado."],
+    "explicacion": "10x²÷5x=2x; -15x÷5x=-3. El resultado es 2x-3."
+  },
+  {
+    "id": "polinomios-division-05",
+    "modulo": "polinomios",
+    "subtema": "division",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Divide x²+8x+15 entre x+3 (división larga de polinomios). Escribe el cociente y el residuo.",
+    "pasos": [
+      { "texto": "Cociente =", "esperado": "x+5" },
+      { "texto": "Residuo =", "esperado": "0" }
+    ],
+    "pistas": ["Busca qué binomio, multiplicado por (x+3), da x²+8x+15. Puedes comprobarlo con un producto especial o distributiva."],
+    "explicacion": "(x+3)(x+5) = x²+8x+15, así que el cociente es x+5 y el residuo es 0 (división exacta)."
+  },
+  {
+    "id": "polinomios-division-06",
+    "modulo": "polinomios",
+    "subtema": "division",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Divide y²+24 entre y-7 (división larga de polinomios). Escribe el cociente y el residuo.",
+    "pasos": [
+      { "texto": "Cociente =", "esperado": "y+7" },
+      { "texto": "Residuo =", "esperado": "73" }
+    ],
+    "pistas": ["Prueba con cociente y+7 y verifica: (y-7)(y+7)=y²-49. La diferencia entre y²+24 y ese resultado es el residuo."],
+    "explicacion": "(y-7)(y+7) = y²-49. Como y²+24 - (y²-49) = 73, el cociente es y+7 y el residuo es 73 (la división no es exacta)."
+  },
+  {
+    "id": "polinomios-division-07",
+    "modulo": "polinomios",
+    "subtema": "division",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Divide x²-x-12 entre x-4 (división larga de polinomios). Escribe el cociente y el residuo.",
+    "pasos": [
+      { "texto": "Cociente =", "esperado": "x+3" },
+      { "texto": "Residuo =", "esperado": "0" }
+    ],
+    "pistas": ["Busca qué binomio, multiplicado por (x-4), da x²-x-12."],
+    "explicacion": "(x-4)(x+3) = x²+3x-4x-12 = x²-x-12, así que el cociente es x+3 y el residuo es 0 (división exacta)."
+  }
+]

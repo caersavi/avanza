@@ -18,14 +18,15 @@ tarjetas/
 ├── 02-enteros/
 ├── 03-racionales/
 ├── 04-reales/
-└── 05-irracionales/
+├── 05-irracionales/
+└── 06-polinomios/
 ```
 
 Dentro de cada carpeta de módulo, un archivo por subtema es la convención
 sugerida (ej. `05-irracionales/clasificacion.json`,
 `05-irracionales/operaciones-con-radicales.json`), pero no es obligatorio.
 
-Los 5 módulos ya tienen ejercicios cargados (123 en total — ver
+Los 6 módulos activos ya tienen ejercicios cargados (238 en total — ver
 [`modulos/README.md`](../modulos/README.md) para el detalle por módulo).
 
 ## `manifest.json`

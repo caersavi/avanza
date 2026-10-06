@@ -8,9 +8,9 @@ los que después alimentan las tarjetas correspondientes en
 ## Roadmap completo (9 módulos, currículo de Matemáticas Generales)
 
 Se usan **dos libros a la vez**, cada uno donde tiene mejor cobertura —
-ver `../libro/libro-ean.pdf` y `../libro/libro-tadeo.pdf`. Trabajamos
-activamente solo en los módulos 1-5 (sistemas numéricos); 6-9 quedan
-planeados, sin desarrollar todavía.
+ver `../libro/libro-ean.pdf` y `../libro/libro-tadeo.pdf`. Módulos 1-6 ya
+desarrollados (sistemas numéricos + polinomios); 7-9 quedan planeados, sin
+desarrollar todavía.
 
 | # | Carpeta | Módulo | Fuente | Estado |
 |---|---|---|---|---|
@@ -19,7 +19,7 @@ planeados, sin desarrollar todavía.
 | 3 | `03-racionales` | Racionales | Libro Tadeo | ✅ `teoria.md` escrito |
 | 4 | `04-reales` | Reales | Libro Tadeo — propiedades, jerarquía, orden, potenciación, notación científica | ✅ `teoria.md` escrito |
 | 5 | `05-irracionales` | Irracionales | Teoría propia — ningún libro demuestra irracionalidad de √2, desarrolla *e*, ni cubre densidad | ✅ `teoria.md` escrito |
-| 6 | `06-polinomios` (futuro) | Polinomios | Libro Tadeo, Unidad 2 (pp. 71-104) | ⏸️ Planeado, no iniciado |
+| 6 | `06-polinomios` | Polinomios | Libro Tadeo, Unidad 2 "Expresiones algebraicas" (secciones 2.1-2.6, pp. 71-104) | ✅ `teoria.md` escrito, 42 ejercicios |
 | 7 | `07-factorizacion` (futuro) | Factorización (incluye fracciones algebraicas) | Libro Tadeo, Unidad 3 (pp. 105-134) | ⏸️ Planeado, no iniciado |
 | 8 | `08-ecuaciones` (futuro) | Ecuaciones (1º y 2º grado, con radicales) | Libro Tadeo, Unidad 4 (pp. 135-192) | ⏸️ Planeado, no iniciado |
 | 9 | `09-inecuaciones` (futuro) | Inecuaciones (1er grado, valor absoluto) | **Ningún libro la cubre** — ver huecos abajo | ⏸️ Planeado, sin fuente aún |

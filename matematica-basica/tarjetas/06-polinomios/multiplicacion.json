@@ -1,0 +1,93 @@
+[
+  {
+    "id": "polinomios-multiplicacion-01",
+    "modulo": "polinomios",
+    "subtema": "multiplicacion",
+    "dificultad": 1,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: (3x²)(4x³). Escribe el resultado usando ^ para el exponente y sin espacios (ej. 5x^4).",
+    "pasos": [
+      { "texto": "(3x²)(4x³) =", "esperado": "12x^5" }
+    ],
+    "pistas": ["Multiplica los coeficientes (3×4) y suma los exponentes de x (2+3)."],
+    "explicacion": "3×4=12; x²·x³=x^(2+3)=x^5. El resultado es 12x^5."
+  },
+  {
+    "id": "polinomios-multiplicacion-02",
+    "modulo": "polinomios",
+    "subtema": "multiplicacion",
+    "dificultad": 1,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: (-2a³)(5a²). Escribe el resultado usando ^ para el exponente y sin espacios.",
+    "pasos": [
+      { "texto": "(-2a³)(5a²) =", "esperado": "-10a^5" }
+    ],
+    "pistas": ["Multiplica los coeficientes con su signo (-2×5) y suma los exponentes de a (3+2)."],
+    "explicacion": "-2×5=-10; a³·a²=a^5. El resultado es -10a^5."
+  },
+  {
+    "id": "polinomios-multiplicacion-03",
+    "modulo": "polinomios",
+    "subtema": "multiplicacion",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: 4x(3x²-2x+5). Escribe el resultado usando ^ para exponentes y sin espacios (ej. 2x^2-x+1).",
+    "pasos": [
+      { "texto": "4x(3x²-2x+5) =", "esperado": "12x^3-8x^2+20x" }
+    ],
+    "pistas": ["Multiplica 4x por cada uno de los tres términos del paréntesis, por separado."],
+    "explicacion": "4x·3x²=12x³; 4x·(-2x)=-8x²; 4x·5=20x. El resultado es 12x³-8x²+20x."
+  },
+  {
+    "id": "polinomios-multiplicacion-04",
+    "modulo": "polinomios",
+    "subtema": "multiplicacion",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: -3y(y²+4y-6). Escribe el resultado usando ^ para exponentes y sin espacios.",
+    "pasos": [
+      { "texto": "-3y(y²+4y-6) =", "esperado": "-3y^3-12y^2+18y" }
+    ],
+    "pistas": ["Multiplica -3y por cada uno de los tres términos, respetando los signos."],
+    "explicacion": "-3y·y²=-3y³; -3y·4y=-12y²; -3y·(-6)=18y. El resultado es -3y³-12y²+18y."
+  },
+  {
+    "id": "polinomios-multiplicacion-05",
+    "modulo": "polinomios",
+    "subtema": "multiplicacion",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: (x+2)(x+6). Escribe el resultado usando ^ para exponentes y sin espacios.",
+    "pasos": [
+      { "texto": "(x+2)(x+6) =", "esperado": "x^2+8x+12" }
+    ],
+    "pistas": ["Multiplica cada término del primer paréntesis por cada término del segundo, y suma los semejantes."],
+    "explicacion": "x·x+x·6+2·x+2·6 = x²+6x+2x+12 = x²+8x+12."
+  },
+  {
+    "id": "polinomios-multiplicacion-06",
+    "modulo": "polinomios",
+    "subtema": "multiplicacion",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula: (x-3)(x+7). Escribe el resultado usando ^ para exponentes y sin espacios.",
+    "pasos": [
+      { "texto": "(x-3)(x+7) =", "esperado": "x^2+4x-21" }
+    ],
+    "pistas": ["Multiplica cada término del primer paréntesis por cada término del segundo; cuidado con el signo negativo de -3."],
+    "explicacion": "x·x+x·7-3·x-3·7 = x²+7x-3x-21 = x²+4x-21."
+  },
+  {
+    "id": "polinomios-multiplicacion-07",
+    "modulo": "polinomios",
+    "subtema": "multiplicacion",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "El área de un rectángulo es (x+4)(x+9). Expresa el área como un trinomio, usando ^ para exponentes y sin espacios.",
+    "pasos": [
+      { "texto": "(x+4)(x+9) =", "esperado": "x^2+13x+36" }
+    ],
+    "pistas": ["El área de un rectángulo es base por altura: multiplica los dos binomios como cualquier producto de polinomios."],
+    "explicacion": "x·x+x·9+4·x+4·9 = x²+9x+4x+36 = x²+13x+36."
+  }
+]

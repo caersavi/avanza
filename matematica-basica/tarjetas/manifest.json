@@ -62,6 +62,19 @@
         "racionalizacion.json",
         "aplicacion-combinada.json"
       ]
+    },
+    {
+      "id": "polinomios",
+      "nombre": "Polinomios",
+      "carpeta": "06-polinomios",
+      "archivos": [
+        "expresiones-algebraicas.json",
+        "clasificacion-terminos.json",
+        "suma-resta.json",
+        "multiplicacion.json",
+        "productos-especiales.json",
+        "division.json"
+      ]
     }
   ]
 }

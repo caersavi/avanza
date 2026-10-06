@@ -1,0 +1,95 @@
+[
+  {
+    "id": "polinomios-expresiones-01",
+    "modulo": "polinomios",
+    "subtema": "expresiones-algebraicas",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "Evalúa la expresión 3x+2 cuando x=4.",
+    "respuesta": 14,
+    "pistas": ["Sustituye x por 4 y luego calcula siguiendo la jerarquía de operaciones."],
+    "explicacion": "3(4)+2 = 12+2 = 14."
+  },
+  {
+    "id": "polinomios-expresiones-02",
+    "modulo": "polinomios",
+    "subtema": "expresiones-algebraicas",
+    "dificultad": 1,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Cuál expresión algebraica representa \"el doble de un número más 5\"?",
+    "opciones": [
+      { "id": "a", "texto": "2x+5" },
+      { "id": "b", "texto": "x+2+5" },
+      { "id": "c", "texto": "2(x+5)" },
+      { "id": "d", "texto": "x/2+5" }
+    ],
+    "respuesta": "a",
+    "pistas": ["\"El doble de un número\" es 2 veces ese número; luego se le suma 5."],
+    "explicacion": "El doble de x es 2x; sumarle 5 da 2x+5."
+  },
+  {
+    "id": "polinomios-expresiones-03",
+    "modulo": "polinomios",
+    "subtema": "expresiones-algebraicas",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Evalúa la expresión 2x²-3x+1 cuando x=3.",
+    "respuesta": 10,
+    "pistas": ["Calcula primero x², luego multiplica, y respeta la jerarquía de operaciones."],
+    "explicacion": "2(3)²-3(3)+1 = 2(9)-9+1 = 18-9+1 = 10."
+  },
+  {
+    "id": "polinomios-expresiones-04",
+    "modulo": "polinomios",
+    "subtema": "expresiones-algebraicas",
+    "dificultad": 1,
+    "tipo": "verdadero-falso",
+    "enunciado": "Las expresiones x+5 y 5+x representan lo mismo.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "v",
+    "pistas": ["Piensa en la propiedad conmutativa de la suma."],
+    "explicacion": "La suma es conmutativa: el orden de los sumandos no cambia el resultado."
+  },
+  {
+    "id": "polinomios-expresiones-05",
+    "modulo": "polinomios",
+    "subtema": "expresiones-algebraicas",
+    "dificultad": 2,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Cuál expresión representa \"la diferencia entre el triple de un número y 7\"?",
+    "opciones": [
+      { "id": "a", "texto": "3x-7" },
+      { "id": "b", "texto": "3(x-7)" },
+      { "id": "c", "texto": "x-3·7" },
+      { "id": "d", "texto": "7-3x" }
+    ],
+    "respuesta": "a",
+    "pistas": ["El triple de un número es 3x; la diferencia con 7 es restarle 7 a eso."],
+    "explicacion": "El triple de x es 3x; la diferencia entre 3x y 7 es 3x-7."
+  },
+  {
+    "id": "polinomios-expresiones-06",
+    "modulo": "polinomios",
+    "subtema": "expresiones-algebraicas",
+    "dificultad": 2,
+    "tipo": "numerico",
+    "enunciado": "Evalúa la expresión -2x+5 cuando x=-3.",
+    "respuesta": 11,
+    "pistas": ["Ten cuidado con los dos signos negativos: -2 multiplicado por -3."],
+    "explicacion": "-2(-3)+5 = 6+5 = 11."
+  },
+  {
+    "id": "polinomios-expresiones-07",
+    "modulo": "polinomios",
+    "subtema": "expresiones-algebraicas",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "Evalúa la expresión x²+2x-1 cuando x=-2.",
+    "respuesta": -1,
+    "pistas": ["(-2)² es positivo (16... revisa: es (-2) al cuadrado, no -2²). Calcula cada término por separado antes de sumar."],
+    "explicacion": "(-2)²+2(-2)-1 = 4-4-1 = -1."
+  }
+]

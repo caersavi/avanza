@@ -1,0 +1,99 @@
+[
+  {
+    "id": "polinomios-clasificacion-01",
+    "modulo": "polinomios",
+    "subtema": "clasificacion-terminos",
+    "dificultad": 1,
+    "tipo": "opcion-multiple",
+    "enunciado": "¿Cómo se llama un polinomio que tiene exactamente 2 términos?",
+    "opciones": [
+      { "id": "a", "texto": "Monomio" },
+      { "id": "b", "texto": "Binomio" },
+      { "id": "c", "texto": "Trinomio" },
+      { "id": "d", "texto": "Polinomio nulo" }
+    ],
+    "respuesta": "b",
+    "pistas": ["El prefijo \"bi-\" indica dos."],
+    "explicacion": "Un polinomio con 2 términos se llama binomio."
+  },
+  {
+    "id": "polinomios-clasificacion-02",
+    "modulo": "polinomios",
+    "subtema": "clasificacion-terminos",
+    "dificultad": 1,
+    "tipo": "numerico",
+    "enunciado": "¿Cuál es el grado del polinomio 4x³-2x+7?",
+    "respuesta": 3,
+    "pistas": ["El grado es el mayor exponente que aparece en la variable."],
+    "explicacion": "El término con mayor exponente es 4x³, así que el grado del polinomio es 3."
+  },
+  {
+    "id": "polinomios-clasificacion-03",
+    "modulo": "polinomios",
+    "subtema": "clasificacion-terminos",
+    "dificultad": 2,
+    "tipo": "verdadero-falso",
+    "enunciado": "5x²y y -3x²y son términos semejantes.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "v",
+    "pistas": ["Compara la parte literal (las letras con sus exponentes) de ambos términos, ignorando el coeficiente y el signo."],
+    "explicacion": "Ambos tienen exactamente la misma parte literal (x²y), así que son términos semejantes."
+  },
+  {
+    "id": "polinomios-clasificacion-04",
+    "modulo": "polinomios",
+    "subtema": "clasificacion-terminos",
+    "dificultad": 2,
+    "tipo": "verdadero-falso",
+    "enunciado": "5x²y y 5xy² son términos semejantes.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["Compara con cuidado el exponente de cada variable por separado, no solo que aparezcan las mismas letras."],
+    "explicacion": "En 5x²y, x tiene exponente 2 e y tiene exponente 1. En 5xy², es al revés. No son términos semejantes."
+  },
+  {
+    "id": "polinomios-clasificacion-05",
+    "modulo": "polinomios",
+    "subtema": "clasificacion-terminos",
+    "dificultad": 2,
+    "tipo": "clasificar",
+    "enunciado": "Clasifica cada expresión según su número de términos.",
+    "categorias": ["monomio", "binomio", "trinomio"],
+    "opciones": [
+      { "valor": "7x", "categoria": "monomio" },
+      { "valor": "3x+2", "categoria": "binomio" },
+      { "valor": "x²-x+5", "categoria": "trinomio" },
+      { "valor": "-4ab", "categoria": "monomio" }
+    ],
+    "pistas": ["Cuenta cuántas partes separadas por + o − tiene cada expresión."],
+    "explicacion": "7x y -4ab tienen 1 término (monomios). 3x+2 tiene 2 términos (binomio). x²-x+5 tiene 3 términos (trinomio)."
+  },
+  {
+    "id": "polinomios-clasificacion-06",
+    "modulo": "polinomios",
+    "subtema": "clasificacion-terminos",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "¿Cuál es el grado del polinomio 7-3x⁴+2x²?",
+    "respuesta": 4,
+    "pistas": ["El polinomio no está escrito en orden; revisa el exponente de cada término, no solo el primero que aparece."],
+    "explicacion": "Los términos tienen grados 0, 4 y 2. El mayor es 4 (del término -3x⁴), así que el grado del polinomio es 4."
+  },
+  {
+    "id": "polinomios-clasificacion-07",
+    "modulo": "polinomios",
+    "subtema": "clasificacion-terminos",
+    "dificultad": 3,
+    "tipo": "numerico",
+    "enunciado": "¿Cuántos términos semejantes a x² hay en esta lista: 5x², -2x, 7x², x, -4x²?",
+    "respuesta": 3,
+    "pistas": ["Busca los términos cuya parte literal sea exactamente x² (mismo exponente), ignorando el coeficiente."],
+    "explicacion": "5x², 7x² y -4x² tienen la parte literal x². -2x y x tienen exponente 1, no son semejantes a x². En total, 3."
+  }
+]

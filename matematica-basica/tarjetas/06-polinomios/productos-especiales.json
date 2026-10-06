@@ -1,0 +1,95 @@
+[
+  {
+    "id": "polinomios-productos-especiales-01",
+    "modulo": "polinomios",
+    "subtema": "productos-especiales",
+    "dificultad": 1,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula (x+3)² usando el producto especial del cuadrado de un binomio. Escribe el resultado usando ^ para exponentes y sin espacios (ej. x^2+2x+1).",
+    "pasos": [
+      { "texto": "(x+3)² =", "esperado": "x^2+6x+9" }
+    ],
+    "pistas": ["(a+b)² = a²+2ab+b², con a=x y b=3."],
+    "explicacion": "x²+2(x)(3)+3² = x²+6x+9."
+  },
+  {
+    "id": "polinomios-productos-especiales-02",
+    "modulo": "polinomios",
+    "subtema": "productos-especiales",
+    "dificultad": 1,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula (x-5)² usando el producto especial del cuadrado de un binomio. Escribe el resultado usando ^ para exponentes y sin espacios.",
+    "pasos": [
+      { "texto": "(x-5)² =", "esperado": "x^2-10x+25" }
+    ],
+    "pistas": ["(a-b)² = a²-2ab+b², con a=x y b=5. El término b² siempre es positivo."],
+    "explicacion": "x²-2(x)(5)+5² = x²-10x+25."
+  },
+  {
+    "id": "polinomios-productos-especiales-03",
+    "modulo": "polinomios",
+    "subtema": "productos-especiales",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula (2x+3)² usando el producto especial del cuadrado de un binomio. Escribe el resultado usando ^ para exponentes y sin espacios.",
+    "pasos": [
+      { "texto": "(2x+3)² =", "esperado": "4x^2+12x+9" }
+    ],
+    "pistas": ["(a+b)² = a²+2ab+b², con a=2x y b=3. No olvides elevar también el coeficiente 2 al cuadrado."],
+    "explicacion": "(2x)²+2(2x)(3)+3² = 4x²+12x+9."
+  },
+  {
+    "id": "polinomios-productos-especiales-04",
+    "modulo": "polinomios",
+    "subtema": "productos-especiales",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula (x+6)(x-6) usando el producto especial de diferencia de cuadrados. Escribe el resultado usando ^ para exponentes y sin espacios.",
+    "pasos": [
+      { "texto": "(x+6)(x-6) =", "esperado": "x^2-36" }
+    ],
+    "pistas": ["(a+b)(a-b) = a²-b², con a=x y b=6. El término intermedio siempre se cancela."],
+    "explicacion": "x²-6² = x²-36."
+  },
+  {
+    "id": "polinomios-productos-especiales-05",
+    "modulo": "polinomios",
+    "subtema": "productos-especiales",
+    "dificultad": 2,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula (3x-4)(3x+4) usando el producto especial de diferencia de cuadrados. Escribe el resultado usando ^ para exponentes y sin espacios.",
+    "pasos": [
+      { "texto": "(3x-4)(3x+4) =", "esperado": "9x^2-16" }
+    ],
+    "pistas": ["(a-b)(a+b) = a²-b², con a=3x y b=4."],
+    "explicacion": "(3x)²-4² = 9x²-16."
+  },
+  {
+    "id": "polinomios-productos-especiales-06",
+    "modulo": "polinomios",
+    "subtema": "productos-especiales",
+    "dificultad": 3,
+    "tipo": "paso-a-paso",
+    "enunciado": "Calcula (x+2)³ usando el producto especial del cubo de un binomio. Escribe el resultado usando ^ para exponentes y sin espacios.",
+    "pasos": [
+      { "texto": "(x+2)³ =", "esperado": "x^3+6x^2+12x+8" }
+    ],
+    "pistas": ["(a+b)³ = a³+3a²b+3ab²+b³, con a=x y b=2."],
+    "explicacion": "x³+3(x²)(2)+3(x)(4)+2³ = x³+6x²+12x+8."
+  },
+  {
+    "id": "polinomios-productos-especiales-07",
+    "modulo": "polinomios",
+    "subtema": "productos-especiales",
+    "dificultad": 3,
+    "tipo": "verdadero-falso",
+    "enunciado": "(x+5)² es igual a x²+25.",
+    "opciones": [
+      { "id": "v", "texto": "Verdadero" },
+      { "id": "f", "texto": "Falso" }
+    ],
+    "respuesta": "f",
+    "pistas": ["Desarrolla (x+5)² con la fórmula completa (a+b)²=a²+2ab+b²; no te saltes el término del medio."],
+    "explicacion": "(x+5)² = x²+10x+25, no x²+25. Elevar al cuadrado no se distribuye sobre una suma: falta el término 2ab."
+  }
+]

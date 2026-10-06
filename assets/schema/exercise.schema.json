@@ -13,7 +13,7 @@
     },
     "modulo": {
       "type": "string",
-      "enum": ["naturales", "enteros", "racionales", "irracionales", "reales"]
+      "enum": ["naturales", "enteros", "racionales", "irracionales", "reales", "polinomios"]
     },
     "subtema": {
       "type": "string",
