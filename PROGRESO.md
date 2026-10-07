@@ -1,6 +1,6 @@
 # Progreso — Avanza
 
-Última actualización: 2026-10-06. Léeme primero al empezar una sesión nueva.
+Última actualización: 2026-10-07. Léeme primero al empezar una sesión nueva.
 
 Avanza es una plataforma web de nivelación en matemáticas básicas para
 estudiantes universitarios colombianos. Sitio estático (sin backend),
@@ -164,6 +164,18 @@ duplicados, motor real 42/42 correctas, teoría renderizando sin errores
 de LaTeX. Roadmap actualizado en `modulos/README.md` y conteo total en
 `tarjetas/README.md` (123→196→238 según se fue ampliando el proyecto).
 
+**Favicon (2026-10-07).** Monograma "A" blanco sobre fondo coral
+redondeado (`assets/favicon.svg`), diseñado y rasterizado con ImageMagick
+en los formatos necesarios: `favicon.svg` (navegadores modernos),
+`favicon.ico` multi-resolución 16/32/48px (navegadores viejos),
+`apple-touch-icon.png` 180px (ícono al agregar el sitio a inicio en
+iOS/Android). No contradice la decisión de wordmark "solo texto" (ver
+más abajo) — esa fue sobre el logo visible en la página; el favicon es un
+contexto distinto (pestaña del navegador, 16-32px) donde el texto
+"Avanza" completo no cabe, así que un monograma de una letra es la
+solución estándar. Agregado con `<link>` en las 4 páginas del portal.
+Verificado: los 4 archivos responden 200, 0 errores de consola.
+
 **Publicación** — GitHub Pages vía GitHub Actions
 (`.github/workflows/static.yml`, deploy automático en cada push a
 `master`). Rutas del sitio son **relativas** (no absolutas) porque el sitio
@@ -233,6 +245,15 @@ flecha integrada; ambos se descartaron porque se veían desconectados del
 logo. Un solo componente reutilizado (`.marca-avanza` en
 `estudiante.css`) en las 4 páginas: grande en portada, compacto junto a
 las migas en las demás.
+
+**Color por módulo — descartado (2026-10-06).** Se consideró dar un
+acento de color distinto a Polinomios (o a futuros módulos de álgebra)
+para diferenciarlo visualmente de los módulos numéricos. Se decidió NO
+hacerlo: el color en este sitio ya tiene un significado funcional (coral
+= acento/acción, dorado = en progreso, verde = completado, rojo = error);
+agregar color por categoría de módulo lo volvería ambiguo y abriría la
+pregunta de qué color le toca a cada módulo futuro. Todos los módulos
+(1-6, y los futuros 7-9) comparten el mismo acento coral — sin excepción.
 
 **Fuentes bibliográficas por módulo** — se usan **dos libros a la vez**,
 cada uno donde tiene mejor cobertura (complemento, no reemplazo):
