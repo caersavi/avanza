@@ -233,13 +233,29 @@ contexto distinto (pestaña del navegador, 16-32px) donde el texto
 solución estándar. Agregado con `<link>` en las 4 páginas del portal.
 Verificado: los 4 archivos responden 200, 0 errores de consola.
 
-**Crédito del pie de página actualizado (2026-10-08).** Texto cambiado
-de "Ing. Carlos Sánchez" a "Diseñado por Ing. Carlos Sánchez" en las 4
-páginas del portal. Estilo (`.creditos` en `estudiante.css`) actualizado:
-tamaño de letra de 0.78rem a 0.98rem y color de gris neutro
-(`--av-linea`) a coral (`--av-acento`), en negrita — le da más presencia
-sin salirse de la paleta existente. Verificado visualmente y sin errores
-de consola en las 4 páginas.
+**Crédito del pie de página actualizado (2026-10-08, 2 iteraciones).**
+Texto cambiado de "Ing. Carlos Sánchez" a "Diseñado por Ing. Carlos
+Sánchez" en las 4 páginas del portal, estilo (`.creditos` en
+`estudiante.css`) actualizado: tamaño de letra de 0.78rem a 0.98rem y
+color de gris neutro (`--av-linea`) a coral (`--av-acento`), en negrita.
+**Iteración 2:** el usuario preguntó "Creado por" vs. "Diseñado por" —
+se recomendó "Creado por" (cubre todo el trabajo — contenido, pedagogía,
+estructura — no solo la parte visual) y el usuario lo confirmó; texto
+final: **"Creado por Ing. Carlos Sánchez"**.
+
+**Separador del `<title>` cambiado de "—" a "•" (2026-10-08).** El
+usuario notó que al pasar el mouse sobre la pestaña del navegador se veía
+"Avanza — Teoría de Polinomios" y pidió un punto en vez del guion largo.
+Cambiado en los 4 `<title>` estáticos y en los 3 lugares donde el título
+se actualiza dinámicamente por JS (`modulo.html`, `practica.html`,
+`teoria.html` — ej. `document.title = \`Avanza • ${modulo.nombre}\``).
+**Cuidado al aplicar el cambio:** un reemplazo con `sed` sobre "Avanza — "
+también alcanzó sin querer el `aria-label="Avanza — Inicio"` del
+wordmark compacto (accesibilidad, no visible) en 3 páginas — se detectó
+al revisar el diff y se revirtió solo esa parte, dejando el separador "—"
+ahí (donde sí tiene sentido para un lector de pantalla) y "•" únicamente
+en los títulos de pestaña. Verificado con los 4 `document.title` reales
+en el navegador.
 
 **Publicación** — GitHub Pages vía GitHub Actions
 (`.github/workflows/static.yml`, deploy automático en cada push a

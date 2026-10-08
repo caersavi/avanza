@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Avanza — Teoría</title>
+  <title>Avanza • Teoría</title>
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="../../assets/favicon.ico">
   <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
@@ -56,7 +56,7 @@
     <a id="enlace-practicar" class="boton-cta" href="#">Practicar ejercicios de este módulo →</a>
   </div>
 
-  <footer class="creditos">Diseñado por Ing. Carlos Sánchez</footer>
+  <footer class="creditos">Creado por Ing. Carlos Sánchez</footer>
 
   <script type="module">
     import { obtenerModulo, cargarTeoriaDeModulo, mostrarError } from './util.js';
@@ -107,7 +107,7 @@
       const modulo = await obtenerModulo(idModulo);
       document.querySelector('#titulo-modulo').textContent = modulo.nombre;
       document.querySelector('#titulo-modulo').hidden = false;
-      document.title = `Avanza — Teoría de ${modulo.nombre}`;
+      document.title = `Avanza • Teoría de ${modulo.nombre}`;
       document.querySelector('#enlace-practicar').href = `modulo.html?modulo=${encodeURIComponent(idModulo)}`;
 
       const md = quitarTituloPrincipal(await cargarTeoriaDeModulo(modulo));
