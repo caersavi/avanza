@@ -106,44 +106,43 @@
 
 /* MathJax: que herede el color del texto, y que ninguna fórmula (inline o
    en bloque) pueda ensanchar la página. mjx-container se ajusta por
-   defecto al ancho de su fórmula (shrink-to-fit), así que overflow-x:auto
-   por sí solo no alcanza — hace falta un ancho máximo real para que sea la
-   fórmula la que scrollee dentro de su propia caja. Esto importa incluso
-   para fórmulas "inline" ($...$): algunas (ej. una ecuación con fracción
-   dentro de una oración) terminan siendo bastante anchas igual. */
+   defecto al ancho de su fórmula (shrink-to-fit). */
 .teoria-contenido mjx-container {
   color: inherit;
   /* <mjx-container> es una etiqueta sin registrar: por defecto es
      `display: inline`, y max-width NO tiene efecto en elementos inline no
-     reemplazados (spec de CSS) — de ahí que la fórmula más ancha del
-     ejemplo de mcm ignorara silenciosamente el max-width de abajo. Forzar
-     inline-block la deja seguir fluyendo en el texto pero ya respetando
-     el límite de ancho. */
+     reemplazados (spec de CSS) — de ahí que una fórmula ancha pudiera
+     ignorar silenciosamente el max-width. Forzar inline-block la deja
+     seguir fluyendo en el texto pero ya respetando el límite de ancho. */
   display: inline-block;
   max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
   vertical-align: -0.2em;
-  /* Barra de scroll siempre visible (no solo al pasar el mouse/tocar) para
-     que quede claro que una fórmula truncada se puede deslizar, en vez de
-     verse como si el contenido estuviera roto o cortado. */
-  scrollbar-width: thin;
 }
 
-.teoria-contenido mjx-container::-webkit-scrollbar {
-  height: 5px;
-}
-
-.teoria-contenido mjx-container::-webkit-scrollbar-thumb {
-  background: var(--av-borde, #F1E1D9);
-  border-radius: 999px;
-}
-
-/* Las de bloque ($$...$$) además van en su propia línea, centradas, con
-   más aire arriba/abajo. */
+/* El scroll propio (con su barra visible) solo se le da a las fórmulas en
+   BLOQUE ($$...$$) — son las únicas que realmente pueden llegar a ser más
+   anchas que la pantalla en móvil. Dárselo también a las inline (como
+   antes) hacía que Chrome les dibujara una barra de scroll visible aunque
+   no hubiera nada que desplazar — un efecto secundario de estilizar
+   ::-webkit-scrollbar en cualquier elemento con overflow-x:auto, incluso
+   sin overflow real — y se veía como ruido bajo fórmulas cortas como "73".
+   Las de bloque además van en su propia línea, centradas, con más aire
+   arriba/abajo. */
 .teoria-contenido mjx-container[display="true"] {
   display: block !important;
   margin: 12px 0 20px !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
+.teoria-contenido mjx-container[display="true"]::-webkit-scrollbar {
+  height: 5px;
+}
+
+.teoria-contenido mjx-container[display="true"]::-webkit-scrollbar-thumb {
+  background: var(--av-borde, #F1E1D9);
+  border-radius: 999px;
 }
 
 .cta-practicar {

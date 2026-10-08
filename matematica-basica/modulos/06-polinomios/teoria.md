@@ -93,14 +93,36 @@ divisor (misma mecánica que la división larga de números).
 
 **Ejemplo paso a paso:** dividir $x^3-2x^2-5x+6$ entre $x-1$.
 
-1. $x^3\div x=x^2$. Multiplica: $x^2(x-1)=x^3-x^2$. Resta:
-   $(x^3-2x^2-5x+6)-(x^3-x^2)=-x^2-5x+6$.
-2. $-x^2\div x=-x$. Multiplica: $-x(x-1)=-x^2+x$. Resta:
-   $(-x^2-5x+6)-(-x^2+x)=-6x+6$.
-3. $-6x\div x=-6$. Multiplica: $-6(x-1)=-6x+6$. Resta:
-   $(-6x+6)-(-6x+6)=0$.
+**Paso 1:**
+$$
+\begin{aligned}
+\text{Divide: } & x^3 \div x = x^2 \\
+\text{Multiplica: } & x^2(x-1) = x^3-x^2 \\
+\text{Resta: } & (x^3-2x^2-5x+6)-(x^3-x^2) = -x^2-5x+6
+\end{aligned}
+$$
 
-Cociente: $x^2-x-6$. Residuo: $0$ (división exacta).
+**Paso 2** (se repite con lo que quedó, $-x^2-5x+6$):
+$$
+\begin{aligned}
+\text{Divide: } & -x^2 \div x = -x \\
+\text{Multiplica: } & -x(x-1) = -x^2+x \\
+\text{Resta: } & (-x^2-5x+6)-(-x^2+x) = -6x+6
+\end{aligned}
+$$
+
+**Paso 3** (se repite con lo que quedó, $-6x+6$):
+$$
+\begin{aligned}
+\text{Divide: } & -6x \div x = -6 \\
+\text{Multiplica: } & -6(x-1) = -6x+6 \\
+\text{Resta: } & (-6x+6)-(-6x+6) = 0
+\end{aligned}
+$$
+
+El residuo ya llegó a $0$, así que terminamos. **Cociente:** $x^2-x-6$
+(los tres resultados de "Divide" en orden). **Residuo:** $0$ (división
+exacta).
 
 **Ejemplo (con residuo):** dividiendo $y^2+24$ entre $y-7$ con el mismo
 método se obtiene cociente $y+7$ y residuo $73$ — se comprueba porque

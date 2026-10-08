@@ -165,21 +165,45 @@ de LaTeX. Roadmap actualizado en `modulos/README.md` y conteo total en
 `tarjetas/README.md` (123→196→238 según se fue ampliando el proyecto).
 
 **Mejora: división de polinomios con pasos explícitos (2026-10-07,
-sugerida por el usuario).** El usuario mostró una foto de su cuaderno
-resolviendo una división de polinomios con el método largo completo
-(dividir, multiplicar, restar, repetir) y preguntó si convenía agregar
-esa forma a la teoría. Tenía razón: la sección 6 de `teoria.md` solo
-decía "misma mecánica que dividir números" y verificaba el resultado
-multiplicando, sin mostrar nunca el proceso paso a paso — útil para
-comprobar una respuesta, pero no para aprender a resolverlo desde cero.
-Se reemplazó por un ejemplo propio completamente resuelto en 3 pasos
-numerados ($x^3-2x^2-5x+6 \div (x-1) = x^2-x-6$, residuo 0), explicando
-cada "divide → multiplica → resta". No se replicó el dibujo visual de la
+sugerida por el usuario, 2 iteraciones).** El usuario mostró una foto de
+su cuaderno resolviendo una división de polinomios con el método largo
+completo (dividir, multiplicar, restar, repetir) y preguntó si convenía
+agregar esa forma a la teoría. Tenía razón: la sección 6 de `teoria.md`
+solo decía "misma mecánica que dividir números" y verificaba el resultado
+multiplicando, sin mostrar nunca el proceso paso a paso. **Iteración 1:**
+se agregó un ejemplo propio ($x^3-2x^2-5x+6 \div (x-1) = x^2-x-6$,
+residuo 0) con los 3 pasos en una lista numerada, cada uno con
+"Divide/Multiplica/Resta" en una sola oración con fórmulas inline. **El
+usuario mandó otra captura**: así se veía apretado y con flechitas de
+scroll raras bajo las fórmulas, "se entiende poco". **Iteración 2:** se
+reorganizó cada paso como bloque LaTeX (`$$\begin{aligned}...\end{aligned}$$`)
+con una fila para "Divide:", una para "Multiplica:" y una para "Resta:" —
+exactamente lo que pidió el usuario. No se replicó el dibujo visual de la
 cajita de división (difícil de renderizar de forma confiable en
-Markdown/LaTeX — ya hubo 2 bugs de renderizado por casos más simples);
-en su lugar, los mismos pasos en formato de lista numerada con LaTeX
-inline, que es seguro con el pipeline actual. Verificado con captura de
-pantalla: renderiza sin errores.
+Markdown/LaTeX); el formato de filas alineadas logra la misma claridad de
+forma segura con el pipeline actual.
+
+**Bug encontrado al investigar lo anterior: scrollbar fantasma en TODAS
+las fórmulas de teoría, no solo Polinomios (2026-10-07).** Las flechitas
+que reportó el usuario aparecían hasta bajo fórmulas cortas como "73" o
+"y-7", que nunca necesitarían scroll — eso reveló que el problema no era
+solo de organización sino un bug de CSS real y antiguo, presente en las 6
+páginas de teoría desde que se agregó el manejo de overflow para fórmulas
+anchas (sesión de pulido visual original). Causa: `teoria.css` le daba
+`overflow-x:auto` + una barra de scroll estilizada (`::-webkit-scrollbar`)
+a **toda** fórmula (`mjx-container`), inline o en bloque. En Chrome,
+estilizar `::-webkit-scrollbar` en un elemento con `overflow-x:auto` hace
+que el navegador dibuje esa barra de forma visible aunque no haya overflow
+real que desplazar — por eso aparecía hasta en fórmulas diminutas. Fix:
+el scroll con barra visible ahora solo se le da a fórmulas en **bloque**
+(`mjx-container[display="true"]`), que son las únicas que de verdad
+pueden ser más anchas que la pantalla en móvil; las inline solo mantienen
+`max-width:100%` sin su propia barra. Verificado: las flechitas
+desaparecieron de las fórmulas cortas en las 6 páginas de teoría (0
+errores de consola en todas), y el caso original que motivó el fix de
+overflow (la cadena de mcm en Naturales) se sigue conteniendo bien en
+móvil (0px de overflow horizontal de página, confirmado con una prueba
+automatizada).
 
 **Favicon (2026-10-07).** Monograma "A" blanco sobre fondo coral
 redondeado (`assets/favicon.svg`), diseñado y rasterizado con ImageMagick
