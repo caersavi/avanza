@@ -408,8 +408,9 @@ button:focus-visible,
   margin-top: 56px;
   padding-top: 18px;
   border-top: 1px solid var(--av-borde, #F1E1D9);
-  font-size: 0.78rem;
-  color: var(--av-linea, #6E5F73);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--av-acento, #E8664B);
   text-align: center;
 }
 

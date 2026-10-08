@@ -1,6 +1,6 @@
 # Progreso — Avanza
 
-Última actualización: 2026-10-07. Léeme primero al empezar una sesión nueva.
+Última actualización: 2026-10-08. Léeme primero al empezar una sesión nueva.
 
 Avanza es una plataforma web de nivelación en matemáticas básicas para
 estudiantes universitarios colombianos. Sitio estático (sin backend),
@@ -203,7 +203,23 @@ desaparecieron de las fórmulas cortas en las 6 páginas de teoría (0
 errores de consola en todas), y el caso original que motivó el fix de
 overflow (la cadena de mcm en Naturales) se sigue conteniendo bien en
 móvil (0px de overflow horizontal de página, confirmado con una prueba
-automatizada).
+automatizada). **Confirmado visualmente por el usuario** con una tercera
+captura de pantalla — el resultado final le pareció correcto, cerrado sin
+pedir más ajustes.
+
+**Falsa alarma revisada (2026-10-08):** el usuario volvió sobre el mismo
+ejemplo y dijo "creo te has equivocado en la resta" — pensaba que restar
+contra toda la expresión que quedaba (en vez de solo contra los primeros
+dos términos, "bajando" el resto después, como en el método clásico de
+columna) era un error de cálculo. Se verificó de nuevo de forma
+independiente: $(x-1)(x^2-x-6)=x^3-2x^2-5x+6$ — el resultado es correcto;
+ambas formas de escribir la resta dan el mismo resultado, es solo
+notación distinta. Se probó reescribir con el estilo "baja el siguiente
+término" (más parecido al método de columna tradicional) y se llegó,
+después de idas y vueltas del usuario, a la decisión final de **dejar la
+versión original** (restar contra toda la expresión restante) — el
+usuario confirmó que así está bien. `teoria.md` de Polinomios quedó sin
+cambios netos respecto a la iteración anterior.
 
 **Favicon (2026-10-07).** Monograma "A" blanco sobre fondo coral
 redondeado (`assets/favicon.svg`), diseñado y rasterizado con ImageMagick
@@ -216,6 +232,14 @@ contexto distinto (pestaña del navegador, 16-32px) donde el texto
 "Avanza" completo no cabe, así que un monograma de una letra es la
 solución estándar. Agregado con `<link>` en las 4 páginas del portal.
 Verificado: los 4 archivos responden 200, 0 errores de consola.
+
+**Crédito del pie de página actualizado (2026-10-08).** Texto cambiado
+de "Ing. Carlos Sánchez" a "Diseñado por Ing. Carlos Sánchez" en las 4
+páginas del portal. Estilo (`.creditos` en `estudiante.css`) actualizado:
+tamaño de letra de 0.78rem a 0.98rem y color de gris neutro
+(`--av-linea`) a coral (`--av-acento`), en negrita — le da más presencia
+sin salirse de la paleta existente. Verificado visualmente y sin errores
+de consola en las 4 páginas.
 
 **Publicación** — GitHub Pages vía GitHub Actions
 (`.github/workflows/static.yml`, deploy automático en cada push a
