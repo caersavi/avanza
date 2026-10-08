@@ -164,6 +164,23 @@ duplicados, motor real 42/42 correctas, teoría renderizando sin errores
 de LaTeX. Roadmap actualizado en `modulos/README.md` y conteo total en
 `tarjetas/README.md` (123→196→238 según se fue ampliando el proyecto).
 
+**Mejora: división de polinomios con pasos explícitos (2026-10-07,
+sugerida por el usuario).** El usuario mostró una foto de su cuaderno
+resolviendo una división de polinomios con el método largo completo
+(dividir, multiplicar, restar, repetir) y preguntó si convenía agregar
+esa forma a la teoría. Tenía razón: la sección 6 de `teoria.md` solo
+decía "misma mecánica que dividir números" y verificaba el resultado
+multiplicando, sin mostrar nunca el proceso paso a paso — útil para
+comprobar una respuesta, pero no para aprender a resolverlo desde cero.
+Se reemplazó por un ejemplo propio completamente resuelto en 3 pasos
+numerados ($x^3-2x^2-5x+6 \div (x-1) = x^2-x-6$, residuo 0), explicando
+cada "divide → multiplica → resta". No se replicó el dibujo visual de la
+cajita de división (difícil de renderizar de forma confiable en
+Markdown/LaTeX — ya hubo 2 bugs de renderizado por casos más simples);
+en su lugar, los mismos pasos en formato de lista numerada con LaTeX
+inline, que es seguro con el pipeline actual. Verificado con captura de
+pantalla: renderiza sin errores.
+
 **Favicon (2026-10-07).** Monograma "A" blanco sobre fondo coral
 redondeado (`assets/favicon.svg`), diseñado y rasterizado con ImageMagick
 en los formatos necesarios: `favicon.svg` (navegadores modernos),

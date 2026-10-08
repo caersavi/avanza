@@ -85,13 +85,23 @@ $$(a+b)(a-b) = a^2-b^2$$
 **Polinomio entre monomio:** divide cada término por separado.
 $$\frac{6x^3-9x^2+3x}{3x} = 2x^2-3x+1$$
 
-**Polinomio entre polinomio (división larga):** misma mecánica que
-dividir números, término por término, hasta que el residuo tenga menor
-grado que el divisor.
+**Polinomio entre polinomio (división larga):** en cada paso, divide el
+término de mayor grado de lo que queda entre el término de mayor grado
+del divisor, multiplica ese resultado por todo el divisor, y réstalo —
+repite con lo que sobra hasta que el residuo tenga menor grado que el
+divisor (misma mecánica que la división larga de números).
 
-**Ejemplo (división exacta):** dividir $x^2+8x+15$ entre $x+3$ da
-cociente $x+5$ y residuo $0$ — se puede comprobar porque
-$(x+3)(x+5)=x^2+8x+15$ (ver sección 4).
+**Ejemplo paso a paso:** dividir $x^3-2x^2-5x+6$ entre $x-1$.
 
-**Ejemplo (con residuo):** dividir $y^2+24$ entre $y-7$ da cociente $y+7$
-y residuo $73$, porque $(y-7)(y+7)=y^2-49$ y $24-(-49)=73$.
+1. $x^3\div x=x^2$. Multiplica: $x^2(x-1)=x^3-x^2$. Resta:
+   $(x^3-2x^2-5x+6)-(x^3-x^2)=-x^2-5x+6$.
+2. $-x^2\div x=-x$. Multiplica: $-x(x-1)=-x^2+x$. Resta:
+   $(-x^2-5x+6)-(-x^2+x)=-6x+6$.
+3. $-6x\div x=-6$. Multiplica: $-6(x-1)=-6x+6$. Resta:
+   $(-6x+6)-(-6x+6)=0$.
+
+Cociente: $x^2-x-6$. Residuo: $0$ (división exacta).
+
+**Ejemplo (con residuo):** dividiendo $y^2+24$ entre $y-7$ con el mismo
+método se obtiene cociente $y+7$ y residuo $73$ — se comprueba porque
+$(y-7)(y+7)=y^2-49$ y $24-(-49)=73$.
